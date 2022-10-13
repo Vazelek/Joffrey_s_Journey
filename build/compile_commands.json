@@ -1,0 +1,142 @@
+[
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Arrow.cpp.o -c /home/isen/Projects/game/src/Arrow.cpp",
+  "file": "/home/isen/Projects/game/src/Arrow.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/ArrowThrower.cpp.o -c /home/isen/Projects/game/src/ArrowThrower.cpp",
+  "file": "/home/isen/Projects/game/src/ArrowThrower.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/BreakablePlatform.cpp.o -c /home/isen/Projects/game/src/BreakablePlatform.cpp",
+  "file": "/home/isen/Projects/game/src/BreakablePlatform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Button.cpp.o -c /home/isen/Projects/game/src/Button.cpp",
+  "file": "/home/isen/Projects/game/src/Button.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Coin.cpp.o -c /home/isen/Projects/game/src/Coin.cpp",
+  "file": "/home/isen/Projects/game/src/Coin.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/EventItem.cpp.o -c /home/isen/Projects/game/src/EventItem.cpp",
+  "file": "/home/isen/Projects/game/src/EventItem.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Flag.cpp.o -c /home/isen/Projects/game/src/Flag.cpp",
+  "file": "/home/isen/Projects/game/src/Flag.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Infos.cpp.o -c /home/isen/Projects/game/src/Infos.cpp",
+  "file": "/home/isen/Projects/game/src/Infos.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Lava.cpp.o -c /home/isen/Projects/game/src/Lava.cpp",
+  "file": "/home/isen/Projects/game/src/Lava.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/LevelChoiceButton.cpp.o -c /home/isen/Projects/game/src/LevelChoiceButton.cpp",
+  "file": "/home/isen/Projects/game/src/LevelChoiceButton.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/LevelEnd.cpp.o -c /home/isen/Projects/game/src/LevelEnd.cpp",
+  "file": "/home/isen/Projects/game/src/LevelEnd.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Login.cpp.o -c /home/isen/Projects/game/src/Login.cpp",
+  "file": "/home/isen/Projects/game/src/Login.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/MainWindow.cpp.o -c /home/isen/Projects/game/src/MainWindow.cpp",
+  "file": "/home/isen/Projects/game/src/MainWindow.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Menu.cpp.o -c /home/isen/Projects/game/src/Menu.cpp",
+  "file": "/home/isen/Projects/game/src/Menu.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/MovingPlatform.cpp.o -c /home/isen/Projects/game/src/MovingPlatform.cpp",
+  "file": "/home/isen/Projects/game/src/MovingPlatform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/MyScene.cpp.o -c /home/isen/Projects/game/src/MyScene.cpp",
+  "file": "/home/isen/Projects/game/src/MyScene.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Pause.cpp.o -c /home/isen/Projects/game/src/Pause.cpp",
+  "file": "/home/isen/Projects/game/src/Pause.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Platform.cpp.o -c /home/isen/Projects/game/src/Platform.cpp",
+  "file": "/home/isen/Projects/game/src/Platform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/Player.cpp.o -c /home/isen/Projects/game/src/Player.cpp",
+  "file": "/home/isen/Projects/game/src/Player.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/PlayerData.cpp.o -c /home/isen/Projects/game/src/PlayerData.cpp",
+  "file": "/home/isen/Projects/game/src/PlayerData.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/PushablePlatform.cpp.o -c /home/isen/Projects/game/src/PushablePlatform.cpp",
+  "file": "/home/isen/Projects/game/src/PushablePlatform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/SecretRoom.cpp.o -c /home/isen/Projects/game/src/SecretRoom.cpp",
+  "file": "/home/isen/Projects/game/src/SecretRoom.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/SemiPassablePlatform.cpp.o -c /home/isen/Projects/game/src/SemiPassablePlatform.cpp",
+  "file": "/home/isen/Projects/game/src/SemiPassablePlatform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/SkillPlatform.cpp.o -c /home/isen/Projects/game/src/SkillPlatform.cpp",
+  "file": "/home/isen/Projects/game/src/SkillPlatform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/SlidingPlatform.cpp.o -c /home/isen/Projects/game/src/SlidingPlatform.cpp",
+  "file": "/home/isen/Projects/game/src/SlidingPlatform.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/TextArea.cpp.o -c /home/isen/Projects/game/src/TextArea.cpp",
+  "file": "/home/isen/Projects/game/src/TextArea.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/src/main.cpp.o -c /home/isen/Projects/game/src/main.cpp",
+  "file": "/home/isen/Projects/game/src/main.cpp"
+},
+{
+  "directory": "/home/isen/Projects/game/build",
+  "command": "/usr/bin/g++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/isen/Projects/game/build/game_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork  -g   -fPIC -std=gnu++14 -o CMakeFiles/game.dir/game_autogen/mocs_compilation.cpp.o -c /home/isen/Projects/game/build/game_autogen/mocs_compilation.cpp",
+  "file": "/home/isen/Projects/game/build/game_autogen/mocs_compilation.cpp"
+}
+]

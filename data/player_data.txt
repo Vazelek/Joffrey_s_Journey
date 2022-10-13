@@ -1,0 +1,196 @@
+(Bastien){
+    [
+        score: (48730)
+        star: (1/0/0/0)
+        time: (8:47.9333)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
+(Dodo l'asticot){
+    [
+        score: (57020)
+        star: (1/0/1/1)
+        time: (1:38.55)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
+(Joffrey){
+    [
+        score: (56080)
+        star: (1/1/1/1)
+        time: (1:32.45)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
+(Martin){
+    [
+        score: (47640)
+        star: (1/0/0/0)
+        time: (7:16.7333)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
+(Prout){
+    [
+        score: (57690)
+        star: (1/1/1/0)
+        time: (2:11.8167)
+    ],
+    [
+        score: (37910)
+        star: (1/0/0/0)
+        time: (13:29.1833)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
+(Valentin){
+    [
+        score: (58160)
+        star: (1/1/1/1)
+        time: (1:24.1167)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
+(vca){
+    [
+        score: (52690)
+        star: (1/0/0/0)
+        time: (2:11.2167)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+$$$

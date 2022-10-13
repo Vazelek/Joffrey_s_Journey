@@ -1,0 +1,42 @@
+Level 0{
+    score: (58160),
+    score_player: (Valentin),
+    time: (1:24.1167),
+    time_player: (Valentin)
+}
+
+Level 1{
+    score: (37910),
+    score_player: (Prout),
+    time: (13:29.1833),
+    time_player: (Prout)
+}
+
+Level 2{
+    score: (0),
+    score_player: (),
+    time: (00:00),
+    time_player: ()
+}
+
+Level 3{
+    score: (0),
+    score_player: (),
+    time: (00:00),
+    time_player: ()
+}
+
+Level 4{
+    score: (0),
+    score_player: (),
+    time: (00:00),
+    time_player: ()
+}
+
+Level 5{
+    score: (0),
+    score_player: (),
+    time: (00:00),
+    time_player: ()
+}
+

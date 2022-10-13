@@ -1,0 +1,4 @@
+/mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game/cmake-build-debug/CMakeFiles/game.dir
+/mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game/cmake-build-debug/CMakeFiles/game_autogen.dir

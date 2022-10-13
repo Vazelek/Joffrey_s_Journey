@@ -1,0 +1,1246 @@
+# Génération du niveau 1
+
+Data: {
+    spawn_x: (0),
+    spawn_y: (252)
+}
+
+Platforms: {
+    [
+        x: (-16),
+        y: (0),
+        width: (1),
+        height: (313), # à adapter à la taille
+        ressource: (stone.png)
+    ],
+    [
+        x: (0),
+        y: (300),
+        width: (30),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (960),
+        y: (300),
+        width: (6),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (464),
+        y: (300),
+        width: (1),
+        height: (6),
+        ressource: (stone.png)
+    ],
+    [
+        x: (480),
+        y: (380),
+        width: (30),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (960),
+        y: (300),
+        width: (1),
+        height: (6),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1104),
+        y: (300),
+        width: (6),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1168),
+        y: (284),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1696),
+        y: (284),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1680),
+        y: (300),
+        width: (30),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1792),
+        y: (-4),
+        width: (11),
+        height: (13),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2228),
+        y: (-4),
+        width: (3),
+        height: (35),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1588),
+        y: (636),
+        width: (29),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2100),
+        y: (636),
+        width: (11),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1822),
+        y: (428),
+        width: (5),
+        height: (6),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1902),
+        y: (492),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (468),
+        y: (732),
+        width: (70),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (452),
+        y: (636),
+        width: (1),
+        height: (8),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1588),
+        y: (636),
+        width: (1),
+        height: (8),
+        ressource: (stone.png)
+    ],
+    [
+        x: (532),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (644),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (756),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (868),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (980),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (1092),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (1204),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (1316),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (1428),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (1540),
+        y: (652),
+        width: (2),
+        height: (2),
+        ressource: (crate)
+    ],
+    [
+        x: (868),
+        y: (524),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (756),
+        y: (476),
+        width: (4),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (176),
+        y: (636),
+        width: (18),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (64),
+        y: (300),
+        width: (2),
+        height: (19),
+        ressource: (stone.png)
+    ],
+    [
+        x: (64),
+        y: (636),
+        width: (1),
+        height: (80), # ------------------------------------------------------------------------------------------------
+        ressource: (stone.png)
+    ],
+    [
+        x: (80),
+        y: (636),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (96),
+        y: (412),
+        width: (4),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (208),
+        y: (556),
+        width: (3),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (336),
+        y: (504),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (384),
+        y: (424),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (288),
+        y: (376),
+        width: (3),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (204),
+        y: (360),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (80),
+        y: (972),
+        width: (20),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (176),
+        y: (812),
+        width: (22),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (404),
+        y: (748),
+        width: (3),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (384),
+        y: (956),
+        width: (1),
+        height: (7),
+        ressource: (stone.png)
+    ],
+    [
+        x: (528),
+        y: (764),
+        width: (1),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (384),
+        y: (1052),
+        width: (17),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (656),
+        y: (956),
+        width: (1),
+        height: (7),
+        ressource: (stone.png)
+    ],
+    [
+        x: (656),
+        y: (1052),
+        width: (15),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (864),
+        y: (956),
+        width: (1),
+        height: (6),
+        ressource: (stone.png)
+    ],
+    [
+        x: (864),
+        y: (956),
+        width: (5),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (672),
+        y: (1036),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1088),
+        y: (956),
+        width: (3),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1136),
+        y: (924),
+        width: (3),
+        height: (4),
+        ressource: (stone.png)
+    ],
+    [
+        x: (912),
+        y: (1052),
+        width: (6),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (920),
+        y: (1068),
+        width: (1),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (872),
+        y: (1068),
+        width: (1),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (888),
+        y: (1084),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (992),
+        y: (1052),
+        width: (1),
+        height: (3),
+        ressource: (stone.png)
+    ],
+    [
+        x: (992),
+        y: (1084),
+        width: (5),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1072),
+        y: (1052),
+        width: (1),
+        height: (3),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1072),
+        y: (1052),
+        width: (75),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1168),
+        y: (748),
+        width: (1),
+        height: (11),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1152),
+        y: (892),
+        width: (1),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (992),
+        y: (844),
+        width: (5),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1250),
+        y: (1000),
+        width: (3),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1300),
+        y: (920),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1480),
+        y: (920),
+        width: (1),
+        height: (2),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1650),
+        y: (870),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1588),
+        y: (764),
+        width: (6),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1730),
+        y: (810),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1720),
+        y: (700),
+        width: (12),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1800),
+        y: (700),
+        width: (1),
+        height: (4),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1938),
+        y: (650),
+        width: (1),
+        height: (5),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1912),
+        y: (950),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2000),
+        y: (900),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2050),
+        y: (850),
+        width: (14),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2260),
+        y: (1052),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2260),
+        y: (850),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2356),
+        y: (0),
+        width: (1),
+        height: (300),
+        ressource: (stone.png)
+    ],
+    [
+        x: (64),
+        y: (1532),
+        width: (13),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (320),
+        y: (1532),
+        width: (10),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (2128),
+        y: (1532),
+        width: (15),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1904),
+        y: (1452),
+        width: (1),
+        height: (5),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1760),
+        y: (1452),
+        width: (1),
+        height: (5),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1744),
+        y: (1490),
+        width: (1),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1600),
+        y: (1452),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1500),
+        y: (1388),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1400),
+        y: (1324),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1250),
+        y: (1324),
+        width: (2),
+        height: (11),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1008),
+        y: (1532),
+        width: (1),
+        height: (6),
+        ressource: (stone.png)
+    ],
+    [
+        x: (1008),
+        y: (1532),
+        width: (68),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (480),
+        y: (1532),
+        width: (1),
+        height: (6),
+        ressource: (stone.png)
+    ],
+    [
+        x: (480),
+        y: (1612),
+        width: (34),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (0),
+        y: (2000),
+        width: (200),
+        height: (1),
+        ressource: (stone.png)
+    ],
+    [
+        x: (320),
+        y: (1760),
+        width: (4),
+        height: (10),
+        ressource: (stone.png)
+    ],
+}
+
+MovingPlatforms: {
+    [
+        x: (496),
+        y: (268),
+        width: (2),
+        height: (1),
+        ressource: (moving_platform.png),
+        final_coord: (188),
+        movement_vertical: (true),
+        speed: (1)
+    ],
+    [
+        x: (870),
+        y: (-48),
+        width: (1),
+        height: (6),
+        ressource: (moving_platform.png),
+        final_coord: (48),
+        movement_vertical: (true),
+        speed: (2)
+    ],
+    [
+        x: (1792),
+        y: (204),
+        width: (4),
+        height: (6),
+        ressource: (door),
+        final_coord: (0),
+        movement_vertical: (true),
+        speed: (1)
+    ],
+    [
+        x: (1904),
+        y: (204),
+        width: (4),
+        height: (6),
+        ressource: (door),
+        final_coord: (-32),
+        movement_vertical: (true),
+        speed: (1)
+    ],
+    [
+        x: (2228),
+        y: (556),
+        width: (3),
+        height: (5),
+        ressource: (door),
+        final_coord: (476),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (1)
+    ],
+    [
+        x: (1822),
+        y: (524),
+        width: (5),
+        height: (7),
+        ressource: (door),
+        final_coord: (316),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (1)
+    ],
+    [
+        x: (96),
+        y: (636),
+        width: (5),
+        height: (1),
+        ressource: (moving_platform.png),
+        final_coord: (972),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false)
+    ],
+    [
+        x: (1136),
+        y: (988),
+        width: (3),
+        height: (4),
+        ressource: (door),
+        final_coord: (924),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (1)
+    ],
+    [
+        x: (944),
+        y: (844),
+        width: (3),
+        height: (2),
+        ressource: (door),
+        final_coord: (992),
+        movement_vertical: (false),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (1)
+    ],
+    [
+        x: (2276),
+        y: (1052),
+        width: (5),
+        height: (1),
+        ressource: (moving_platform.png),
+        final_coord: (636),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (-1),
+        initial_coord: (1532)
+    ],
+    [
+        x: (320),
+        y: (1920),
+        width: (4),
+        height: (5),
+        ressource: (door),
+        final_coord: (1760),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (1)
+    ],
+}
+
+PushablePlatforms: {
+    [
+        x: (372),
+        y: (796),
+        width: (1),
+        height: (1),
+        ressource: (crate)
+    ],
+    [
+        x: (292),
+        y: (796),
+        width: (1),
+        height: (1),
+        ressource: (crate)
+    ],
+    [
+        x: (312),
+        y: (796),
+        width: (1),
+        height: (1),
+        ressource: (crate)
+    ],
+    [
+        x: (332),
+        y: (796),
+        width: (1),
+        height: (1),
+        ressource: (crate)
+    ],
+    [
+        x: (352),
+        y: (796),
+        width: (1),
+        height: (1),
+        ressource: (crate)
+    ],
+    [
+        x: (1024),
+        y: (828),
+        width: (1),
+        height: (1),
+        ressource: (crate)
+    ],
+}
+
+BreakablePlatforms: {
+    [
+        x: (576),
+        y: (188),
+        width: (2),
+        height: (2),
+        lifetime: (1),
+        respawn_time: (3)
+    ],
+    [
+        x: (1284),
+        y: (604),
+        width: (2),
+        height: (1),
+        lifetime: (12),
+        respawn_time: (3)
+    ],
+}
+
+SkillPlatforms: {
+    [
+        x: (2052),
+        y: (636),
+        type: (jump)
+    ],
+    [
+        x: (1056),
+        y: (300),
+        type: (shield)
+    ],
+    [
+        x: (2096),
+        y: (1532),
+        type: (dash)
+    ],
+    [
+        x: (128),
+        y: (1984),
+        type: (size_increase)
+    ],
+    [
+        x: (272),
+        y: (1532),
+        type: (size_decrease)
+    ]
+}
+
+SlidingPlatform: {
+    [
+        x: (688),
+        y: (236),
+        width: (3),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (768),
+        y: (204),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (1200),
+        y: (300),
+        width: (30),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (1264),
+        y: (172),
+        width: (7),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (1420),
+        y: (220),
+        width: (1),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (804),
+        y: (604),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (992),
+        y: (956),
+        width: (3),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (1400),
+        y: (920),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (1600),
+        y: (950),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (500),
+        y: (1500),
+        width: (1),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (550),
+        y: (1532),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (650),
+        y: (1500),
+        width: (1),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (700),
+        y: (1532),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (800),
+        y: (1500),
+        width: (1),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (850),
+        y: (1532),
+        width: (2),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+    [
+        x: (950),
+        y: (1500),
+        width: (1),
+        height: (1),
+        ressource: (icy_stone.png)
+    ],
+}
+
+SemiPassablePlatform: {
+}
+
+SecretRoom: {
+    [
+        x: (16),
+        y: (636),
+        width: (2),
+        height: (1),
+        ressource: (stone.png)
+    ],
+}
+
+Lava: {
+    [
+        x: (480),
+        y: (304),
+        width: (30),
+        height: (5),
+        final_y: (0),
+        speed: (0),
+        wait_time: (0),
+    ],
+    [
+        x: (468),
+        y: (640),
+        width: (70),
+        height: (6),
+        final_y: (656),
+        speed: (1),
+        wait_time: (7),
+    ],
+    [
+        x: (400),
+        y: (976),
+        width: (16),
+        height: (5),
+        final_y: (0),
+        speed: (0),
+        wait_time: (0),
+    ],
+    [
+        x: (1008),
+        y: (1056),
+        width: (4),
+        height: (2),
+        final_y: (0),
+        speed: (0),
+        wait_time: (0),
+    ],
+    [
+        x: (1776),
+        y: (1456),
+        width: (8),
+        height: (5),
+        final_y: (0),
+        speed: (0),
+        wait_time: (0),
+    ],
+    [
+        x: (496),
+        y: (1536),
+        width: (32),
+        height: (5),
+        final_y: (0),
+        speed: (0),
+        wait_time: (0),
+    ],
+}
+
+Buttons: {
+    [
+        x: (756),
+        y: (460),
+        linked_platform: (5)
+    ],
+    [
+        x: (96),
+        y: (396),
+        linked_platform: (6)
+    ],
+    [
+        x: (192),
+        y: (956),
+        linked_platform: (6)
+    ],
+    [
+        x: (888),
+        y: (1068),
+        linked_platform: (7)
+    ],
+    [
+        x: (952),
+        y: (1036)
+        linked_platform: (8)
+    ],
+    [
+        x: (2164),
+        y: (834)
+        linked_platform: (9)
+    ],
+    [
+        x: (2216),
+        y: (834)
+        linked_platform: (4)
+    ],
+    [
+        x: (256),
+        y: (1984)
+        linked_platform: (10)
+    ],
+}
+
+Flags: {
+    [
+        x: (2148),
+        y: (588)
+    ],
+    [
+        x: (888),
+        y: (908)
+    ],
+    [
+        x: (192),
+        y: (764)
+    ],
+    [
+        x: (2100),
+        y: (802)
+    ],
+    [
+        x: (24),
+        y: (1952)
+    ],
+    [
+        x: (1200),
+        y: (1952),
+        is_end_flag: (true)
+    ]
+}
+
+Coins: {
+    [
+        x: (1312),
+        y: (48)
+    ]
+}
+
+ArrowThrower: {
+    [
+        x: (1184),
+        y: (284),
+        direction: (right),
+        final_coord: (1696),
+        delay: (2.5)
+    ],
+    [
+        x: (1692),
+        y: (284),
+        direction: (left),
+        final_coord: (1168),
+        delay: (2)
+    ],
+    [
+        x: (1280),
+        y: (188),
+        direction: (down),
+        final_coord: (300),
+        delay: (2)
+    ],
+    [
+        x: (1344),
+        y: (296),
+        direction: (up),
+        final_coord: (172),
+        delay: (2)
+    ],
+    [
+        x: (1872),
+        y: (204),
+        direction: (down),
+        final_coord: (300),
+        delay: (5)
+    ],
+}
+
+TextArea: {
+    [
+        x: (136),
+        y: (100),
+        max_width: (120),
+        text: ("La fleur est censée se trouver tout au fond de cette sombre grotte.<br>Let's go !!")
+    ],
+    [
+        x: (2050),
+        y: (125),
+        max_width: (75),
+        text: ("Oof ! Ça ce complique...")
+    ],
+    [
+        x: (2000),
+        y: (425),
+        max_width: (150),
+        text: ("Un petit conseil tiré de mon guide :<br>'Parfois, savoir regarder en arrière peut permettre d'aller de l'avant'<br>Philosophique...")
+    ],
+    [
+        x: (2100),
+        y: (1350),
+        max_width: (100),
+        text: ("Mieux vaut ne pas utiliser un pouvoir si je n'en ai pas la nécessité et le conservé pour plus tard !")
+    ],
+    [
+        x: (200),
+        y: (1825),
+        max_width: (100),
+        text: ("Je crois qu'on est enfin arrivé au bout ! La fleur doit se trouver juste derrière cette porte.")
+    ],
+    [
+        x: (800),
+        y: (1825),
+        max_width: (100),
+        text: ("Je l'ai enfin trouvée ! La fleur unique la plus difficile à trouver ! Merci. Merci de m'avoir accompagner jusqu'ici et aider à atteindre mon objectif !!")
+    ],
+    [
+        x: (1000),
+        y: (1825),
+        max_width: (100),
+        text: (Thanks For Playing My Game ^^)
+    ],
+}

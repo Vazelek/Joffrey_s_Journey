@@ -1,0 +1,4 @@
+/home/isen/Projects/game/build/CMakeFiles/rebuild_cache.dir
+/home/isen/Projects/game/build/CMakeFiles/game.dir
+/home/isen/Projects/game/build/CMakeFiles/edit_cache.dir
+/home/isen/Projects/game/build/CMakeFiles/game_autogen.dir
