@@ -6,10 +6,10 @@ Level 0{
 }
 
 Level 1{
-    score: (37910),
-    score_player: (Prout),
-    time: (13:29.1833),
-    time_player: (Prout)
+    score: (40070),
+    score_player: (Valentin),
+    time: (9:53.9833),
+    time_player: (Valentin)
 }
 
 Level 2{

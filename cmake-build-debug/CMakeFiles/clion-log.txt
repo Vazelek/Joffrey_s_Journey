@@ -1,4 +1,0 @@
-C:\Windows\system32\wsl.exe --distribution Debian --exec /bin/sh -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/c/Users/valen/Documents/ISEN/CIR2_2021_2022/AlgoAvanceeC/Cpp/Qt/TP/game/cmake-build-debug
