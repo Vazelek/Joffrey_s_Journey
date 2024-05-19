@@ -21,9 +21,9 @@ Pause::Pause(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
 
     QHBoxLayout* h_layout = new QHBoxLayout;
 
-    QPushButton* restart = new QPushButton("Redémarer");
+    QPushButton* restart = new QPushButton((MainWindow::isInEnglish) ? "Restart" : "Redémarer");
     h_layout->addWidget(restart);
-    QPushButton* exit = new QPushButton("Quitter vers le menu");
+    QPushButton* exit = new QPushButton((MainWindow::isInEnglish) ? "Go back to menu" : "Quitter vers le menu");
     h_layout->addWidget(exit);
     QPushButton* kill = new QPushButton("Suicide");
     h_layout->addWidget(kill);
@@ -47,7 +47,7 @@ Pause::~Pause(){
 void Pause::updatePos(){
     int coord_x = player->x() + player->getWidth() / 2 - (width / 2);
     int coord_y = player->y() + player->getHeight() / 2 - (height / 2);
-    float window_width = scene->getMainWindow()->window()->size().width() / 3; // /3 pour le scale
+    float window_width = scene->getMainWindow()->window()->size().width() / 3;
     float window_height = scene->getMainWindow()->window()->size().height() / 3;
 
     if(player->x() <  window_width / 2 - player->getWidth() / 2){

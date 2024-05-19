@@ -2,12 +2,15 @@
 
 LevelChoiceButton::LevelChoiceButton(int number, Menu* menu, QWidget* parent): QPushButton(parent), number(number), menu(menu){
     locked = true;
-    setText("Niveau " + QString::number(number));
+    setText(
+        ((MainWindow::isInEnglish()) ? "Level " : "Niveau ")
+            + QString::number(number)
+    );
     if(number == 0){
         setText("Introduction");
     }
     if(number > 1){
-        setText("Coming soon");
+        setText("Under construction");
         return;
     }
     QObject::connect(this, SIGNAL(clicked()), this, SLOT(ButtonClick()));

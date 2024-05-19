@@ -40,7 +40,7 @@ void SecretRoom::itemsGeneration(QString ressource_url, int new_width, int new_h
         graphics_items[i] = new QGraphicsPixmapItem*[height];
     }
 
-    QString path = "../ressources/";
+    QString path = "resources/";
 
     for(int i = 0; i < width; i++){
         for(int j = 0; j < height; j++){

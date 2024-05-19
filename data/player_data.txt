@@ -54,6 +54,34 @@
     ]
 }
 
+(Joffre){
+    [
+        score: (57730)
+        star: (1/1/1/0)
+        time: (2:7.4)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ],
+    [
+        score: (0)
+        star: (0/0/0/0)
+        time: (00:00)
+    ]
+}
+
 (Joffrey){
     [
         score: (56080)

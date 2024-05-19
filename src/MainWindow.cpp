@@ -15,19 +15,23 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     setWindowTitle("Joffrey's Journey");
     setFixedSize(1200, 720);
-
 }
 
 MainWindow::~MainWindow(){
 
 }
 
+bool MainWindow::is_in_english = true;
+
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    QMessageBox::StandardButton resBtn = QMessageBox::question( this, "Fermer le jeu",
-                                                                tr("Are you sure?\n"),
-                                                                QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
-                                                                QMessageBox::Yes);
+    QMessageBox::StandardButton resBtn = QMessageBox::question(
+        this,
+        (MainWindow::isInEnglish()) ? "Close the game" : "Fermer le jeu",
+        tr("Are you sure?\n"),
+        QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+        QMessageBox::Yes
+    );
     if (resBtn != QMessageBox::Yes) {
         event->ignore();
     } else {
@@ -57,4 +61,8 @@ Menu* MainWindow::getMenu(){
 
 void MainWindow::setMyScene(MyScene* new_scene){
     scene = new_scene;
+}
+
+bool MainWindow::isInEnglish() {
+    return MainWindow::is_in_english;
 }

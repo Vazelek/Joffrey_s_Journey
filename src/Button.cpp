@@ -11,18 +11,18 @@ Button::~Button(){
 
 void Button::isOnIt(){
     if(!pushed){
-       QUrl baseUrl = QUrl::fromLocalFile(QDir::currentPath() + "/");
+    //    QUrl baseUrl = QUrl::fromLocalFile(QDir::currentPath() + "/");
 
-       QMediaPlaylist *playlist = new QMediaPlaylist();
-       playlist->addMedia(baseUrl.resolved(QUrl("../sound_effects/dk.wav")));
-       playlist->setPlaybackMode(QMediaPlaylist::Loop);
+    //    QMediaPlaylist *playlist = new QMediaPlaylist();
+    //    playlist->addMedia(baseUrl.resolved(QUrl("sound_effects/dk.wav")));
+    //    playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
-       QMediaPlayer* musicPlayer = new QMediaPlayer;
-       musicPlayer->setPlaylist(playlist);
-       musicPlayer->setVolume(50);
-       musicPlayer->play();
+    //    QMediaPlayer* musicPlayer = new QMediaPlayer;
+    //    musicPlayer->setPlaylist(playlist);
+    //    musicPlayer->setVolume(50);
+    //    musicPlayer->play();
 
-        QString res = "../ressources/pushed_button.png";
+        QString res = "resources/pushed_button.png";
         graphics_items[0][0]->setPixmap(res);
         graphics_items[0][0]->setY(y + 12);
         y = y + 12;
@@ -38,7 +38,7 @@ void Button::isOnIt(){
 void Button::toInitialState(){
     if(pushed){
         pushed = false;
-        QString res = "../ressources/button.png";
+        QString res = "resources/button.png";
         graphics_items[0][0]->setPixmap(res);
         graphics_items[0][0]->setY(y - 12);
         y = y - 12;

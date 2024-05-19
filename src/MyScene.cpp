@@ -2,30 +2,30 @@
 
 MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int level, QObject* parent) : QGraphicsScene(parent), window(window), player_view(player_view), menu(menu), level(level), deaths(0), coins_count(0), total_coins(0), game_stopped(false) {
 
-    // Chargement de l'arrière plan
-    background.load("../ressources/background_" + QString::number(level) + ".png");
+    // Load background
+    background.load("resources/background_" + QString::number(level) + ".png");
     setSceneRect(0, 0, background.width(), background.height());
 
-    // Chargement du joueur
-    player = new Player("../ressources/player_2.png", this);
+    // Load player
+    player = new Player("resources/player_2.png", this);
     player->setScale(1);
 
-    // Génération des élément (lecture du fichier correspondant au level)
+    // Element generation (reading the file corresponding to the level)
     readLevelGenerationFile();
 
-    // Affichage du joueur (par dessus tous les éléments)
+    // Player display
     addItem(player);
 
-    // Timer pour les FPS
+    // Timer for the FPS
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
     timer->start(1000 / FPS);
 
-    // Chargement du menu de pause (non affiché)
+    // Loading the pause menu (not displayed)
     pause = new Pause(this, player);
     pause_menu_displayed = false;
 
-    // Chargement du widget infos
+    // Load the info widget
     infos = new Infos(this, player);
     addItem(infos);
 }
@@ -33,7 +33,7 @@ MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int
 void MyScene::readLevelGenerationFile(){
     std::string line = "";
     std::string values[11] = {""};
-    std::ifstream file("../data/level_" + std::to_string(level) + ".txt");
+    std::ifstream file("data/level_" + std::to_string(level) + ".txt");
     int index = 0;
     if(file.is_open()){
 
@@ -631,7 +631,7 @@ void MyScene::readLevelGenerationFile(){
                     std::stoi(values[0]),
                     std::stoi(values[1]),
                     std::stoi(values[2]),
-                    (this->getLanguage() == Language::EN) ? QString::fromStdString(values[3]) : QString::fromStdString(values[4]));
+                    (MainWindow::isInEnglish()) ? QString::fromStdString(values[3]) : QString::fromStdString(values[4]));
 
             addItem(textarea);
 
@@ -893,10 +893,6 @@ int MyScene::getLevel(){
 
 Infos* MyScene::getInfos(){
     return infos;
-}
-
-Language MyScene::getLanguage() {
-    return language;
 }
 
 void MyScene::setDeaths(int n){

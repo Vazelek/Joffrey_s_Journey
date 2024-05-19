@@ -5,14 +5,18 @@ Menu::Menu(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_win
     QVBoxLayout* vlayout = new QVBoxLayout(this);
 
     connect_name = new QLabel;
-    connect_name->setText("Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom");
+    connect_name->setText(
+        (MainWindow::isInEnglish()) ?
+            "You are logged in as \""  + main_window->getPlayerData()->getCurrentPlayer() + "\"\nYour scores and records will be saved under this nickname": 
+            "Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom"
+    );
     connect_name->setAlignment(Qt::AlignCenter);
     connect_name->setMaximumHeight(80);
 
     vlayout->addWidget(connect_name);
 
     QPushButton* disconnect_button = new QPushButton;
-    disconnect_button->setText("Déconnexion");
+    disconnect_button->setText((MainWindow::isInEnglish()) ? "Log out" : "Déconnexion");
     QObject::connect(disconnect_button, SIGNAL(clicked()), this, SLOT(signOut()));
     vlayout->addWidget(disconnect_button);
 
@@ -90,7 +94,11 @@ void Menu::signOut(){
 }
 
 void Menu::reloadConnectName(){
-    connect_name->setText("Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom");
+    connect_name->setText(
+        (MainWindow::isInEnglish()) ?
+            "You are logged in as \""  + main_window->getPlayerData()->getCurrentPlayer() + "\"\nYour scores and records will be saved under this nickname": 
+            "Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom"
+    );
     updateLockedLevels();
 }
 

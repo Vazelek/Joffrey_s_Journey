@@ -40,7 +40,7 @@ void Platform::itemsGeneration(QString ressource_url, int new_width, int new_hei
         graphics_items[i] = new QGraphicsPixmapItem*[height];
     }
 
-    QString path = "../ressources/";
+    QString path = "resources/";
 
 
     if(ressource_url == "button"){
@@ -259,7 +259,7 @@ bool Platform::collidesWithPlatform(Platform* platform, int v_speed, int h_speed
 void Platform::updateImage(QString ressource_url){
     for(int i = 0; i < width; i++){
         for(int j = 0; j < height; j++){
-            QString path = "../ressources/";
+            QString path = "resources/";
             graphics_items[i][j]->setPixmap(path + ressource_url);
         }
     }

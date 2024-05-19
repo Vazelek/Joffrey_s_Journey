@@ -1,6 +1,6 @@
 #include "Arrow.h"
 
-Arrow::Arrow(MyScene* scene, Player* player, int x, int y, QString orientation, int final_coord, float speed) : EventItem(scene, player, x, y, "../ressources/arrow_" + orientation), final_coord(final_coord), orientation(orientation), speed(speed){
+Arrow::Arrow(MyScene* scene, Player* player, int x, int y, QString orientation, int final_coord, float speed) : EventItem(scene, player, x, y, "resources/arrow_" + orientation), final_coord(final_coord), orientation(orientation), speed(speed){
     setZValue(-1);
 }
 

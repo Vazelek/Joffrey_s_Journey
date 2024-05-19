@@ -36,7 +36,7 @@ void PlayerData::readDataFile(){
     std::string line = "";
     std::string player = "";
     std::string values[3] = {""};
-    std::ifstream file("../data/player_data.txt");
+    std::ifstream file("data/player_data.txt");
     int index = 0;
     if(file.is_open()){
 
@@ -91,7 +91,7 @@ void PlayerData::readDataFile(){
 }
 
 void PlayerData::writeDataFile(){
-    std::ofstream file ("../data/player_data.txt");
+    std::ofstream file ("data/player_data.txt");
     int index = 0;
     if(file.is_open()){
 
@@ -137,7 +137,7 @@ void PlayerData::writeDataFile(){
 void PlayerData::readRecords() {
     std::string line = "";
     std::string values[4] = {""};
-    std::ifstream file("../data/records.txt");
+    std::ifstream file("data/records.txt");
     int index = 0;
     if(file.is_open()){
 
@@ -190,7 +190,7 @@ void PlayerData::readRecords() {
 }
 
 void PlayerData::writeRecords() {
-    std::ofstream file ("../data/records.txt");
+    std::ofstream file ("data/records.txt");
     int index = 0;
     if(file.is_open()){
 

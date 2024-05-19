@@ -76,10 +76,10 @@ void Player::move(){
             }
             animation_status += animation_direction;
             if(facing_left){
-                setPixmap(QPixmap("../ressources/player_" + QString::number(animation_status) + ".png").transformed(QTransform().scale(-1, 1)));
+                setPixmap(QPixmap("resources/player_" + QString::number(animation_status) + ".png").transformed(QTransform().scale(-1, 1)));
             }
             else{
-                setPixmap(QPixmap("../ressources/player_" + QString::number(animation_status) + ".png"));
+                setPixmap(QPixmap("resources/player_" + QString::number(animation_status) + ".png"));
             }
             animation_time = 6;
         }
@@ -364,7 +364,7 @@ bool Player::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
 }
 
 void Player::death(Platform* platform){ // A suppr
-    qDebug() << "Le décès est présent pour votre plus grand déplaisir ! " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
+    qDebug() << "DEATH " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
     death();
 }
 
@@ -455,7 +455,7 @@ void Player::useShield(){
     }
     skills_available[2] = false;
     scene->getInfos()->updateSkills();
-    shield = new QGraphicsPixmapItem(QPixmap("../ressources/shield.png"));
+    shield = new QGraphicsPixmapItem(QPixmap("resources/shield.png"));
     shield->setScale(0.1);
     shield->setPos(x() + width / 2 - 13, y() + height / 2 - 32);
     scene->addItem(shield);

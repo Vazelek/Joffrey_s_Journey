@@ -34,6 +34,8 @@ public:
     PlayerData* getPlayerData();
     Menu* getMenu();
     void setMyScene(MyScene* new_scene);
+    static bool isInEnglish();
+    static bool is_in_english;
 };
 
 
