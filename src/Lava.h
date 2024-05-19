@@ -9,7 +9,7 @@ class Lava : public Platform{
     Q_OBJECT
 
 private:
-    int initial_y; // Initial y doit être plus petite que final y
+    int initial_y;
     int final_y;
     int speed;
     int wait_time;

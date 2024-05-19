@@ -65,9 +65,9 @@ void Menu::startLevel(int number){
     mainView->setScene(scene);
 
     // A delete
-    mainView->setWindowTitle("Scene");
-    mainView->resize(2000, 1000);
-    mainView->show();
+//     mainView->setWindowTitle("Scene");
+//     mainView->resize(2000, 1000);
+//     mainView->show();
     // A delete
 
     player_view->setScene(scene);
@@ -103,7 +103,7 @@ void Menu::updateLockedLevels(){
         for(int i = 0; i < 4; i++){
             count_saved_stars += saved_stars[i].toInt();
         }
-        if(count_saved_stars != 0 && buttons.length() != level + 1){ // Si on n'est pas au dernier niveau
+        if(count_saved_stars != 0 && buttons.length() != level + 1){ // If we're not on the last level
             buttons[level + 1]->setUnlocked();
         }
         if(level == 0){ // Intro

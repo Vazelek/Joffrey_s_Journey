@@ -15,7 +15,6 @@ private:
     QMap<QString, QVector<QMap<QString, QString>*>*>* data;
     QVector<QMap<QString, QString>*>* records;
     QString current_player;
-    //   Pseudo        Score    Value   Niveau
 
 public:
     PlayerData();

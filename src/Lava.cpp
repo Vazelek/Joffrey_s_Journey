@@ -7,7 +7,7 @@ Lava::Lava(MyScene* scene, Player* player, int x, int y, int width, int height, 
 
     this->speed = abs(speed);
 
-     // Initial coord doit être plus petite que final coord
+     // Initial coord must be lower than final coord
      if(initial_y > final_y){
          int temp = final_y;
          this->final_y = initial_y;

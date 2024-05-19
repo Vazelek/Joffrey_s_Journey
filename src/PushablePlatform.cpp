@@ -16,7 +16,7 @@ void PushablePlatform::update(){
     if(isCollidingDown(-1) == nullptr){
         vert_speed -= 0.5;
         if(vert_speed <= -15){
-            vert_speed = -15; // Vitesse verticale limite
+            vert_speed = -15; // Max vertical speed
         }
     }
 
@@ -33,7 +33,7 @@ Platform* PushablePlatform::isCollidingDown(int speed){
         return nullptr;
     }
 
-    int min_distance = 0; // Pour savoir quel est le bloc le plus proche
+    int min_distance = 0; // What is the closest block
     int new_coord = 0;
     Platform* closest = nullptr;
 
@@ -57,7 +57,7 @@ Platform* PushablePlatform::isCollidingDown(int speed){
         }
     }
 
-    if(player->collidesWithPlatform(this, -speed, 0)){ // Tue le joueur si une collision avec lui
+    if(player->collidesWithPlatform(this, -speed, 0)){ // Kill the player if he collides with it
         player->death(this);
     }
 

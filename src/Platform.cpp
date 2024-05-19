@@ -40,11 +40,10 @@ void Platform::itemsGeneration(QString ressource_url, int new_width, int new_hei
         graphics_items[i] = new QGraphicsPixmapItem*[height];
     }
 
-    // Chemin vers le fichier contenant les ressources
     QString path = "../ressources/";
 
 
-    if(ressource_url == "button"){ // Ressources url spéciale (prédéfinie)
+    if(ressource_url == "button"){
         QString res = "button.png";
         graphics_items[0][0] = new QGraphicsPixmapItem(path + res);
         graphics_items[0][0]->setScale(0.1);
@@ -224,7 +223,6 @@ void Platform::platformCollidesWithGravitySensitiveItem(bool positive_speed, boo
                     }
                     platform->platformCollidesWithGravitySensitiveItem(positive_speed, movement_vertical);
                 }
-                // Collision en descente impossible selon le game design
             }
         }
     }

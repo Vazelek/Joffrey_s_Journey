@@ -1,5 +1,5 @@
-#ifndef CPP_QT_TPMINIPROJET_MYSCENE_H
-#define CPP_QT_TPMINIPROJET_MYSCENE_H
+#ifndef MYSCENE_H
+#define MYSCENE_H
 
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -146,4 +146,4 @@ public slots:
 };
 
 
-#endif //CPP_QT_TPMINIPROJET_MYSCENE_H
+#endif //MYSCENE_H

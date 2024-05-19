@@ -11,16 +11,16 @@ Button::~Button(){
 
 void Button::isOnIt(){
     if(!pushed){
-//        QUrl baseUrl = QUrl::fromLocalFile(QDir::currentPath() + "/");
-//
-//        QMediaPlaylist *playlist = new QMediaPlaylist();
-//        playlist->addMedia(baseUrl.resolved(QUrl("../sound_effects/dk.wav")));
-//        playlist->setPlaybackMode(QMediaPlaylist::Loop);
-//
-//        QMediaPlayer* musicPlayer = new QMediaPlayer;
-//        musicPlayer->setPlaylist(playlist);
-//        musicPlayer->setVolume(50);
-//        musicPlayer->play();
+       QUrl baseUrl = QUrl::fromLocalFile(QDir::currentPath() + "/");
+
+       QMediaPlaylist *playlist = new QMediaPlaylist();
+       playlist->addMedia(baseUrl.resolved(QUrl("../sound_effects/dk.wav")));
+       playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+       QMediaPlayer* musicPlayer = new QMediaPlayer;
+       musicPlayer->setPlaylist(playlist);
+       musicPlayer->setVolume(50);
+       musicPlayer->play();
 
         QString res = "../ressources/pushed_button.png";
         graphics_items[0][0]->setPixmap(res);

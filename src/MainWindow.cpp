@@ -2,14 +2,14 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
-    player_data = new PlayerData; // Lecture du fichier de données
+    player_data = new PlayerData; // Read player_data file
 
     menu = new Menu(this);
     Login* login = new Login(this);
     stacked_widget = new QStackedWidget;
     stacked_widget->addWidget(login);
     stacked_widget->addWidget(menu);
-    stacked_widget->setCurrentIndex(0); // On affiche en premier lieu la page login
+    stacked_widget->setCurrentIndex(0); // First print the login window
     setCentralWidget(stacked_widget);
     scene = nullptr;
 

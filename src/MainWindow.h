@@ -1,5 +1,5 @@
-#ifndef CPP_QT_TPMINIPROJET_MAINWINDOW_H
-#define CPP_QT_TPMINIPROJET_MAINWINDOW_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QGraphicsView>
@@ -37,4 +37,4 @@ public:
 };
 
 
-#endif //CPP_QT_TPMINIPROJET_MAINWINDOW_H
+#endif //MAINWINDOW_H

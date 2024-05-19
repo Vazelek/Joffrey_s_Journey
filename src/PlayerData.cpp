@@ -52,7 +52,7 @@ void PlayerData::readDataFile(){
 
             while(line.find("}") == std::string::npos){
 
-                // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+                // Check for extra blanks
                 if(line.find("[") == std::string::npos){
                     getline(file, line);
                     continue;

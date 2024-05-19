@@ -23,16 +23,16 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     }
     int coins = scene->getCoinsCount();
 
-    int score = 10000; // Niveau terminé
-    int death_score = 10000 - (deaths_count * 1000); // Morts
-    int time_score = (3600 - seconds) * 10; // Temps
-    int coins_score = coins * 1000; // Pièces ramassées
+    int score = 10000; // Level end
+    int death_score = 10000 - (deaths_count * 1000); // Deaths
+    int time_score = (3600 - seconds) * 10; // Time
+    int coins_score = coins * 1000; // Coins
 
     score += death_score + time_score + coins_score;
 
     QString star_save = "";
 
-    // Vérification de s'il y a nouveau record et update du fichier records.txt
+    // Check if there is a new record and update records.txt
     scene->getMainWindow()->getPlayerData()->updatePlayerData(scene->getLevel(), score, QString::number(minutes) + ":" + QString::number(infos->getSeconds()));
     auto records = scene->getMainWindow()->getPlayerData()->getRecords()->value(scene->getLevel());
 
@@ -49,11 +49,11 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont bubble(family);
 
-    // Remplissage de l'écran de fin de niveau
+    // Fill the screen of the end of the level
     QVBoxLayout* v_layout = new QVBoxLayout();
     mainWidget->setLayout(v_layout);
 
-    // Titre
+    // Title
     QLabel* title = new QLabel();
     if(scene->getLevel() != 0){
         title->setText("Niveau " + QString::number(scene->getLevel()) + " terminé !!!");
@@ -68,7 +68,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     title->setAlignment(Qt::AlignHCenter);
     v_layout->addWidget(title);
 
-    // Etoiles
+    // Stars
     QWidget* stars_widget = new QWidget();
     stars_widget->setStyleSheet("border: 1px solid black;");
     QVBoxLayout* stars_layout = new QVBoxLayout();
@@ -89,7 +89,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     labels_wg->setLayout(labels);
     labels_wg->setStyleSheet("border: 0px solid black;");
 
-    // Niveau terminé
+    // Level completed
     QLabel* star1 = new QLabel();
     star1->setPixmap(QPixmap("../ressources/star_full.png"));
     star1->setFixedSize(48, 48);
@@ -103,7 +103,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     label1->setAlignment(Qt::AlignHCenter);
     labels->addWidget(label1);
 
-    // Pièces ramassées
+    // Collected coins
     QLabel* star2 = new QLabel();
     if(coins == scene->getTotalCoins()){
         star2->setPixmap(QPixmap("../ressources/star_full.png"));
@@ -142,7 +142,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     labels->addWidget(label2);
 
-    // Morts
+    // Deaths
     QLabel* star3 = new QLabel();
     if(scene->getDeaths() == 0){
         star3->setPixmap(QPixmap("../ressources/star_full.png"));
@@ -181,7 +181,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     labels->addWidget(label3);
 
-    // Temps
+    // Time
     QLabel* star4 = new QLabel();
 
     if(minutes < 2){
@@ -334,8 +334,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     updatePos();
 
-    // Animation du personnage
-
+    // Character animation
     QTimer* timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updatePlayer()));
     timer->start(200);
@@ -353,7 +352,7 @@ LevelEnd::~LevelEnd(){
 void LevelEnd::updatePos(){
     int coord_x = player->x() + player->getWidth() / 2  - (width / 2);
     int coord_y = player->y() + player->getHeight() / 2  - (height / 2);
-    float window_width = scene->getMainWindow()->window()->size().width() / 3; // /3 pour le scale
+    float window_width = scene->getMainWindow()->window()->size().width() / 3;
     float window_height = scene->getMainWindow()->window()->size().height() / 3;
 
     if(player->x() <  window_width / 2 - player->getWidth() / 2){

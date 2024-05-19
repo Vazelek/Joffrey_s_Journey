@@ -17,12 +17,12 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     QWidget* right_widget = new QWidget;
     layout->addWidget(right_widget);
 
-    // Partie infos ----------------------------------------------------------------------------------------------------
+    // Infos part ----------------------------------------------------------------------------------------------------
     QHBoxLayout* layout_right = new QHBoxLayout;
     right_widget->setLayout(layout_right);
     layout_right->setAlignment(Qt::AlignRight);
 
-    // Pièces
+    // Coins
     QWidget* coins_widget = new QWidget;
     QHBoxLayout* coins_layout = new QHBoxLayout;
     coins_widget->setLayout(coins_layout);
@@ -42,7 +42,7 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     layout_right->addWidget(coins_widget);
 
 
-    // Morts
+    // Deaths
     QWidget* deaths_widget = new QWidget;
     QHBoxLayout* deaths_layout = new QHBoxLayout;
     deaths_widget->setLayout(deaths_layout);
@@ -62,7 +62,7 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     layout_right->addWidget(deaths_widget);
 
 
-    // Chronomètre
+    // Chronometer
     QWidget* chrono_widget = new QWidget;
     QHBoxLayout* chrono_layout = new QHBoxLayout;
     chrono_widget->setLayout(chrono_layout);
@@ -82,12 +82,12 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     layout_right->addWidget(chrono_widget);
 
 
-    // Partie skills ---------------------------------------------------------------------------------------------------
+    // Skills part ---------------------------------------------------------------------------------------------------
     QHBoxLayout* layout_left = new QHBoxLayout;
     left_widget->setLayout(layout_left);
     layout_left->setAlignment(Qt::AlignLeft);
 
-    // Super saut
+    // Super jump
     jump  = new QLabel;
     jump->setPixmap(QPixmap("../ressources/jump_empty.png"));
     jump->setFixedSize(16, 16);
@@ -101,7 +101,7 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     dash->setScaledContents(true);
     layout_left->addWidget(dash);
 
-    // Bouclier
+    // Shield
     shield  = new QLabel;
     shield->setPixmap(QPixmap("../ressources/shield_empty.png"));
     shield->setFixedSize(16, 16);
@@ -124,7 +124,7 @@ Infos::~Infos(){
 
 void Infos::update(){
 
-    float window_width = scene->getMainWindow()->window()->size().width() / 3; // /3 pour le scale
+    float window_width = scene->getMainWindow()->window()->size().width() / 3;
     float window_height = scene->getMainWindow()->window()->size().height() / 3;
     int coord_x = player->x() + player->getWidth() / 2  + (window_width / 2) - width;
     int coord_y = player->y() + player->getHeight() / 2  - (window_height / 2);
@@ -144,7 +144,7 @@ void Infos::update(){
 
     setPos(coord_x, coord_y - 22);
 
-    seconds += (double) 1 / FPS; // Manque de précision (trop rapide)
+    seconds += (double) 1 / FPS; // Not precise
     if(seconds >= 60){
         seconds -= 60;
         minutes++;

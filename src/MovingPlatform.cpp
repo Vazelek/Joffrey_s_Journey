@@ -16,7 +16,7 @@ MovingPlatform::MovingPlatform(MyScene* scene, Player* player, int x, int y, int
 
     this->speed = abs(speed);
 
-     // Initial coord doit être plus petite que final coord
+     // Initial coord must be lower than final coord
      if(this->initial_coord > final_coord){
         int temp = final_coord;
         this->final_coord = this->initial_coord;
@@ -39,7 +39,7 @@ MovingPlatform::~MovingPlatform(){
 
 void MovingPlatform::move(){
     if(repeat == 0 || movement_stop){
-        return; // On arrète le mouvement de la platform si son animation est terminée (portes par exemple)
+        return; // End of the movement of the platform if its animation is completed
     }
     bool positive_speed = speed > 0;
 
@@ -48,7 +48,7 @@ void MovingPlatform::move(){
             moveTo(x, final_coord);
             speed = -abs(speed);
             if(repeat > 0){
-                repeat--; // A la fin d'un mouvement, on dit qu'il en reste un de moins à faire
+                repeat--;
             }
         }
         else if(y + speed <= initial_coord && speed < 0){
@@ -82,10 +82,10 @@ void MovingPlatform::move(){
         }
     }
 
-    // On vérifie si la platform doit pousser un bloc / le joueur
+    // Check if platform must push a box or the player
     platformCollidesWithGravitySensitiveItem(positive_speed, movement_vertical);
 
-    // On tue le joueur s'il s"est fait écrasé au cours de l'animation
+    // The player is killed if he get crushed by the platform
     for(auto platform : *scene->getPlatforms()){
         if(platform->getWidth() == 0 || platform->getHeight() == 0 || platform == this){
             continue;

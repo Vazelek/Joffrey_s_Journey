@@ -42,7 +42,7 @@ void Login::buttonClick(){
         }
     }
     else if(input->text().indexOf("$$$") != -1 || input->text().indexOf("(") != -1 || input->text().indexOf(")") != -1 || input->text().indexOf("{") != -1 || input->text().indexOf("}") != -1 || input->text().indexOf("[") != -1 || input->text().indexOf("]") != -1){
-        infos->setText("Suite de charactères impossible : \"$$$\", \"(\", \")\", \"{\", \"}\", \"[\", \"]\""); // Causerait des problème dans la lecture du fichier player_data.txt
+        infos->setText("Suite de charactères impossible : \"$$$\", \"(\", \")\", \"{\", \"}\", \"[\", \"]\""); // May cause problems in player_data.txt file
         if(new_connection_button_displayed){
             QObject::disconnect(new_connection, SIGNAL(clicked()), this, SLOT(newConnection()));
             new_connection_button_displayed = false;
