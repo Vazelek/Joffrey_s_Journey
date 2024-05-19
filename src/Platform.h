@@ -54,6 +54,5 @@ public:
 #include "SemiPassablePlatform.h"
 #include "Button.h"
 #include "Lava.h"
-// Si l'include n'est pas mis là, le code ne compile pas
 
 #endif

@@ -15,7 +15,7 @@ TextArea::TextArea(int x, int y, int max_width, QString text, QGraphicsItem* par
     widget->setLayout(layout);
     layout->setAlignment(Qt::AlignCenter);
 
-    int id = QFontDatabase::addApplicationFont("../fonts/RobotoSlab-VariableFont_wght.ttf");
+    int id = QFontDatabase::addApplicationFont("fonts/RobotoSlab-VariableFont_wght.ttf");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont roboto(family);
 

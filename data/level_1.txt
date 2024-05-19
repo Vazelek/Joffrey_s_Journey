@@ -1205,42 +1205,49 @@ TextArea: {
         x: (136),
         y: (100),
         max_width: (120),
-        text: ("La fleur est censée se trouver tout au fond de cette sombre grotte.<br>Let's go !!")
+        text_en: ("The flower is supposed to be at the very bottom of this dark cave.<br>Let's go !!!"),
+        text_fr: ("La fleur est censée se trouver tout au fond de cette sombre grotte.<br>Let's go !!")
     ],
     [
         x: (2050),
         y: (125),
         max_width: (75),
-        text: ("Oof ! Ça ce complique...")
+        text_en: ("Well... it's getting harder!"),
+        text_fr: ("Oof ! Ça ce complique...")
     ],
     [
         x: (2000),
         y: (425),
         max_width: (150),
-        text: ("Un petit conseil tiré de mon guide :<br>'Parfois, savoir regarder en arrière peut permettre d'aller de l'avant'<br>Philosophique...")
+        text_en: ("A little advice from my guidebook:<br>'Sometimes looking back can help you move forward'<br>Philosophical...")
+        text_fr: ("Un petit conseil tiré de mon guide :<br>'Parfois, savoir regarder en arrière peut permettre d'aller de l'avant'<br>Philosophique...")
     ],
     [
         x: (2100),
         y: (1350),
         max_width: (100),
-        text: ("Mieux vaut ne pas utiliser un pouvoir si je n'en ai pas la nécessité et le conservé pour plus tard !")
+        text_en: ("It's better not to use a power if I don't need it, and save it for later!"),
+        text_fr: ("Mieux vaut ne pas utiliser un pouvoir si je n'en ai pas la nécessité et le conservé pour plus tard !")
     ],
     [
         x: (200),
         y: (1825),
         max_width: (100),
-        text: ("Je crois qu'on est enfin arrivé au bout ! La fleur doit se trouver juste derrière cette porte.")
+        text_en: ("I think we've finally reached the end! The flower must be just beyond that door."),
+        text_fr: ("Je crois qu'on est enfin arrivé au bout ! La fleur doit se trouver juste derrière cette porte.")
     ],
     [
         x: (800),
         y: (1825),
         max_width: (100),
-        text: ("Je l'ai enfin trouvée ! La fleur unique la plus difficile à trouver ! Merci. Merci de m'avoir accompagner jusqu'ici et aider à atteindre mon objectif !!")
+        text_en: ("I've finally found it! The hardest single flower to find! Thank you. Thank you for getting me this far and helping me reach my goal!"),
+        text_fr: ("Je l'ai enfin trouvée ! La fleur unique la plus difficile à trouver ! Merci. Merci de m'avoir accompagner jusqu'ici et aider à atteindre mon objectif !!")
     ],
     [
         x: (1000),
         y: (1825),
         max_width: (100),
-        text: (Thanks For Playing My Game ^^)
+        text_en: (Thanks For Playing My Game ^^),
+        text_fr: (Thanks For Playing My Game ^^)
     ],
 }

@@ -33,7 +33,7 @@ void BreakablePlatform::update(){
             status = 0;
             itemsGeneration("breakable_platform.png", initial_width, initial_height);
             respawn_time = initial_respawn_time;
-            if(player->collidesWithPlatform(this)){ // On vérifie si la platform s'est crée sur le joueur
+            if(player->collidesWithPlatform(this)){ // Check if platform was created on the player
                 player->setY(y - player->sceneBoundingRect().height());
             }
             platformCollidesWithGravitySensitiveItem(false, true);

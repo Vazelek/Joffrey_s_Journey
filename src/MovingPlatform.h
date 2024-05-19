@@ -9,11 +9,11 @@ class MovingPlatform : public Platform{
     Q_OBJECT
 
 private:
-    int initial_coord; // Initial coord doit être plus petite que final coord
+    int initial_coord;
     int final_coord;
-    bool movement_vertical; // Orientation du mouvement
+    bool movement_vertical; // Movement direction
     int speed;
-    int repeat; // Nombre de fois que le mouvement doit être répété
+    int repeat; // Number of time the movement needs to be repeated
     int init_repeat;
     bool movement_stop;
     bool init_movement_stop;

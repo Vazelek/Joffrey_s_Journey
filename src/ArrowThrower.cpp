@@ -1,6 +1,6 @@
 #include "ArrowThrower.h"
 
-ArrowThrower::ArrowThrower(MyScene* scene, Player* player, int x, int y, QString orientation, int final_coord, float delay) : EventItem(scene, player, x, y, "../ressources/arrow_thrower_" + orientation), delay(delay * FPS), initial_delay(delay * FPS), final_coord(final_coord), orientation(orientation){
+ArrowThrower::ArrowThrower(MyScene* scene, Player* player, int x, int y, QString orientation, int final_coord, float delay) : EventItem(scene, player, x, y, "resources/arrow_thrower_" + orientation), delay(delay * FPS), initial_delay(delay * FPS), final_coord(final_coord), orientation(orientation){
     
 }
 

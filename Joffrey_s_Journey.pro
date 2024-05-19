@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = Joffrey_s_Journey
+TARGET = Joffrey_s_Journey.exe
 INCLUDEPATH += .
 QT += gui core widgets multimedia
 CONFIG += warn_off
@@ -13,7 +13,7 @@ CONFIG += warn_off
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 
-DESTDIR = ./build
+DESTDIR = .
 
 OBJECTS_DIR = ./build/obj
 MOC_DIR = ./build/moc

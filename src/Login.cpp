@@ -6,7 +6,7 @@ Login::Login(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_w
     vlayout->setAlignment(Qt::AlignCenter);
 
     QLabel* label = new QLabel();
-    label->setText("Entrez votre pseudo");
+    label->setText((MainWindow::isInEnglish()) ? "Enter your pseudo" : "Entrez votre pseudo");
     label->setAlignment(Qt::AlignHCenter);
     vlayout->addWidget(label);
 
@@ -24,7 +24,7 @@ Login::Login(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_w
     vlayout->addWidget(infos);
 
     new_connection = new QPushButton;
-    new_connection->setText("Se connecter");
+    new_connection->setText((MainWindow::isInEnglish()) ? "Log in" : "Se connecter");
 
     new_connection_button_displayed = false;
 }
@@ -35,14 +35,18 @@ Login::~Login(){
 
 void Login::buttonClick(){
     if(input->text() == ""){
-        infos->setText("IL FAUT REMPLIR CE CHAMP !!!");
+        infos->setText((MainWindow::isInEnglish()) ? "This field must be filled in!" : "IL FAUT REMPLIR CE CHAMP !!!");
         if(new_connection_button_displayed){
             QObject::disconnect(new_connection, SIGNAL(clicked()), this, SLOT(newConnection()));
             new_connection_button_displayed = false;
         }
     }
     else if(input->text().indexOf("$$$") != -1 || input->text().indexOf("(") != -1 || input->text().indexOf(")") != -1 || input->text().indexOf("{") != -1 || input->text().indexOf("}") != -1 || input->text().indexOf("[") != -1 || input->text().indexOf("]") != -1){
-        infos->setText("Suite de charactères impossible : \"$$$\", \"(\", \")\", \"{\", \"}\", \"[\", \"]\""); // Causerait des problème dans la lecture du fichier player_data.txt
+        infos->setText(
+            (MainWindow::isInEnglish()) ? 
+                "Forbidden character strings : \"$$$\", \"(\", \")\", \"{\", \"}\", \"[\", \"]\"" :
+                "Suite de charactères impossible : \"$$$\", \"(\", \")\", \"{\", \"}\", \"[\", \"]\""
+        ); // May cause problems in player_data.txt file
         if(new_connection_button_displayed){
             QObject::disconnect(new_connection, SIGNAL(clicked()), this, SLOT(newConnection()));
             new_connection_button_displayed = false;
@@ -56,7 +60,11 @@ void Login::buttonClick(){
             main_window->getMenu()->reloadConnectName();
         }
         else{
-            infos->setText("Vous êtes sur le point de vous connecter en tant que \"" + input->text() + "\"\nVos scores et records vont être enregistrés sous ce pseudonyme");
+            infos->setText(
+                (MainWindow::isInEnglish()) ? 
+                    "You are about to log in as \"" + input->text() + "\"\nYour scores and records will be saved under this nickname" :
+                    "Vous êtes sur le point de vous connecter en tant que \"" + input->text() + "\"\nVos scores et records vont être enregistrés sous ce pseudonyme"
+            );
             if(!new_connection_button_displayed){
                 vlayout->addWidget(new_connection);
                 QObject::connect(new_connection, SIGNAL(clicked()), this, SLOT(newConnection()));

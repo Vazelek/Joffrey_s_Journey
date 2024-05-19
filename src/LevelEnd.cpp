@@ -23,43 +23,53 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     }
     int coins = scene->getCoinsCount();
 
-    int score = 10000; // Niveau terminé
-    int death_score = 10000 - (deaths_count * 1000); // Morts
-    int time_score = (3600 - seconds) * 10; // Temps
-    int coins_score = coins * 1000; // Pièces ramassées
+    int score = 10000; // Level end
+    int death_score = 10000 - (deaths_count * 1000); // Deaths
+    int time_score = (3600 - seconds) * 10; // Time
+    int coins_score = coins * 1000; // Coins
 
     score += death_score + time_score + coins_score;
 
     QString star_save = "";
 
-    // Vérification de s'il y a nouveau record et update du fichier records.txt
+    // Check if there is a new record and update records.txt
     scene->getMainWindow()->getPlayerData()->updatePlayerData(scene->getLevel(), score, QString::number(minutes) + ":" + QString::number(infos->getSeconds()));
     auto records = scene->getMainWindow()->getPlayerData()->getRecords()->value(scene->getLevel());
 
     // Fonts
-    int id = QFontDatabase::addApplicationFont("../fonts/albas.TTF");
+    int id = QFontDatabase::addApplicationFont("fonts/albas.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont albas(family);
 
-    id = QFontDatabase::addApplicationFont("../fonts/Maghrib-MVZpx.ttf");
+    id = QFontDatabase::addApplicationFont("fonts/Maghrib-MVZpx.ttf");
     family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont maghrib(family);
 
-    id = QFontDatabase::addApplicationFont("../fonts/BubbleBobble-rg3rx.ttf");
+    id = QFontDatabase::addApplicationFont("fonts/BubbleBobble-rg3rx.ttf");
     family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont bubble(family);
 
-    // Remplissage de l'écran de fin de niveau
+    // Fill the screen of the end of the level
     QVBoxLayout* v_layout = new QVBoxLayout();
     mainWidget->setLayout(v_layout);
 
-    // Titre
+    // Title
     QLabel* title = new QLabel();
     if(scene->getLevel() != 0){
-        title->setText("Niveau " + QString::number(scene->getLevel()) + " terminé !!!");
+        if (MainWindow::isInEnglish()) {
+            title->setText("Level " + QString::number(scene->getLevel()) + " complete!");
+        }
+        else {
+            title->setText("Niveau " + QString::number(scene->getLevel()) + " terminé !!!");
+        }
     }
     else{
-        title->setText("Introduction terminée !!!\nVous êtes prêt pour partir à l'aventure !");
+        if (MainWindow::isInEnglish()) {
+            title->setText("Introduction complete! You're ready to embark on your adventure!");
+        }
+        else {
+            title->setText("Introduction terminée !!!\nVous êtes prêt pour partir à l'aventure !");
+        }
         height += 50;
     }
     star_save += "1/";
@@ -68,7 +78,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     title->setAlignment(Qt::AlignHCenter);
     v_layout->addWidget(title);
 
-    // Etoiles
+    // Stars
     QWidget* stars_widget = new QWidget();
     stars_widget->setStyleSheet("border: 1px solid black;");
     QVBoxLayout* stars_layout = new QVBoxLayout();
@@ -89,28 +99,28 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     labels_wg->setLayout(labels);
     labels_wg->setStyleSheet("border: 0px solid black;");
 
-    // Niveau terminé
+    // Level completed
     QLabel* star1 = new QLabel();
-    star1->setPixmap(QPixmap("../ressources/star_full.png"));
+    star1->setPixmap(QPixmap("resources/star_full.png"));
     star1->setFixedSize(48, 48);
     star1->setScaledContents(true);
     stars->addWidget(star1);
 
     QLabel* label1 = new QLabel();
-    label1->setText("Niveau terminé");
+    label1->setText((MainWindow::isInEnglish()) ? "Level complete" : "Niveau terminé");
     label1->setFont(albas);
     label1->setMaximumWidth(48);
     label1->setAlignment(Qt::AlignHCenter);
     labels->addWidget(label1);
 
-    // Pièces ramassées
+    // Collected coins
     QLabel* star2 = new QLabel();
     if(coins == scene->getTotalCoins()){
-        star2->setPixmap(QPixmap("../ressources/star_full.png"));
+        star2->setPixmap(QPixmap("resources/star_full.png"));
         star_save += "1/";
     }
     else{
-        star2->setPixmap(QPixmap("../ressources/star_empty.png"));
+        star2->setPixmap(QPixmap("resources/star_empty.png"));
         star_save += "0/";
     }
     star2->setFixedSize(48, 48);
@@ -125,7 +135,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     label2->setLayout(label2_layout);
 
     QLabel* label21 = new QLabel();
-    label21->setText("Pièces ramassées");
+    label21->setText((MainWindow::isInEnglish()) ? "Coins obtained" : "Pièces ramassées");
     label21->setFont(albas);
     label21->setFixedWidth(48);
     label21->setAlignment(Qt::AlignHCenter);
@@ -142,14 +152,14 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     labels->addWidget(label2);
 
-    // Morts
+    // Deaths
     QLabel* star3 = new QLabel();
     if(scene->getDeaths() == 0){
-        star3->setPixmap(QPixmap("../ressources/star_full.png"));
+        star3->setPixmap(QPixmap("resources/star_full.png"));
         star_save += "1/";
     }
     else{
-        star3->setPixmap(QPixmap("../ressources/star_empty.png"));
+        star3->setPixmap(QPixmap("resources/star_empty.png"));
         star_save += "0/";
     }
     star3->setFixedSize(48, 48);
@@ -164,7 +174,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     label3->setLayout(label3_layout);
 
     QLabel* label31 = new QLabel();
-    label31->setText("Mort(s)");
+    label31->setText((MainWindow::isInEnglish()) ? "Deaths" : "Morts");
     label31->setFont(albas);
     label31->setFixedWidth(48);
     label31->setAlignment(Qt::AlignHCenter);
@@ -181,15 +191,15 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     labels->addWidget(label3);
 
-    // Temps
+    // Time
     QLabel* star4 = new QLabel();
 
     if(minutes < 2){
-       star4->setPixmap(QPixmap("../ressources/star_full.png"));
+       star4->setPixmap(QPixmap("resources/star_full.png"));
        star_save += "1";
     }
     else{
-        star4->setPixmap(QPixmap("../ressources/star_empty.png"));
+        star4->setPixmap(QPixmap("resources/star_empty.png"));
         star_save += "0";
     }
     star4->setFixedSize(48, 48);
@@ -206,7 +216,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     label4->setLayout(label4_layout);
 
     QLabel* label41 = new QLabel();
-    label41->setText("Temps");
+    label41->setText((MainWindow::isInEnglish()) ? "Time" : "Temps");
     label41->setFont(albas);
     label41->setFixedWidth(48);
     label41->setAlignment(Qt::AlignHCenter);
@@ -268,11 +278,11 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     time_best->setStyleSheet("border: 0px solid black;");
     time_best->setFont(bubble);
     if(records->value("time") == QString::number(minutes) + ":" + QString::number(infos->getSeconds())){
-        time_label->setText("Nouveau record de temps !");
+        time_label->setText((MainWindow::isInEnglish()) ? "New time record!" : "Nouveau record de temps !");
         time_best->setText(records->value("time") + "\n(" + records->value("time_player") + ")");
     }
     else{
-        time_label->setText("Record de temps");
+        time_label->setText((MainWindow::isInEnglish()) ? "Time record!" : "Record de temps");
         time_best->setText(records->value("time") + "\n(" + records->value("time_player") + ")");
     }
     time_label->setFont(albas);
@@ -288,11 +298,11 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     score_best->setFont(bubble);
     score_best->setAlignment(Qt::AlignCenter);
     if(records->value("score") == QString::number(score)){
-        score_label->setText("Nouveau record de score !");
+        score_label->setText((MainWindow::isInEnglish()) ? "New score record!" : "Nouveau record de score !");
         score_best->setText(records->value("score") + "\n(" + records->value("score_player") + ")");
     }
     else{
-        score_label->setText("Record de score");
+        score_label->setText((MainWindow::isInEnglish()) ? "Score record!" : "Record de score");
         score_best->setText(records->value("score") + "\n(" + records->value("score_player") + ")");
     }
     score_label->setFont(albas);
@@ -306,7 +316,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
     player_widget->setLayout(player_layout);
 
     moving_player = new QLabel;
-    moving_player->setPixmap(QPixmap("../ressources/player_bag_2"));
+    moving_player->setPixmap(QPixmap("resources/player_bag_2"));
     moving_player->setFixedWidth(42);
     player_layout->addWidget(moving_player);
 
@@ -316,9 +326,9 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     QHBoxLayout* h_layout = new QHBoxLayout;
 
-    QPushButton* restart = new QPushButton("Recommencer le niveau");
+    QPushButton* restart = new QPushButton((MainWindow::isInEnglish()) ? "Restart level" : "Recommencer le niveau");
     h_layout->addWidget(restart);
-    QPushButton* exit = new QPushButton("Retour vers le menu");
+    QPushButton* exit = new QPushButton((MainWindow::isInEnglish()) ? "Back to menu" : "Retour vers le menu");
     h_layout->addWidget(exit);
     h_layout->setMargin(0);
 
@@ -334,8 +344,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 
     updatePos();
 
-    // Animation du personnage
-
+    // Character animation
     QTimer* timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updatePlayer()));
     timer->start(200);
@@ -353,7 +362,7 @@ LevelEnd::~LevelEnd(){
 void LevelEnd::updatePos(){
     int coord_x = player->x() + player->getWidth() / 2  - (width / 2);
     int coord_y = player->y() + player->getHeight() / 2  - (height / 2);
-    float window_width = scene->getMainWindow()->window()->size().width() / 3; // /3 pour le scale
+    float window_width = scene->getMainWindow()->window()->size().width() / 3;
     float window_height = scene->getMainWindow()->window()->size().height() / 3;
 
     if(player->x() <  window_width / 2 - player->getWidth() / 2){
@@ -389,5 +398,5 @@ void LevelEnd::updatePlayer(){
         animation_direction = -1;
     }
     animation_status += animation_direction;
-    moving_player->setPixmap(QPixmap("../ressources/player_bag_" + QString::number(animation_status) + ".png"));
+    moving_player->setPixmap(QPixmap("resources/player_bag_" + QString::number(animation_status) + ".png"));
 }

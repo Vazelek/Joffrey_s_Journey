@@ -6,7 +6,7 @@
 class Arrow : public EventItem{
 
 private:
-    int final_coord; // Mettre une coordonnée finale évite que chaque flèche vérifie ses collisions avec toutes les plateforms à chaque fois (faux)
+    int final_coord;
     QString orientation;
     float speed;
 public:

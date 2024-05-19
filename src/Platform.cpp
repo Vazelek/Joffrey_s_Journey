@@ -40,11 +40,10 @@ void Platform::itemsGeneration(QString ressource_url, int new_width, int new_hei
         graphics_items[i] = new QGraphicsPixmapItem*[height];
     }
 
-    // Chemin vers le fichier contenant les ressources
-    QString path = "../ressources/";
+    QString path = "resources/";
 
 
-    if(ressource_url == "button"){ // Ressources url spéciale (prédéfinie)
+    if(ressource_url == "button"){
         QString res = "button.png";
         graphics_items[0][0] = new QGraphicsPixmapItem(path + res);
         graphics_items[0][0]->setScale(0.1);
@@ -224,7 +223,6 @@ void Platform::platformCollidesWithGravitySensitiveItem(bool positive_speed, boo
                     }
                     platform->platformCollidesWithGravitySensitiveItem(positive_speed, movement_vertical);
                 }
-                // Collision en descente impossible selon le game design
             }
         }
     }
@@ -261,7 +259,7 @@ bool Platform::collidesWithPlatform(Platform* platform, int v_speed, int h_speed
 void Platform::updateImage(QString ressource_url){
     for(int i = 0; i < width; i++){
         for(int j = 0; j < height; j++){
-            QString path = "../ressources/";
+            QString path = "resources/";
             graphics_items[i][j]->setPixmap(path + ressource_url);
         }
     }

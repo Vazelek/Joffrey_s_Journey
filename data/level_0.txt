@@ -900,168 +900,196 @@ TextArea: {
         x: (136),
         y: (0),
         max_width: (120),
-        text: (Déplacements :<br>[Q] / [←] : Aller à gauche<br>[D] / [→] : Aller à droite)
+        text_en: (Movements :<br>[Q] / [←] : Go left<br>[D] / [→] : Go right),
+        text_fr: (Déplacements :<br>[Q] / [←] : Aller à gauche<br>[D] / [→] : Aller à droite)
     ],
     [
         x: (400),
         y: (0),
         max_width: (75),
-        text: (Mettre le jeu en pause :<br>[Esc])
+        text_en: (Pause game :<br>[Esc]),
+        text_fr: (Mettre le jeu en pause :<br>[Esc])
     ],
     [
         x: (700),
         y: (0),
         max_width: (75),
-        text: (Sauter :<br>[Z] / [↑])
+        text_en: (Jump :<br>[Z] / [↑]),
+        text_fr: (Sauter :<br>[Z] / [↑])
     ],
     [
         x: (1100),
         y: (0),
         max_width: (150),
-        text: ("Bienvenue dans mon jardin !<br>Mon nom est Joffrey, et je fais une collection de fleurs extrèmement rares depuis des décennies. Prends ton temps pour admirer ma collection !")
+        text_en: ("Welcome to my garden!<br>My name is Joffrey, and I've been collecting extremely rare flowers for decades. Take your time to admire my collection!"),
+        text_fr: ("Bienvenue dans mon jardin !<br>Mon nom est Joffrey, et je fais une collection de fleurs extrêmement rares depuis des décennies. Prends ton temps pour admirer ma collection !")
     ],
     [
         x: (1650),
         y: (0),
         max_width: (200),
-        text: ("Une toute dernière fleur manque à ma collection. C'est une fleur unique au monde. D'après mon guide ultime du fleuriste-aventurier, elle se trouve dans un magnifique jardin secret très reculé et extrèmement difficile d'accès.")
+        text_en: ("One last flower is missing from my collection. It's the only flower of its kind in the world. According to my ultimate florist-adventurer's guide, it can be found in a magnificent secret garden, very remote and extremely difficult to access.."),
+        text_fr: ("Une toute dernière fleur manque à ma collection. C'est une fleur unique au monde. D'après mon guide ultime du fleuriste-aventurier, elle se trouve dans un magnifique jardin secret très reculé et extrêmement difficile d'accès.")
     ],
     [
         x: (2450),
         y: (0),
         max_width: (100),
-        text: ("C'est le grand jour !<br>En route pour une nouvelle aventure !!!")
+        text_en: ("Today's the big day!<br>Let's go for a new adventure!!!"),
+        text_fr: ("C'est le grand jour !<br>En route pour une nouvelle aventure !!!")
     ],
     [
         x: (2500),
         y: (510),
         max_width: (120),
-        text: ("Le chemin va sûrement être semé d'embûches. Il risque d'être dangereux, mais la récompense vaut largement le coup !")
+        text_en: ("It's sure to be a bumpy ride. It may be dangerous, but the reward is well worth it!"),
+        text_fr: ("Le chemin va sûrement être semé d'embûches. Il risque d'être dangereux, mais la récompense vaut largement le coup !")
     ],
     [
         x: (2150),
         y: (510),
         max_width: (130),
-        text: ("Ce drapeau est un "check-point" je crois. Il paraît, d'après mon guide, qu'il peut me permettre de revenir ici si jamais je ...")
+        text_en: ("This flag is a "check-point", I think. It seems, according to my guide, that it can allow me to come back here if I ever ..."),
+        text_fr: ("Ce drapeau est un "check-point" je crois. Il paraît, d'après mon guide, qu'il peut me permettre de revenir ici si jamais je ...")
     ],
     [
         x: (1851),
         y: (510),
         max_width: (130),
-        text: ("Essayons d'atteindre l'autre côté.")
+        text_en: ("Let's try to reach the other side."),
+        text_fr: ("Essayons d'atteindre l'autre côté.")
     ],
     [
         x: (1450),
         y: (594),
         max_width: (100),
-        text: ("Hmm... Cette plateforme semble fragile.")
+        text_en: ("Hmm... This platform looks fragile."),
+        text_fr: ("Hmm... Cette plateforme semble fragile.")
     ],
     [
         x: (1600),
         y: (800),
         max_width: (110),
-        text: ("Oulà ! Il commence à faire chaud là... Mieux vaut ne pas tomber !")
+        text_en: ("Wow, it's getting hot in here... Better not fall off!"),
+        text_fr: ("Oulà ! Il commence à faire chaud là... Mieux vaut ne pas tomber !")
     ],
     [
         x: (2650),
         y: (800),
         max_width: (150),
-        text: ("Aïe ! Il faudra que je fasse plus attention dans le futur... Certaines choses ne sont apparemment pas ce qu'elles semblent être.")
+        text_en: ("Ouch! I'll have to be more careful in the future... Some things are apparently not what they seem."),
+        text_fr: ("Aïe ! Il faudra que je fasse plus attention dans le futur... Certaines choses ne sont apparemment pas ce qu'elles semblent être.")
     ],
     [
         x: (3000),
         y: (800),
         max_width: (75),
-        text: ("Une porte...<br>Comment l'ouvrir ?")
+        text_en: ("A door...<br>How to open it?"),
+        text_fr: ("Une porte...<br>Comment l'ouvrir ?")
     ],
     [
         x: (3100),
         y: (1100),
         max_width: (100),
-        text: ("Certaines choses ne sont pas forcément ce qu'elles semblent être...")
+        text_en: ("Some things are apparently not what they seem..."),
+        text_fr: ("Certaines choses ne sont pas forcément ce qu'elles semblent être...")
     ],
     [
         x: (2700),
         y: (1100),
         max_width: (100),
-        text: ("Quelle est cette sorcèlerie ?")
+        text_en: ("What kind of sorcery is this?"),
+        text_fr: ("Quelle est cette sorcèlerie ?")
     ],
     [
         x: (2500),
         y: (1100),
         max_width: (150),
-        text: ("Cette grosse boite m'empêche de passer !"<br><br>[A] + [←] / [A] + [→] : Pousser une caisse)
+        text_en: ("This big box is in my way!"<br><br>[A] + [←] / [A] + [→] : Pushing a box),
+        text_fr: ("Cette grosse boite m'empêche de passer !"<br><br>[A] + [←] / [A] + [→] : Pousser une caisse)
     ],
     [
         x: (2200),
         y: (1100),
         max_width: (100),
-        text: ("Brrrrrr ! Il commence à faire froid ici !")
+        text_en: ("Brrrrrr! It's getting cold in here!"),
+        text_fr: ("Brrrrrr ! Il commence à faire froid ici !")
     ],
     [
         x: (1950),
         y: (1250),
         max_width: (100),
-        text: ("Impossible que je passe dans ce trou... Il faut que j'y fasse tomber quelque chose.")
+        text_en: ("There's no way I'm going through that hole... I have to drop something."),
+        text_fr: ("Impossible que je passe dans ce trou... Il faut que j'y fasse tomber quelque chose.")
     ],
     [
         x: (1950),
         y: (1575),
         max_width: (100),
-        text: ("Oulà ! Ça devient dangereux par ici... Mieux vaut ne pas toucher une de ces flèches !")
+        text_en: ("Wow! It's getting dangerous around here... Better not hit one of those arrows!"),
+        text_fr: ("Oulà ! Ça devient dangereux par ici... Mieux vaut ne pas toucher une de ces flèches !")
     ],
     [
         x: (2300),
         y: (1575),
         max_width: (150),
-        text: (Les cercles en haut à gauche de votre écran représentent vos pouvoirs.<br>Un cercle plein signifi que le pouvoir correspondant est disponible à l'utilisation et que vous pouvez l'activer, au contraire d'un cercle vide.)
+        text_en: (The circles at the top left of your screen represent your powers.<br>A full circle means that the corresponding power is available for use and that you can activate it, as opposed to an empty circle.),
+        text_fr: (Les cercles en haut à gauche de votre écran représentent vos pouvoirs.<br>Un cercle plein signifi que le pouvoir correspondant est disponible à l'utilisation et que vous pouvez l'activer, au contraire d'un cercle vide.)
     ],
     [
         x: (2500),
         y: (1575),
         max_width: (200),
-        text: ("Hmmm... Il paraît que marcher sur une de ces plateformes octroie le pouvoir correspondant à la couleur. La couleur bleue permettrait de sauter plus haut d'après mon guide"<br><br>Activer le pouvoir bleu<br>[&]<br>Votre prochain saut vous emmenera plus haut)
+        text_en: ("Hmmm... I've heard that stepping on one of these platforms grants the power corresponding to the color. The blue color would allow you to jump higher, according to my guide."<br><br>Activate blue power<br>[&]<br>Your next jump will take you higher),
+        text_fr: ("Hmmm... Il paraît que marcher sur une de ces plateformes octroie le pouvoir correspondant à la couleur. La couleur bleue permettrait de sauter plus haut d'après mon guide"<br><br>Activer le pouvoir bleu<br>[&]<br>Votre prochain saut vous emmenera plus haut)
     ],
     [
         x: (2350),
         y: (1410),
         max_width: (200),
-        text: ("La couleur rouge permettrait de... "dasher" ? Qu'est-ce que ça veut dire ?"<br><br>Activer le pouvoir rouge<br>[é]<br>Aller dans une direction et appuyer sur la touche d'activation pour vous téléporter plus loin)
+        text_en: ("The color purple would allow you to... "dash"? What does that mean?"<br><br>Activate the purple power<br>[é]<br>Go in one direction and press the activation key to teleport further away),
+        text_fr: ("La couleur violette permettrait de... "dasher" ? Qu'est-ce que ça veut dire ?"<br><br>Activer le pouvoir violet<br>[é]<br>Aller dans une direction et appuyer sur la touche d'activation pour vous téléporter plus loin)
     ],
     [
         x: (2825),
         y: (1300),
         max_width: (200),
-        text: ("Enfin, la couleur orange permet d'obtenir un bouclier qui me protège des flèches"<br><br>Activer le pouvoir orange<br>["]<br>Désintègre les flèches qui vous touche, vous rendant invulnérable une fois)
+        text_en: ("Finally, the orange color creates a shield that protects me from arrows."<br><br>Activate orange power<br>["]<br>Disintegrates arrows that hit you, making you invulnerable once),
+        text_fr: ("Enfin, la couleur orange permet d'obtenir un bouclier qui me protège des flèches"<br><br>Activer le pouvoir orange<br>["]<br>Désintègre les flèches qui vous touche, vous rendant invulnérable une fois)
     ],
     [
         x: (2850),
         y: (1875),
         max_width: (100),
-        text: ("Impossible pour moi de passer par ce trou de souris. Il faudrait que j'arrête la charcuterie...")
+        text_en: ("It's impossible for me to get through this mouse hole. I'd have to stop eating cold meats..."),
+        text_fr: ("Impossible pour moi de passer par ce trou de souris. Il faudrait que j'arrête la charcuterie...")
     ],
     [
         x: (2896),
         y: (1448),
         max_width: (100),
-        text: ("Hmm... Elle sert à quoi celle-là ? Je n'ai pas souvenir de l'avoir vu dans mon guide")
+        text_en: ("Hmm... What's this one for? I don't remember seeing it in my guidebook."),
+        text_fr: ("Hmm... Elle sert à quoi celle-là ? Je n'ai pas souvenir de l'avoir vu dans mon guide.")
     ],
     [
         x: (2550),
         y: (1875),
         max_width: (100),
-        text: ("Wow ! J'ai rapetissé ! J'espère que je vais retrouver ma taille un jour, parce que je me sens comme un enfant...")
+        text_en: ("Wow, I've shrunk! I hope I'll get my size back one day, because I feel like a kid..."),
+        text_fr: ("Wow ! J'ai rapetissé ! J'espère que je vais retrouver ma taille un jour, parce que je me sens comme un enfant...")
     ],
     [
         x: (2350),
         y: (1875),
         max_width: (75),
-        text: ("Ma taille normale !<br>Ça fait du bien !")
+        text_en: ("My normal size!<br>That feels good!"),
+        text_fr: ("Ma taille normale !<br>Ça fait du bien !")
     ],
     [
         x: (2200),
         y: (1875),
         max_width: (100),
-        text: ("La partie facile est terminée...<br>En route pour la véritable aventure !!!")
+        text_en: ("The easy part is over...<br>On the way to the real adventure!!!"),
+        text_fr: ("La partie facile est terminée...<br>En route pour la véritable aventure !!!")
     ],
 }

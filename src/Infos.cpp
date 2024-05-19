@@ -17,19 +17,19 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     QWidget* right_widget = new QWidget;
     layout->addWidget(right_widget);
 
-    // Partie infos ----------------------------------------------------------------------------------------------------
+    // Infos part ----------------------------------------------------------------------------------------------------
     QHBoxLayout* layout_right = new QHBoxLayout;
     right_widget->setLayout(layout_right);
     layout_right->setAlignment(Qt::AlignRight);
 
-    // Pièces
+    // Coins
     QWidget* coins_widget = new QWidget;
     QHBoxLayout* coins_layout = new QHBoxLayout;
     coins_widget->setLayout(coins_layout);
     coins_layout->setMargin(5);
 
     QLabel* coins_image = new QLabel;
-    coins_image->setPixmap(QPixmap("../ressources/coin_icon.png"));
+    coins_image->setPixmap(QPixmap("resources/coin_icon.png"));
     coins_image->setFixedSize(16, 16);
     coins_image->setScaledContents(true);
     coins_layout->addWidget(coins_image);
@@ -42,14 +42,14 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     layout_right->addWidget(coins_widget);
 
 
-    // Morts
+    // Deaths
     QWidget* deaths_widget = new QWidget;
     QHBoxLayout* deaths_layout = new QHBoxLayout;
     deaths_widget->setLayout(deaths_layout);
     deaths_layout->setMargin(5);
 
     QLabel* deaths_image = new QLabel;
-    deaths_image->setPixmap(QPixmap("../ressources/death.png"));
+    deaths_image->setPixmap(QPixmap("resources/death.png"));
     deaths_image->setFixedSize(16, 16);
     deaths_image->setScaledContents(true);
     deaths_layout->addWidget(deaths_image);
@@ -62,14 +62,14 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     layout_right->addWidget(deaths_widget);
 
 
-    // Chronomètre
+    // Chronometer
     QWidget* chrono_widget = new QWidget;
     QHBoxLayout* chrono_layout = new QHBoxLayout;
     chrono_widget->setLayout(chrono_layout);
     chrono_layout->setMargin(5);
 
     QLabel* chronometer_image = new QLabel;
-    chronometer_image->setPixmap(QPixmap("../ressources/clock.png"));
+    chronometer_image->setPixmap(QPixmap("resources/clock.png"));
     chronometer_image->setFixedSize(16, 16);
     chronometer_image->setScaledContents(true);
     chrono_layout->addWidget(chronometer_image);
@@ -82,28 +82,28 @@ Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
     layout_right->addWidget(chrono_widget);
 
 
-    // Partie skills ---------------------------------------------------------------------------------------------------
+    // Skills part ---------------------------------------------------------------------------------------------------
     QHBoxLayout* layout_left = new QHBoxLayout;
     left_widget->setLayout(layout_left);
     layout_left->setAlignment(Qt::AlignLeft);
 
-    // Super saut
+    // Super jump
     jump  = new QLabel;
-    jump->setPixmap(QPixmap("../ressources/jump_empty.png"));
+    jump->setPixmap(QPixmap("resources/jump_empty.png"));
     jump->setFixedSize(16, 16);
     jump->setScaledContents(true);
     layout_left->addWidget(jump);
 
     // Dash
     dash  = new QLabel;
-    dash->setPixmap(QPixmap("../ressources/dash_empty.png"));
+    dash->setPixmap(QPixmap("resources/dash_empty.png"));
     dash->setFixedSize(16, 16);
     dash->setScaledContents(true);
     layout_left->addWidget(dash);
 
-    // Bouclier
+    // Shield
     shield  = new QLabel;
-    shield->setPixmap(QPixmap("../ressources/shield_empty.png"));
+    shield->setPixmap(QPixmap("resources/shield_empty.png"));
     shield->setFixedSize(16, 16);
     shield->setScaledContents(true);
     layout_left->addWidget(shield);
@@ -124,7 +124,7 @@ Infos::~Infos(){
 
 void Infos::update(){
 
-    float window_width = scene->getMainWindow()->window()->size().width() / 3; // /3 pour le scale
+    float window_width = scene->getMainWindow()->window()->size().width() / 3;
     float window_height = scene->getMainWindow()->window()->size().height() / 3;
     int coord_x = player->x() + player->getWidth() / 2  + (window_width / 2) - width;
     int coord_y = player->y() + player->getHeight() / 2  - (window_height / 2);
@@ -144,7 +144,7 @@ void Infos::update(){
 
     setPos(coord_x, coord_y - 22);
 
-    seconds += (double) 1 / FPS; // Manque de précision (trop rapide)
+    seconds += (double) 1 / FPS; // Not precise
     if(seconds >= 60){
         seconds -= 60;
         minutes++;
@@ -177,24 +177,24 @@ double Infos::getSeconds(){
 
 void Infos::updateSkills(){
     if(player->getSkillsAvailable(0)){
-        jump->setPixmap(QPixmap("../ressources/jump_full.png"));
+        jump->setPixmap(QPixmap("resources/jump_full.png"));
     }
     else{
-        jump->setPixmap(QPixmap("../ressources/jump_empty.png"));
+        jump->setPixmap(QPixmap("resources/jump_empty.png"));
     }
 
     if(player->getSkillsAvailable(1)){
-        dash->setPixmap(QPixmap("../ressources/dash_full.png"));
+        dash->setPixmap(QPixmap("resources/dash_full.png"));
     }
     else{
-        dash->setPixmap(QPixmap("../ressources/dash_empty.png"));
+        dash->setPixmap(QPixmap("resources/dash_empty.png"));
     }
 
     if(player->getSkillsAvailable(2)){
-        shield->setPixmap(QPixmap("../ressources/shield_full.png"));
+        shield->setPixmap(QPixmap("resources/shield_full.png"));
     }
     else{
-        shield->setPixmap(QPixmap("../ressources/shield_empty.png"));
+        shield->setPixmap(QPixmap("resources/shield_empty.png"));
     }
 }
 

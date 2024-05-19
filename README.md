@@ -22,7 +22,7 @@ make
 
 Execute
 ```sh
-./build/Joffrey_s_Journey
+./Joffrey_s_Journey.exe
 ```
 
 ### Centos
@@ -40,6 +40,6 @@ make
 
 Execute
 ```sh
-./build/Joffrey_s_Journey
+./Joffrey_s_Journey.exe
 ```
 

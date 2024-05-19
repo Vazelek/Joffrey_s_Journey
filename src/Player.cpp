@@ -41,12 +41,11 @@ void Player::jump(){
 
 void Player::move(){
 
-    // Check si le personnage à un sol sous ses pieds
-    // Possibilité de le mettre avec l'autre isColliding down
+    // Check whether the player's feet are on the ground
     if(isColliding("down", -1) == nullptr){
         vert_speed -= 0.5;
         if(vert_speed <= -15){
-            vert_speed = -15; // Vitesse verticale limite
+            vert_speed = -15; // Max vertical speed
         }
     }
 
@@ -77,10 +76,10 @@ void Player::move(){
             }
             animation_status += animation_direction;
             if(facing_left){
-                setPixmap(QPixmap("../ressources/player_" + QString::number(animation_status) + ".png").transformed(QTransform().scale(-1, 1)));
+                setPixmap(QPixmap("resources/player_" + QString::number(animation_status) + ".png").transformed(QTransform().scale(-1, 1)));
             }
             else{
-                setPixmap(QPixmap("../ressources/player_" + QString::number(animation_status) + ".png"));
+                setPixmap(QPixmap("resources/player_" + QString::number(animation_status) + ".png"));
             }
             animation_time = 6;
         }
@@ -139,15 +138,14 @@ void Player::move(){
         ice_speed = 0;
     }
 
-    // Check si le personnage tente d'aller hors limites / de passer à travers le sol
-    // - en bas
+    // Check if the player is trying to go Out Of Bounds
+    // - down
     if(vert_speed < 0){
         if(isColliding("down", floor(vert_speed)) != nullptr){
-            // On l'arrète
             vert_speed = 0;
         }
     }
-    // - en haut
+    // - up
     if(vert_speed > 0){
         Platform* platform = isColliding("up", floor(vert_speed));
         if(platform != nullptr){
@@ -162,16 +160,16 @@ void Player::move(){
 
     Platform* platform = nullptr;
 
-    // - à gauche
+    // - on the left
     if(hori_speed < 0){
         platform = isColliding("left", hori_speed);
         if(platform != nullptr){
             hori_speed = 0;
 
             std::string class_name(platform->metaObject()->className());
-            // On vérifie si on tente de pousser une platforme poussable
+            // Check if he is trying to push a box
             if(class_name == "PushablePlatform"){
-                if(scene->getPressedKeys(2)){ // Si la touche A est appuyée, on essaye de pousser la boite
+                if(scene->getPressedKeys(2)){ // If A key is pressed, try to push the box
 
                     platform->moveTo(platform->getX() -1, platform->getY());
                     QVector<Platform*>* platforms_moved = new QVector<Platform*>;
@@ -188,26 +186,26 @@ void Player::move(){
                             continue;
                         }
 
-                        // Replace totes les platformes poussables qui ont bougé si elles touchent un mur
+                        // Stop the pushable platforms if they hit a wall
                         plt->platformCollidesWithGravitySensitiveItem(true, false, nullptr, platforms_moved);
                     }
                     delete platforms_moved;
 
-                    // Enfin on essaye de coller le joueur à la platform qu'il a pousser
+                    // Stick the player to the platform he is trying to push
                     isColliding("left", -1);
                 }
             }
         }
-    } // - à droite
+    } // - on the right
     else if(hori_speed > 0){
         platform = isColliding("right", hori_speed);
         if(platform != nullptr){
             hori_speed = 0;
 
             std::string class_name(platform->metaObject()->className());
-            // On vérifie si on tente de pousser une platforme poussable
+            // Check if he is trying to push a box
             if(class_name == "PushablePlatform"){
-                if(scene->getPressedKeys(2)){ // Si la touche A est appuyée, on essaye de pousser la boite
+                if(scene->getPressedKeys(2)){ // If A key is pressed, try to push the box
 
                     platform->moveTo(platform->getX() +1, platform->getY());
                     QVector<Platform*>* platforms_moved = new QVector<Platform*>;
@@ -254,7 +252,7 @@ Platform* Player::isColliding(QString direction, float speed){
 
     // qDebug() << "Collides " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
 
-    int min_distance = 0; // Pour savoir quel est le bloc le plus proche
+    int min_distance = 0; // To know what is the closest bloc
     int new_coord = 0;
     Platform* closest = nullptr;
     if(direction == "left"){
@@ -366,7 +364,7 @@ bool Player::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
 }
 
 void Player::death(Platform* platform){ // A suppr
-    qDebug() << "Le décès est présent pour votre plus grand déplaisir ! " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
+    qDebug() << "DEATH " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
     death();
 }
 
@@ -457,7 +455,7 @@ void Player::useShield(){
     }
     skills_available[2] = false;
     scene->getInfos()->updateSkills();
-    shield = new QGraphicsPixmapItem(QPixmap("../ressources/shield.png"));
+    shield = new QGraphicsPixmapItem(QPixmap("resources/shield.png"));
     shield->setScale(0.1);
     shield->setPos(x() + width / 2 - 13, y() + height / 2 - 32);
     scene->addItem(shield);

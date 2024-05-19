@@ -3,8 +3,6 @@
 SecretRoom::SecretRoom(MyScene* scene, Player* player, int x, int y, int width, int height, QString ressource_url) : QObject(), scene(scene), player(player), x(x), y(y), width(width), height(height){
 
     scene->pushSecretRoom(this);
-
-    // Exception width ou height = 0
     
     itemsGeneration(ressource_url);
     is_hidden = false;
@@ -42,8 +40,7 @@ void SecretRoom::itemsGeneration(QString ressource_url, int new_width, int new_h
         graphics_items[i] = new QGraphicsPixmapItem*[height];
     }
 
-    // Chemin vers le fichier contenant les ressources
-    QString path = "../ressources/";
+    QString path = "resources/";
 
     for(int i = 0; i < width; i++){
         for(int j = 0; j < height; j++){

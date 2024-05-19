@@ -5,14 +5,18 @@ Menu::Menu(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_win
     QVBoxLayout* vlayout = new QVBoxLayout(this);
 
     connect_name = new QLabel;
-    connect_name->setText("Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom");
+    connect_name->setText(
+        (MainWindow::isInEnglish()) ?
+            "You are logged in as \""  + main_window->getPlayerData()->getCurrentPlayer() + "\"\nYour scores and records will be saved under this nickname": 
+            "Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom"
+    );
     connect_name->setAlignment(Qt::AlignCenter);
     connect_name->setMaximumHeight(80);
 
     vlayout->addWidget(connect_name);
 
     QPushButton* disconnect_button = new QPushButton;
-    disconnect_button->setText("Déconnexion");
+    disconnect_button->setText((MainWindow::isInEnglish()) ? "Log out" : "Déconnexion");
     QObject::connect(disconnect_button, SIGNAL(clicked()), this, SLOT(signOut()));
     vlayout->addWidget(disconnect_button);
 
@@ -65,9 +69,9 @@ void Menu::startLevel(int number){
     mainView->setScene(scene);
 
     // A delete
-//    mainView->setWindowTitle("Scene");
-//    mainView->resize(2000, 1000);
-//    mainView->show();
+//     mainView->setWindowTitle("Scene");
+//     mainView->resize(2000, 1000);
+//     mainView->show();
     // A delete
 
     player_view->setScene(scene);
@@ -90,7 +94,11 @@ void Menu::signOut(){
 }
 
 void Menu::reloadConnectName(){
-    connect_name->setText("Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom");
+    connect_name->setText(
+        (MainWindow::isInEnglish()) ?
+            "You are logged in as \""  + main_window->getPlayerData()->getCurrentPlayer() + "\"\nYour scores and records will be saved under this nickname": 
+            "Vous êtes connecté en tant que \"" + main_window->getPlayerData()->getCurrentPlayer() + "\"\nVos scores et records seront enregistrés sous ce nom"
+    );
     updateLockedLevels();
 }
 
@@ -103,7 +111,7 @@ void Menu::updateLockedLevels(){
         for(int i = 0; i < 4; i++){
             count_saved_stars += saved_stars[i].toInt();
         }
-        if(count_saved_stars != 0 && buttons.length() != level + 1){ // Si on n'est pas au dernier niveau
+        if(count_saved_stars != 0 && buttons.length() != level + 1){ // If we're not on the last level
             buttons[level + 1]->setUnlocked();
         }
         if(level == 0){ // Intro

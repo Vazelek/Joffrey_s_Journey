@@ -2,30 +2,30 @@
 
 MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int level, QObject* parent) : QGraphicsScene(parent), window(window), player_view(player_view), menu(menu), level(level), deaths(0), coins_count(0), total_coins(0), game_stopped(false) {
 
-    // Chargement de l'arrière plan
-    background.load("../ressources/background_" + QString::number(level) + ".png");
+    // Load background
+    background.load("resources/background_" + QString::number(level) + ".png");
     setSceneRect(0, 0, background.width(), background.height());
 
-    // Chargement du joueur
-    player = new Player("../ressources/player_2.png", this);
+    // Load player
+    player = new Player("resources/player_2.png", this);
     player->setScale(1);
 
-    // Génération des élément (lecture du fichier correspondant au level)
+    // Element generation (reading the file corresponding to the level)
     readLevelGenerationFile();
 
-    // Affichage du joueur (par dessus tous les éléments)
+    // Player display
     addItem(player);
 
-    // Timer pour les FPS
+    // Timer for the FPS
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
     timer->start(1000 / FPS);
 
-    // Chargement du menu de pause (non affiché)
+    // Loading the pause menu (not displayed)
     pause = new Pause(this, player);
     pause_menu_displayed = false;
 
-    // Chargement du widget infos
+    // Load the info widget
     infos = new Infos(this, player);
     addItem(infos);
 }
@@ -33,11 +33,11 @@ MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int
 void MyScene::readLevelGenerationFile(){
     std::string line = "";
     std::string values[11] = {""};
-    std::ifstream file("../data/level_" + std::to_string(level) + ".txt");
+    std::ifstream file("data/level_" + std::to_string(level) + ".txt");
     int index = 0;
     if(file.is_open()){
 
-        // Lecture de la partie data -----------------------------------------------------------------------------------
+        // Reading part data -----------------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
@@ -49,7 +49,7 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Placement initial du joueur
+        // Initial position of the player
         player->setSpawnPoint(std::stoi(values[0]), std::stoi(values[1]));
         player->setPos(std::stoi(values[0]), std::stoi(values[1]));
         spawn_x = std::stoi(values[0]);
@@ -61,13 +61,13 @@ void MyScene::readLevelGenerationFile(){
 
         getline(file, line);
 
-        // Lecture de la partie platformes -----------------------------------------------------------------------------
+        // Reading part platforms -----------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -82,8 +82,8 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes
-            // Gestion des valeurs par défaut
+            // Platforms generation
+            // Managing default values
             if(values[5] == ""){
                 values[5] = "16";
             }
@@ -109,13 +109,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie platformes mobiles ---------------------------------------------------------------------
+        // Reading part Moving Platforms ---------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -130,8 +130,8 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes mobiles
-            // Gestion des valeurs par défaut
+            // Moving Platforms generation
+            // Managing default values
             if(values[8] == ""){
                 values[8] = "true";
             }
@@ -142,7 +142,7 @@ void MyScene::readLevelGenerationFile(){
                 values[10] = "-666";
             }
 
-            // Traduction des booléens
+            // Translation of booleans
             bool bool1 = true;
             bool bool2 = true;
             if(values[6] == "false"){
@@ -175,13 +175,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie platformes poussables ------------------------------------------------------------------
+        // Reading part Pushable Platforms ------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -196,8 +196,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes poussables
-
+            // Pushable Platforms generation
             PushablePlatform* platform = new PushablePlatform(
                     this,
                     player,
@@ -215,13 +214,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie platformes cassables -------------------------------------------------------------------
+        // Reading part Breakable Platforms -------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -236,8 +235,8 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes cassables
-            // Gestion des valeurs par défaut
+            // Breakable Platforms generation
+            // Management of default values
             if(values[5] == ""){
                 values[5] = "-1";
             }
@@ -259,13 +258,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie skill platform -------------------------------------------------------------------------
+        // Reading part Skill Platform -------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -280,8 +279,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes de capacités
-
+            // Skill Platforms generation
             SkillPlatform* platform = new SkillPlatform(
                     this,
                     player,
@@ -296,13 +294,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie platform glissante ---------------------------------------------------------------------
+        // Reading part Sliding Platforms ---------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -317,8 +315,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes glissantes
-
+            // Sliding Platforms generation
             SlidingPlatform* platform = new SlidingPlatform(
                     this,
                     player,
@@ -335,13 +332,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie platform semi passable -----------------------------------------------------------------
+        // Reading part Semi-Passable Platforms -----------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -356,8 +353,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des plateformes semi-passables
-
+            // Semi-Passable Platforms generation
             SemiPassablePlatform* platform = new SemiPassablePlatform(
                     this,
                     player,
@@ -374,13 +370,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie secret room ----------------------------------------------------------------------------
+        // Reading part Secret Room ----------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -395,8 +391,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des salles secrètes
-
+            // Secret Rooms generation
             SecretRoom* secret_room = new SecretRoom(
                     this,
                     player,
@@ -413,13 +408,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie lave -----------------------------------------------------------------------------------
+        // Reading part Lava -----------------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -434,8 +429,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des zones de lave
-
+            // Lava areas generation
             Lava* secret_room = new Lava(
                     this,
                     player,
@@ -454,13 +448,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie boutons --------------------------------------------------------------------------------
+        // Reading part Button --------------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -475,8 +469,8 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des boutons
-            // Gestion des valeurs par défaut
+            // Buttons generation
+            // Monitoring default values
             if(values[2] == ""){
                 values[2] = "-1";
             }
@@ -495,13 +489,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie drapeaux -------------------------------------------------------------------------------
+        // Reading part Flags -------------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -516,8 +510,8 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des drapeaux
-            // Traduction du booléen
+            // Flags generation
+            // Booleans translation
             bool bool1 = false;
             if(values[2] == "true"){
                 bool1 = true;
@@ -537,13 +531,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie pièces ---------------------------------------------------------------------------------
+        // Reading part Coins ---------------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -558,7 +552,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des pièces
+            // Coins generation
             Coin* coin = new Coin(
                     this,
                     player,
@@ -572,13 +566,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie lanceur de flèches ---------------------------------------------------------------------
+        // Reading part Arrow Throwers ---------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -593,7 +587,7 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des lanceurs de flèches
+            // Arrow Throwers generation
             ArrowThrower* arrow_thrower = new ArrowThrower(
                     this,
                     player,
@@ -610,13 +604,13 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
         }
 
-        // Lecture de la partie zone de texte --------------------------------------------------------------------------
+        // Reading part Text Areas --------------------------------------------------------------------------
         while(line.find("{") == std::string::npos){
             getline(file, line);
         }
         while(line.find("}") == std::string::npos){
 
-            // Vérification s'il n'y a pas d'espaces en trop dans le fichier de génération
+            // Check if there is no too much spaces in the generation file
             if(line.find("[") == std::string::npos){
                 getline(file, line);
                 continue;
@@ -624,7 +618,7 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
 
             index = 0;
-            for(int i = 0; i < 4; i++){ // Ici impossible de rechercher un "]" car ils peuvent être présent dans les textes
+            for(int i = 0; i < 5; i++){
                 if(line.find("(") != std::string::npos){
                     values[index] = line.std::string::substr(line.find("(") + 1, line.find(")") - line.find("(") - 1);
                     index++;
@@ -632,12 +626,12 @@ void MyScene::readLevelGenerationFile(){
                 getline(file, line);
             }
 
-            // Génération des zones de texte
+            // Text Areas generation
             TextArea* textarea = new TextArea(
                     std::stoi(values[0]),
                     std::stoi(values[1]),
                     std::stoi(values[2]),
-                    QString::fromStdString(values[3]));
+                    (MainWindow::isInEnglish()) ? QString::fromStdString(values[3]) : QString::fromStdString(values[4]));
 
             addItem(textarea);
 
