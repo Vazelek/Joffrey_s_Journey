@@ -624,7 +624,7 @@ void MyScene::readLevelGenerationFile(){
             getline(file, line);
 
             index = 0;
-            for(int i = 0; i < 4; i++){ // Ici impossible de rechercher un "]" car ils peuvent être présent dans les textes
+            for(int i = 0; i < 5; i++){ // Ici impossible de rechercher un "]" car ils peuvent être présent dans les textes
                 if(line.find("(") != std::string::npos){
                     values[index] = line.std::string::substr(line.find("(") + 1, line.find(")") - line.find("(") - 1);
                     index++;
@@ -637,7 +637,7 @@ void MyScene::readLevelGenerationFile(){
                     std::stoi(values[0]),
                     std::stoi(values[1]),
                     std::stoi(values[2]),
-                    QString::fromStdString(values[3]));
+                    (this->getLanguage() == Language::EN) ? QString::fromStdString(values[3]) : QString::fromStdString(values[4]));
 
             addItem(textarea);
 
@@ -899,6 +899,10 @@ int MyScene::getLevel(){
 
 Infos* MyScene::getInfos(){
     return infos;
+}
+
+Language MyScene::getLanguage() {
+    return language;
 }
 
 void MyScene::setDeaths(int n){

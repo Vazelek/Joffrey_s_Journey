@@ -65,9 +65,9 @@ void Menu::startLevel(int number){
     mainView->setScene(scene);
 
     // A delete
-//    mainView->setWindowTitle("Scene");
-//    mainView->resize(2000, 1000);
-//    mainView->show();
+    mainView->setWindowTitle("Scene");
+    mainView->resize(2000, 1000);
+    mainView->show();
     // A delete
 
     player_view->setScene(scene);

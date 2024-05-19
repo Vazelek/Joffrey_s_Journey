@@ -55,6 +55,8 @@ class Coin;
 class EventItem;
 class SecretRoom;
 
+enum Language {FR, EN};
+
 class MyScene : public QGraphicsScene {
     Q_OBJECT
 
@@ -88,6 +90,7 @@ private:
     bool game_stopped;
     int spawn_x;
     int spawn_y;
+    Language language = Language::EN;
 
 public:
     MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int level, QObject* parent = nullptr);
@@ -135,6 +138,7 @@ public:
     void levelEnd();
     void toInitialState();
     void exit();
+    Language getLanguage();
 
 public slots:
     void update();
