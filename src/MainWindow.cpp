@@ -13,6 +13,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     setCentralWidget(stacked_widget);
     scene = nullptr;
 
+    QMenu* language_menu = menuBar()->addMenu(tr("&Language"));
+
+    QAction* setEnglishAct = new QAction(tr("&English"), this);
+    connect(setEnglishAct, &QAction::triggered, this, &MainWindow::setEnglish);
+
+    QAction* setFrenchAct = new QAction(tr("&Français"), this);
+    connect(setFrenchAct, &QAction::triggered, this, &MainWindow::setFrench);
+
+    language_menu->addAction(setEnglishAct);
+    language_menu->addAction(setFrenchAct);
+
+
     setWindowTitle("Joffrey's Journey");
     setFixedSize(1200, 720);
 }
@@ -65,4 +77,12 @@ void MainWindow::setMyScene(MyScene* new_scene){
 
 bool MainWindow::isInEnglish() {
     return MainWindow::is_in_english;
+}
+
+void MainWindow::setEnglish() {
+    MainWindow::is_in_english = true;
+}
+
+void MainWindow::setFrench() {
+    MainWindow::is_in_english = false;
 }

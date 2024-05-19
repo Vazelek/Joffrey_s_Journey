@@ -36,6 +36,8 @@ public:
     void setMyScene(MyScene* new_scene);
     static bool isInEnglish();
     static bool is_in_english;
+    void setEnglish();
+    void setFrench();
 };
 
 
