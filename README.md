@@ -40,6 +40,6 @@ make
 
 Execute
 ```sh
-./Joffrey_s_Journey
+./Joffrey_s_Journey.exe
 ```
 
