@@ -1,4 +1,4 @@
-#include "LevelChoiceButton.h"
+#include "include/LevelChoiceButton.h"
 
 LevelChoiceButton::LevelChoiceButton(int number, Menu* menu, QWidget* parent): QPushButton(parent), number(number), menu(menu){
     locked = true;

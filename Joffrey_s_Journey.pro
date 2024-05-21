@@ -24,32 +24,32 @@ MOC_DIR = ./build/moc
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-HEADERS += src/Arrow.h \
-           src/ArrowThrower.h \
-           src/BreakablePlatform.h \
-           src/Button.h \
-           src/Coin.h \
-           src/EventItem.h \
-           src/Flag.h \
-           src/Infos.h \
-           src/Lava.h \
-           src/LevelChoiceButton.h \
-           src/LevelEnd.h \
-           src/Login.h \
-           src/MainWindow.h \
-           src/Menu.h \
-           src/MovingPlatform.h \
-           src/MyScene.h \
-           src/Pause.h \
-           src/Platform.h \
-           src/Player.h \
-           src/PlayerData.h \
-           src/PushablePlatform.h \
-           src/SecretRoom.h \
-           src/SemiPassablePlatform.h \
-           src/SkillPlatform.h \
-           src/SlidingPlatform.h \
-           src/TextArea.h
+HEADERS += include/Arrow.h \
+           include/ArrowThrower.h \
+           include/BreakablePlatform.h \
+           include/Button.h \
+           include/Coin.h \
+           include/EventItem.h \
+           include/Flag.h \
+           include/Infos.h \
+           include/Lava.h \
+           include/LevelChoiceButton.h \
+           include/LevelEnd.h \
+           include/Login.h \
+           include/MainWindow.h \
+           include/Menu.h \
+           include/MovingPlatform.h \
+           include/MyScene.h \
+           include/Pause.h \
+           include/Platform.h \
+           include/Player.h \
+           include/PlayerData.h \
+           include/PushablePlatform.h \
+           include/SecretRoom.h \
+           include/SemiPassablePlatform.h \
+           include/SkillPlatform.h \
+           include/SlidingPlatform.h \
+           include/TextArea.h
 SOURCES += src/Arrow.cpp \
            src/ArrowThrower.cpp \
            src/BreakablePlatform.cpp \

@@ -3,7 +3,7 @@
 
 #include <QPushButton>
 #include <QWidget>
-#include "Menu.h"
+#include "include/Menu.h"
 
 class Menu;
 

@@ -1,4 +1,4 @@
-#include "Lava.h"
+#include "include/Lava.h"
 
 Lava::Lava(MyScene* scene, Player* player, int x, int y, int width, int height, int final_y, int speed, int wait_time): Platform(scene, player, x, y, width, height, "lava"), speed(speed), final_y(final_y), wait_time(wait_time * FPS), initial_wait_time(wait_time * FPS){
     scene->pushLavaArea(this);

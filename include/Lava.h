@@ -1,7 +1,7 @@
 #ifndef LAVA_H
 #define LAVA_H
 
-#include "Platform.h"
+#include "include/Platform.h"
 
 class MyScene;
 

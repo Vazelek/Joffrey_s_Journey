@@ -1,7 +1,7 @@
 #ifndef SEMIPASSABLEPLATFORM_H
 #define SEMIPASSABLEPLATFORM_H
 
-#include "Platform.h"
+#include "include/Platform.h"
 
 class SemiPassablePlatform : public Platform{
     Q_OBJECT

@@ -1,7 +1,7 @@
 #ifndef SKILLPLATFORM_H
 #define SKILLPLATFORM_H
 
-#include "Platform.h"
+#include "include/Platform.h"
 
 class SkillPlatform : public Platform{
     Q_OBJECT

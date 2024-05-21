@@ -1,7 +1,7 @@
 #ifndef BUTTON_H
 #define BUTTON_H
 
-#include "Platform.h"
+#include "include/Platform.h"
 
 class Button : public Platform{
     Q_OBJECT

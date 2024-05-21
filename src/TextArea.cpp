@@ -1,4 +1,4 @@
-#include "TextArea.h"
+#include "include/TextArea.h"
 
 TextArea::TextArea(int x, int y, int max_width, QString text, QGraphicsItem* parent) : QGraphicsProxyWidget(parent){
 

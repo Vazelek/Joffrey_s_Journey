@@ -6,8 +6,8 @@
 #include <QPixmap>
 #include <QString>
 #include <QDebug>
-#include "MyScene.h"
-#include "Player.h"
+#include "include/MyScene.h"
+#include "include/Player.h"
 
 class MyScene;
 class Player;

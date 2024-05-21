@@ -1,4 +1,4 @@
-#include "Menu.h"
+#include "include/Menu.h"
 
 Menu::Menu(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_window(main_window), level_number(0){
 

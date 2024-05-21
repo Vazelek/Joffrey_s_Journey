@@ -10,10 +10,10 @@
 #include <QCloseEvent>
 #include <QStackedWidget>
 
-#include "MyScene.h"
-#include "Menu.h"
-#include "Login.h"
-#include "PlayerData.h"
+#include "include/MyScene.h"
+#include "include/Menu.h"
+#include "include/Login.h"
+#include "include/PlayerData.h"
 
 class Menu;
 

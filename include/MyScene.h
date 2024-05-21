@@ -22,16 +22,16 @@
 #include <QDir>
 #include <fstream>
 #include <string>
-#include "MainWindow.h"
-#include "Platform.h"
-#include "Player.h"
-#include "EventItem.h"
-#include "Pause.h"
-#include "Menu.h"
-#include "Infos.h"
-#include "LevelEnd.h"
-#include "SecretRoom.h"
-#include "TextArea.h"
+#include "include/MainWindow.h"
+#include "include/Platform.h"
+#include "include/Player.h"
+#include "include/EventItem.h"
+#include "include/Pause.h"
+#include "include/Menu.h"
+#include "include/Infos.h"
+#include "include/LevelEnd.h"
+#include "include/SecretRoom.h"
+#include "include/TextArea.h"
 
 #define FPS 60
 

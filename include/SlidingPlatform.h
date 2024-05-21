@@ -1,7 +1,7 @@
 #ifndef SLIDINGPLATFORM_H
 #define SLIDINGPLATFORM_H
 
-#include "Platform.h"
+#include "include/Platform.h"
 
 class SlidingPlatform : public Platform{
     Q_OBJECT

@@ -1,4 +1,4 @@
-#include "SkillPlatform.h"
+#include "include/SkillPlatform.h"
 
 SkillPlatform::SkillPlatform(MyScene* scene, Player* player, int x, int y, QString type) : Platform(scene, player, x, y, 1, 1, "skill_platform_" + type, 48, 16), type(type){
     scene->pushSkillPlatform(this);

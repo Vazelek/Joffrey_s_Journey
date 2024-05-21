@@ -1,4 +1,4 @@
-#include "MovingPlatform.h"
+#include "include/MovingPlatform.h"
 
 MovingPlatform::MovingPlatform(MyScene* scene, Player* player, int x, int y, int width, int height, QString ressource_url, int final_coord, bool movement_vertical, int speed, bool start_on_create, int repeat, int initial_coord): Platform(scene, player, x, y, width, height, ressource_url), speed(speed), final_coord(final_coord), movement_vertical(movement_vertical), repeat(repeat), movement_stop(!start_on_create){
     scene->pushMovingPlatform(this);

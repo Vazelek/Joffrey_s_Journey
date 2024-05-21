@@ -1186,10 +1186,10 @@ ArrowThrower: {
     ],
     [
         x: (1344),
-        y: (296),
-        direction: (up),
-        final_coord: (172),
-        delay: (2)
+        y: (188),
+        direction: (down),
+        final_coord: (300),
+        delay: (3)
     ],
     [
         x: (1872),

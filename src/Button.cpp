@@ -1,4 +1,4 @@
-#include "Button.h"
+#include "include/Button.h"
 
 Button::Button(MyScene* scene, Player* player, int x, int y, int linked_platform) : Platform(scene, player, x, y, 1, 1, "button", 32), pushed(false), linked_platform(linked_platform){
     scene->pushButton(this);

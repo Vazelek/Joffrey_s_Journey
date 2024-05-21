@@ -1,7 +1,7 @@
 #ifndef COIN_H
 #define COIN_H
 
-#include "EventItem.h"
+#include "include/EventItem.h"
 
 class MyScene;
 class Player;

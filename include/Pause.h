@@ -8,8 +8,8 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QPushButton>
-#include "MyScene.h"
-#include "Player.h"
+#include "include/MyScene.h"
+#include "include/Player.h"
 
 class MyScene;
 class Player;

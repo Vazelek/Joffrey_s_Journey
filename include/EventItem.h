@@ -4,8 +4,8 @@
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QString>
-#include "MyScene.h"
-#include "Player.h"
+#include "include/MyScene.h"
+#include "include/Player.h"
 
 class MyScene;
 class Player;
@@ -24,9 +24,9 @@ public:
     virtual void toInitialState();
 };
 
-#include "Coin.h"
-#include "Flag.h"
-#include "ArrowThrower.h"
-#include "Arrow.h"
+#include "include/Coin.h"
+#include "include/Flag.h"
+#include "include/ArrowThrower.h"
+#include "include/Arrow.h"
 
 #endif

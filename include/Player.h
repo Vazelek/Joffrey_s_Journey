@@ -7,7 +7,7 @@
 #include <QPixmap>
 #include <QString>
 #include <QDebug>
-#include "MyScene.h"
+#include "include/MyScene.h"
 
 class MyScene;
 class Platform;

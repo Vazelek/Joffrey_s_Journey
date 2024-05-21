@@ -1,4 +1,4 @@
-#include "PushablePlatform.h"
+#include "include/PushablePlatform.h"
 #include "math.h"
 
 PushablePlatform::PushablePlatform(MyScene* scene, Player* player, int x, int y, int width, int height, QString ressource_url) : Platform(scene, player, x, y, width, height, ressource_url), vert_speed(0){

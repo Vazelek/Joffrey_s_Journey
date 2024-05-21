@@ -11,8 +11,8 @@
 #include <QString>
 #include <QDebug>
 #include <QVector>
-#include "MainWindow.h"
-#include "LevelChoiceButton.h"
+#include "include/MainWindow.h"
+#include "include/LevelChoiceButton.h"
 
 class MainWindow;
 class MyScene;

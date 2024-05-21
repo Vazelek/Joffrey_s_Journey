@@ -1,7 +1,7 @@
 #ifndef ARROW_H
 #define ARROW_H
 
-#include "EventItem.h"
+#include "include/EventItem.h"
 
 class Arrow : public EventItem{
 

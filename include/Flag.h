@@ -1,7 +1,7 @@
 #ifndef FLAG_H
 #define FLAG_H
 
-#include "EventItem.h"
+#include "include/EventItem.h"
 
 class MyScene;
 class Player;

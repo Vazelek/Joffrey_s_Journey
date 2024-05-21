@@ -1,4 +1,4 @@
-#include "Pause.h"
+#include "include/Pause.h"
 
 Pause::Pause(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsProxyWidget(parent), scene(scene), player(player){
     QWidget* mainWidget = new QWidget();

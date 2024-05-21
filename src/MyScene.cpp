@@ -1,4 +1,4 @@
-#include "MyScene.h"
+#include "include/MyScene.h"
 
 MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int level, QObject* parent) : QGraphicsScene(parent), window(window), player_view(player_view), menu(menu), level(level), deaths(0), coins_count(0), total_coins(0), game_stopped(false) {
 

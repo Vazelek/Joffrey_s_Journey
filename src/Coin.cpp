@@ -1,4 +1,4 @@
-#include "Coin.h"
+#include "include/Coin.h"
 
 Coin::Coin(MyScene* scene, Player* player, int x, int y) : EventItem(scene, player, x, y, "coin.png"){
     scene->setTotalCoins(scene->getTotalCoins() + 1);

@@ -1,7 +1,7 @@
 #ifndef BREAKABLEPLATFORM_H
 #define BREAKABLEPLATFORM_H
 
-#include "Platform.h"
+#include "include/Platform.h"
 
 class BreakablePlatform : public Platform{
     Q_OBJECT

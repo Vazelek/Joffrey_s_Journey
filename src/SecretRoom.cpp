@@ -1,4 +1,4 @@
-#include "SecretRoom.h"
+#include "include/SecretRoom.h"
 
 SecretRoom::SecretRoom(MyScene* scene, Player* player, int x, int y, int width, int height, QString ressource_url) : QObject(), scene(scene), player(player), x(x), y(y), width(width), height(height){
 
