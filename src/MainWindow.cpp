@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 }
 
 MainWindow::~MainWindow(){
-
+    qDebug() << "~MainWindow()";
 }
 
 bool MainWindow::is_in_english = true;
