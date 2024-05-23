@@ -1,4 +1,4 @@
-#include "include/Flag.h"
+#include "Flag.h"
 
 Flag::Flag(MyScene* scene, Player* player, int x, int y, bool is_end_flag) : EventItem(scene, player, x, y, "flag_1.png"), is_end_flag(is_end_flag){
     if(is_end_flag){

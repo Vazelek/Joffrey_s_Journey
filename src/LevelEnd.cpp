@@ -1,4 +1,4 @@
-#include "include/LevelEnd.h"
+#include "LevelEnd.h"
 #include "math.h"
 
 LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGraphicsItem* parent) : QGraphicsProxyWidget(parent), scene(scene), player(player), infos(infos), menu(menu){

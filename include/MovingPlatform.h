@@ -1,7 +1,7 @@
 #ifndef MOVING_PLATFORM_H
 #define MOVING_PLATFORM_H
 
-#include "include/Platform.h"
+#include "Platform.h"
 
 class MyScene;
 

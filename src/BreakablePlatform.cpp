@@ -1,4 +1,4 @@
-#include "include/BreakablePlatform.h"
+#include "BreakablePlatform.h"
 
 BreakablePlatform::BreakablePlatform(MyScene* scene, Player* player, int x, int y, int width, int height, int lifetime, int respawn_time) : Platform(scene, player, x, y, width, height, "breakable_platform.png"), lifetime(lifetime * FPS), initial_lifetime(lifetime * FPS), status(0), respawn_time(respawn_time * FPS), initial_respawn_time(respawn_time * FPS), initial_width(width), initial_height(height){
     scene->pushBreakablePlatform(this);

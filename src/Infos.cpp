@@ -1,4 +1,4 @@
-#include "include/Infos.h"
+#include "Infos.h"
 #include "math.h"
 
 Infos::Infos(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsProxyWidget(parent), scene(scene), player(player), minutes(0), seconds(0){

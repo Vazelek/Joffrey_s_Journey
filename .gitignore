@@ -3,4 +3,4 @@ Makefile
 .qmake.stash
 .idea
 .vscode
-Joffrey_s_Journey.exe
+*.exe

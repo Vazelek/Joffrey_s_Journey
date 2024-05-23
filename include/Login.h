@@ -12,9 +12,9 @@
 #include <QDebug>
 #include <QLineEdit>
 #include <QLabel>
-#include "include/MainWindow.h"
-#include "include/LevelChoiceButton.h"
-#include "include/PlayerData.h"
+#include "MainWindow.h"
+#include "LevelChoiceButton.h"
+#include "PlayerData.h"
 
 class Login : public QWidget{
     Q_OBJECT

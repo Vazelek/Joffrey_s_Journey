@@ -1,4 +1,4 @@
-#include "include/Platform.h"
+#include "Platform.h"
 
 Platform::Platform(MyScene* scene, Player* player, int x, int y, int width, int height, QString ressource_url, int item_width, int item_height) : QObject(), scene(scene), player(player), x(x), y(y), width(width), height(height), item_width(item_width), item_height(item_height){
 

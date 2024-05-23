@@ -1,4 +1,4 @@
-#include "include/EventItem.h"
+#include "EventItem.h"
 
 EventItem::EventItem(MyScene* scene, Player* player, int x, int y, QString ressource_url) : QGraphicsPixmapItem(QPixmap("resources/" + ressource_url)), player(player), scene(scene), used(false){
     qDebug() << "#0";

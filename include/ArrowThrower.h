@@ -1,7 +1,7 @@
 #ifndef ARROWTHROWER_H
 #define ARROWTHROWER_H
 
-#include "include/EventItem.h"
+#include "EventItem.h"
 
 class ArrowThrower : public EventItem{
 

@@ -7,8 +7,8 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QImage>
-#include "include/MyScene.h"
-#include "include/Player.h"
+#include "MyScene.h"
+#include "Player.h"
 
 class Infos : public QGraphicsProxyWidget{
     Q_OBJECT

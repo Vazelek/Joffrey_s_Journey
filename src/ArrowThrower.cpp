@@ -1,4 +1,4 @@
-#include "include/ArrowThrower.h"
+#include "ArrowThrower.h"
 
 ArrowThrower::ArrowThrower(MyScene* scene, Player* player, int x, int y, QString orientation, int final_coord, float delay) : EventItem(scene, player, x, y, "arrow_thrower_" + orientation + ".png"), delay(delay * FPS), initial_delay(delay * FPS), final_coord(final_coord), orientation(orientation){
 
