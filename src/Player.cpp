@@ -26,7 +26,7 @@ Player::Player(QString image_url, MyScene* scene) : QGraphicsPixmapItem(QPixmap(
 }
 
 Player::~Player(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Player::jump(){

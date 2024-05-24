@@ -12,16 +12,17 @@ void WindowGenerationTests::initTestCase() {
 void WindowGenerationTests::test_WindowWellGenerated()
 {
     QVERIFY(mainWindow != nullptr);
-    QCOMPARE(mainWindow->windowTitle(), QString("Joffrey's Journey"));
+    QCOMPARE(mainWindow->windowTitle(), "Joffrey's Journey");
 }
 
+// Login page
 void WindowGenerationTests::test_WindowCreatedOnLoginPage() {
     current_widget = mainWindow->getStackedWidget()->currentWidget();
-    QCOMPARE(current_widget->metaObject()->className(), QString::fromStdString("Login"));
+    QCOMPARE(current_widget->metaObject()->className(), "Login");
 }
 
 void WindowGenerationTests::test_UsernameInputField() {
-    if (current_widget->metaObject()->className() != QString::fromStdString("Login")) {
+    if (current_widget->metaObject()->className() != QString("Login")) {
         QSKIP("Previous failed test is required");
         return;
     }
@@ -33,7 +34,7 @@ void WindowGenerationTests::test_UsernameInputField() {
 
     if (input != nullptr) {
         QTest::keyClicks(input, "&TestUsername&");
-        QCOMPARE(input->text(), QString::fromStdString("&TestUsername&"));
+        QCOMPARE(input->text(), "&TestUsername&");
     }
 }
 
@@ -51,11 +52,12 @@ void WindowGenerationTests::test_NewConnectionMessageOnConnectButtonClick() {
     if (infos != nullptr) {
         QCOMPARE(
             infos->text(),
-            QString::fromStdString("You are about to log in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname")
+            "You are about to log in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname"
         );
     }
 }
 
+// Menu page
 void WindowGenerationTests::test_WindowSwitchToMenuOnNewConnectionButtonClicked() {
     if (login == nullptr) {
         QSKIP("Previous failed test is required");
@@ -64,11 +66,11 @@ void WindowGenerationTests::test_WindowSwitchToMenuOnNewConnectionButtonClicked(
 
     QTest::mouseClick(login->getNewConnectionButton(), Qt::LeftButton);
     current_widget = mainWindow->getStackedWidget()->currentWidget();
-    QCOMPARE(current_widget->metaObject()->className(), QString::fromStdString("Menu"));
+    QCOMPARE(current_widget->metaObject()->className(), "Menu");
 }
 
 void WindowGenerationTests::test_RightUsernameOnMenuPage() {
-    if (current_widget->metaObject()->className() != QString::fromStdString("Menu")) {
+    if (current_widget->metaObject()->className() != QString("Menu")) {
         QSKIP("Not in the menu window");
         return;
     }
@@ -84,7 +86,7 @@ void WindowGenerationTests::test_RightUsernameOnMenuPage() {
         if (menu_label != nullptr) {
             QCOMPARE(
                 menu_label->text(),
-                QString::fromStdString("You are logged in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname")
+                "You are logged in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname"
             );
         }
     }
@@ -104,7 +106,7 @@ void WindowGenerationTests::test_NewUserLevelOneDisabled() {
         QTest::mouseClick(level_buttons[1], Qt::LeftButton);
 
         // No page switch means the level 1 button is well locked
-        QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), QString::fromStdString("Menu"));
+        QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), "Menu");
     }
 }
 
@@ -112,7 +114,7 @@ void WindowGenerationTests::test_NewUserIntroductionEnabled() {
     if (
         menu == nullptr ||
         level_buttons.length() != 7 ||
-        mainWindow->getStackedWidget()->currentWidget()->metaObject()->className() != QString::fromStdString("Menu")
+        mainWindow->getStackedWidget()->currentWidget()->metaObject()->className() != QString("Menu")
     ) {
         QSKIP("Previous failed test is required");
         return;
@@ -122,7 +124,7 @@ void WindowGenerationTests::test_NewUserIntroductionEnabled() {
     QTest::mouseClick(level_buttons[0], Qt::LeftButton);
 
     // Page switch means the intro button is well unlocked
-    QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), QString::fromStdString("QGraphicsView"));
+    QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), "QGraphicsView");
 }
 
 void WindowGenerationTests::cleanupTestCase() {

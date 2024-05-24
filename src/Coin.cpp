@@ -5,7 +5,7 @@ Coin::Coin(MyScene* scene, Player* player, int x, int y) : EventItem(scene, play
 }
 
 Coin::~Coin(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Coin::update(){

@@ -5,7 +5,7 @@ BreakablePlatform::BreakablePlatform(MyScene* scene, Player* player, int x, int 
 }
 
 BreakablePlatform::~BreakablePlatform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getBreakablePlatforms()->removeOne(this);
 }
 

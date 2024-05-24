@@ -33,7 +33,8 @@ MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int
 void MyScene::readLevelGenerationFile(){
     std::string line = "";
     std::string values[11] = {""};
-    std::ifstream file("data/level_" + std::to_string(level) + ".txt");
+    std::string level_str = (level > 0) ? std::to_string(level) : "test";
+    std::ifstream file("data/level_" + level_str + ".txt");
     int index = 0;
     if(file.is_open()){
 
@@ -646,7 +647,7 @@ void MyScene::readLevelGenerationFile(){
 }
 
 MyScene::~MyScene() {
-    qDebug() << this;
+    // qDebug() << this;
     while(platforms.size() > 0){
         delete platforms[0];
     }
@@ -663,9 +664,7 @@ MyScene::~MyScene() {
         window->getStackedWidget()->setCurrentIndex(1);
         window->getStackedWidget()->removeWidget(player_view);
     }
-    qDebug() << "trying to delete player_view";
     delete player_view;
-    qDebug() << "\n---------MySceneFullFree---------\n";
 }
 
 void MyScene::update() {

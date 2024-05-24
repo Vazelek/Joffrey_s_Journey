@@ -44,5 +44,5 @@ TextArea::TextArea(int x, int y, int max_width, QString text, QGraphicsItem* par
 }
 
 TextArea::~TextArea(){
-    qDebug() << this;
+    // qDebug() << this;
 }

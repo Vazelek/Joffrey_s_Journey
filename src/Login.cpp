@@ -30,7 +30,7 @@ Login::Login(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_w
 }
 
 Login::~Login(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Login::buttonClick(){

@@ -5,7 +5,7 @@ SkillPlatform::SkillPlatform(MyScene* scene, Player* player, int x, int y, QStri
 }
 
 SkillPlatform::~SkillPlatform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getSkillPlatforms()->removeOne(this);
 }
 

@@ -9,7 +9,7 @@ Flag::Flag(MyScene* scene, Player* player, int x, int y, bool is_end_flag) : Eve
 }
 
 Flag::~Flag(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Flag::update(){

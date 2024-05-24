@@ -45,11 +45,10 @@ Menu::Menu(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_win
 }
 
 Menu::~Menu(){
-    qDebug() << this;
+    // qDebug() << this;
     if(mainView != nullptr){
         delete mainView;
     }
-    qDebug() << "View";
 }
 
 void Menu::startLevel(int number){

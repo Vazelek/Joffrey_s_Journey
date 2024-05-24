@@ -1,10 +1,10 @@
-#include "PlayerInteractionsTests.h"
+#include "LevelSceneGeneration.h"
 
-void PlayerInteractionsTests::initTestCase() {
+void LevelSceneGeneration::initTestCase() {
     mainWindow = new MainWindow();
     mainWindow->show();
     Login* login = (Login*) mainWindow->getStackedWidget()->currentWidget();
-    QTest::keyClicks(login->getInput(), "&PlayerInteractionsTests&");
+    QTest::keyClicks(login->getInput(), "&LevelSceneGeneration&");
     QTest::mouseClick(login->getLoginButton(), Qt::LeftButton);
     QTest::mouseClick(login->getNewConnectionButton(), Qt::LeftButton);
 
@@ -20,19 +20,16 @@ void PlayerInteractionsTests::initTestCase() {
     
 }
 
-void PlayerInteractionsTests::test_ArrowKill()
+void LevelSceneGeneration::test_ArrowKill()
 {
     QVERIFY(true); // This will always pass
 }
 
-void PlayerInteractionsTests::test_ShieldSuppressArrow()
+void LevelSceneGeneration::test_ShieldSuppressArrow()
 {
     //QTest::mouseClick
 }
 
-void PlayerInteractionsTests::cleanupTestCase() {
+void LevelSceneGeneration::cleanupTestCase() {
     delete mainWindow;
 }
-
-// QTEST_MAIN(PlayerInteractionsTests)
-// #include "TestExample.moc"

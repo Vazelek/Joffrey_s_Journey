@@ -5,7 +5,7 @@ Button::Button(MyScene* scene, Player* player, int x, int y, int linked_platform
 }
 
 Button::~Button(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getButtons()->removeOne(this);
 }
 

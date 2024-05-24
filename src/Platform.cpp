@@ -9,7 +9,7 @@ Platform::Platform(MyScene* scene, Player* player, int x, int y, int width, int 
 }
 
 Platform::~Platform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getPlatforms()->removeOne(this);
     deleteItems();
 }

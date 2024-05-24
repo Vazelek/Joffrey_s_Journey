@@ -9,7 +9,7 @@ SecretRoom::SecretRoom(MyScene* scene, Player* player, int x, int y, int width, 
 }
 
 SecretRoom::~SecretRoom(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getSecretRooms()->removeOne(this);
     deleteItems();
 }
