@@ -11,13 +11,10 @@ void PlayerInteractionsTests::initTestCase() {
     QWidget* current_widget = mainWindow->getStackedWidget()->currentWidget();
     QCOMPARE(current_widget->metaObject()->className(), "Menu");
 
-    if (current_widget->metaObject()->className() == QString("Menu")) {
-        Menu* menu = (Menu*) current_widget;
-        QTest::mouseClick(menu->getLevelButtons()[0], Qt::LeftButton); // Click on intro button
+    Menu* menu = (Menu*) current_widget;
+    QTest::mouseClick(menu->getLevelButtons()[0], Qt::LeftButton); // Click on intro button
 
-        QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), "QGraphicsView");
-    }
-    
+    QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), "QGraphicsView");    
 }
 
 void PlayerInteractionsTests::test_ArrowKill()

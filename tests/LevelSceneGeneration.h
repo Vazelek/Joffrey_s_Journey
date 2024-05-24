@@ -11,11 +11,17 @@ class LevelSceneGeneration : public QObject
 
 private:
     MainWindow* mainWindow;
+    MyScene* scene;
+    bool test_elements_exists_passed;
+    Player* player;
 
 private slots:
     void initTestCase();
-    void test_ArrowKill();
-    void test_ShieldSuppressArrow();
+    void test_SceneWellGenerated();
+    void test_ElementsExists();
+    void test_PlayerDataInitialisation();
+    void test_ElementsCoordinates();
+    void test_SceneWellClosed();
 
     void cleanupTestCase();
 };

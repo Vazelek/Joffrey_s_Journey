@@ -32,10 +32,8 @@ void WindowGenerationTests::test_UsernameInputField() {
 
     QVERIFY(input != nullptr);
 
-    if (input != nullptr) {
-        QTest::keyClicks(input, "&TestUsername&");
-        QCOMPARE(input->text(), "&TestUsername&");
-    }
+    QTest::keyClicks(input, "&TestUsername&");
+    QCOMPARE(input->text(), "&TestUsername&");
 }
 
 void WindowGenerationTests::test_NewConnectionMessageOnConnectButtonClick() {
@@ -49,12 +47,10 @@ void WindowGenerationTests::test_NewConnectionMessageOnConnectButtonClick() {
 
     QVERIFY(infos != nullptr);
 
-    if (infos != nullptr) {
-        QCOMPARE(
-            infos->text(),
-            "You are about to log in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname"
-        );
-    }
+    QCOMPARE(
+        infos->text(),
+        "You are about to log in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname"
+    );
 }
 
 // Menu page
@@ -77,19 +73,15 @@ void WindowGenerationTests::test_RightUsernameOnMenuPage() {
 
     menu = (Menu*) current_widget;
     QVERIFY(menu != nullptr);
+    
+    QLabel* menu_label = menu->getMenuLabel();
 
-    if (menu != nullptr) {
-        QLabel* menu_label = menu->getMenuLabel();
+    QVERIFY(menu_label != nullptr);
 
-        QVERIFY(menu_label != nullptr);
-
-        if (menu_label != nullptr) {
-            QCOMPARE(
-                menu_label->text(),
-                "You are logged in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname"
-            );
-        }
-    }
+    QCOMPARE(
+        menu_label->text(),
+        "You are logged in as \"&TestUsername&\"\nYour scores and records will be saved under this nickname"
+    );
 }
 
 void WindowGenerationTests::test_NewUserLevelOneDisabled() {
@@ -101,13 +93,11 @@ void WindowGenerationTests::test_NewUserLevelOneDisabled() {
     level_buttons = menu->getLevelButtons();
     QCOMPARE(level_buttons.length(), 7);
 
-    if (level_buttons.length() == 7) {
-        // Click on level 1 button
-        QTest::mouseClick(level_buttons[1], Qt::LeftButton);
+    // Click on level 1 button
+    QTest::mouseClick(level_buttons[1], Qt::LeftButton);
 
-        // No page switch means the level 1 button is well locked
-        QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), "Menu");
-    }
+    // No page switch means the level 1 button is well locked
+    QCOMPARE(mainWindow->getStackedWidget()->currentWidget()->metaObject()->className(), "Menu");
 }
 
 void WindowGenerationTests::test_NewUserIntroductionEnabled() {

@@ -55,9 +55,6 @@ void Menu::startLevel(int number){
     if(mainView != nullptr){
         delete mainView;
     }
-    if(number != 0){
-        number = 1;
-    }
 
     player_view = new QGraphicsView();
 
@@ -126,4 +123,8 @@ QLabel* Menu::getMenuLabel() {
 
 QVector<LevelChoiceButton*> Menu::getLevelButtons(){
     return buttons;
+}
+
+MyScene* Menu::getScene() {
+    return scene;
 }

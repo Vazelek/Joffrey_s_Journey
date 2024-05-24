@@ -111,6 +111,7 @@ public:
     QVector<SecretRoom*>* getSecretRooms();
     MainWindow* getMainWindow();
     Infos* getInfos();
+    Player* getPlayer();
     void pushPlatform(Platform* platform);
     void pushMovingPlatform(MovingPlatform* platform);
     void pushPushablePlatform(PushablePlatform* platform);
