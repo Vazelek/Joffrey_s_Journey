@@ -12,8 +12,10 @@ class WindowGenerationTests : public QObject
 
 private:
     MainWindow* mainWindow;
-    QWidget* stacked_widgets;
+    QWidget* current_widget;
     Login* login;
+    Menu* menu;
+    QVector<LevelChoiceButton*> level_buttons;
 
 private slots:
     // Init
@@ -27,6 +29,9 @@ private slots:
 
     // Menu page
     void test_WindowSwitchToMenuOnNewConnectionButtonClicked();
+    void test_RightUsernameOnMenuPage();
+    void test_NewUserLevelOneDisabled();
+    void test_NewUserIntroductionEnabled();
 
     // Cleanup
     void cleanupTestCase();

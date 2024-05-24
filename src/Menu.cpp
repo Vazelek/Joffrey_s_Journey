@@ -120,3 +120,11 @@ void Menu::updateLockedLevels(){
         level++;
     }
 }
+
+QLabel* Menu::getMenuLabel() {
+    return connect_name;
+}
+
+QVector<LevelChoiceButton*> Menu::getLevelButtons(){
+    return buttons;
+}
