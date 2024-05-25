@@ -21,6 +21,7 @@ MOC_DIR = ../build/tests/moc
 HEADERS += WindowGenerationTests.h \
            PlayerInteractionsTests.h \
            LevelSceneGeneration.h \
+           TestsGlobal.h \
            ../include/Arrow.h \
            ../include/ArrowThrower.h \
            ../include/BreakablePlatform.h \
@@ -51,6 +52,7 @@ HEADERS += WindowGenerationTests.h \
 SOURCES += WindowGenerationTests.cpp \
            PlayerInteractionsTests.cpp \
            LevelSceneGeneration.cpp \
+           TestsGlobal.cpp \
            main.cpp \
            ../src/Arrow.cpp \
            ../src/ArrowThrower.cpp \

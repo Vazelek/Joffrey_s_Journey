@@ -11,11 +11,18 @@ class PlayerInteractionsTests : public QObject
 
 private:
     MainWindow* mainWindow;
+    MyScene* scene;
+    Player* player;
 
 private slots:
     void initTestCase();
     void test_ArrowKill();
-    void test_ShieldSuppressArrow();
+    void test_LevelRespawnPoint();
+    void test_ActivateCheckpoint();
+    void test_ReturnToCheckpointOnDeath();
+    void test_PowerObtention();
+    void test_PowerActivation();
+    void test_ShieldProtectPlayer();
 
     void cleanupTestCase();
 };

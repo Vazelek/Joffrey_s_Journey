@@ -535,3 +535,11 @@ float Player::getBaseVertSpeed(){
 void Player::isOnIce(){
     is_on_ice = true;
 }
+
+int Player::getSpawnX() {
+    return spawn_x;
+}
+
+int Player::getSpawnY() {
+    return spawn_y;
+}

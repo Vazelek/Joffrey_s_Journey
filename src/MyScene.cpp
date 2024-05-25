@@ -930,6 +930,10 @@ void MyScene::toInitialState(){
     }
 }
 
+bool MyScene::isGameStopped() {
+    return game_stopped;
+}
+
 void MyScene::exit(){
     deleteLater();
 }

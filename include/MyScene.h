@@ -135,6 +135,7 @@ public:
     void setTotalCoins(int n);
     void levelEnd();
     void toInitialState();
+    bool isGameStopped();
     void exit();
 
 public slots:
