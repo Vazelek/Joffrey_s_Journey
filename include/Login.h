@@ -24,12 +24,17 @@ private:
     QVBoxLayout* vlayout;
     QLineEdit* input;
     QLabel* infos;
+    QPushButton* login_btn;
     QPushButton* new_connection;
     bool new_connection_button_displayed;
 
 public:
     Login(MainWindow* main_window, QWidget* parent = nullptr);
     ~Login();
+    QLineEdit* getInput();
+    QPushButton* getLoginButton();
+    QLabel* getInfosLabel();
+    QPushButton* getNewConnectionButton();
 
 public slots:
     void buttonClick();

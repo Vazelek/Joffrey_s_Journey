@@ -5,7 +5,7 @@ SemiPassablePlatform::SemiPassablePlatform(MyScene* scene, Player* player, int x
 }
 
 SemiPassablePlatform::~SemiPassablePlatform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getSemiPassablePlatforms()->removeOne(this);
 }
 

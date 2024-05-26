@@ -41,7 +41,7 @@ Pause::Pause(MyScene* scene, Player* player, QGraphicsItem* parent) : QGraphicsP
 }
 
 Pause::~Pause(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Pause::updatePos(){

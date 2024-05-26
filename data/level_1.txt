@@ -1,4 +1,4 @@
-# Génération du niveau 1
+# Generation of the level 1
 
 Data: {
     spawn_x: (0),
@@ -10,7 +10,7 @@ Platforms: {
         x: (-16),
         y: (0),
         width: (1),
-        height: (313), # à adapter à la taille
+        height: (313),
         ressource: (stone.png)
     ],
     [
@@ -1186,10 +1186,10 @@ ArrowThrower: {
     ],
     [
         x: (1344),
-        y: (296),
-        direction: (up),
-        final_coord: (172),
-        delay: (2)
+        y: (188),
+        direction: (down),
+        final_coord: (300),
+        delay: (3)
     ],
     [
         x: (1872),

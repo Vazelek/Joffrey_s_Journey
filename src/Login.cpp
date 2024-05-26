@@ -13,11 +13,11 @@ Login::Login(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_w
     input = new QLineEdit();
     vlayout->addWidget(input);
 
-    QPushButton* button = new QPushButton();
-    button->setText("Let's play !");
-    QObject::connect(button, SIGNAL(clicked()), this, SLOT(buttonClick()));
+    login_btn = new QPushButton();
+    login_btn->setText("Let's play !");
+    QObject::connect(login_btn, SIGNAL(clicked()), this, SLOT(buttonClick()));
 
-    vlayout->addWidget(button);
+    vlayout->addWidget(login_btn);
 
     infos = new QLabel;
     infos->setAlignment(Qt::AlignCenter);
@@ -30,7 +30,7 @@ Login::Login(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_w
 }
 
 Login::~Login(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Login::buttonClick(){
@@ -79,4 +79,20 @@ void Login::newConnection() {
     main_window->getPlayerData()->setCurrentPlayer(input->text());
     main_window->getStackedWidget()->setCurrentIndex(1);
     main_window->getMenu()->reloadConnectName();
+}
+
+QLineEdit* Login::getInput() {
+    return input;
+}
+
+QPushButton* Login::getLoginButton() {
+    return login_btn;
+}
+
+QLabel* Login::getInfosLabel() {
+    return infos;
+}
+
+QPushButton* Login::getNewConnectionButton(){
+    return new_connection;
 }

@@ -18,7 +18,7 @@ Lava::Lava(MyScene* scene, Player* player, int x, int y, int width, int height, 
 }
 
 Lava::~Lava(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getLavaAreas()->removeOne(this);
 }
 

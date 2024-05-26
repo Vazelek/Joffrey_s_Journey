@@ -8,7 +8,7 @@ PushablePlatform::PushablePlatform(MyScene* scene, Player* player, int x, int y,
 }
 
 PushablePlatform::~PushablePlatform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getPushablePlatforms()->removeOne(this);
 }
 

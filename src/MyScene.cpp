@@ -3,7 +3,7 @@
 MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int level, QObject* parent) : QGraphicsScene(parent), window(window), player_view(player_view), menu(menu), level(level), deaths(0), coins_count(0), total_coins(0), game_stopped(false) {
 
     // Load background
-    background.load("resources/background_" + QString::number(level) + ".png");
+    background.load("resources/background_" + ((level >= 0) ? QString::number(level) : QString("test")) + ".png");
     setSceneRect(0, 0, background.width(), background.height());
 
     // Load player
@@ -33,7 +33,8 @@ MyScene::MyScene(MainWindow* window, QGraphicsView* player_view, Menu* menu, int
 void MyScene::readLevelGenerationFile(){
     std::string line = "";
     std::string values[11] = {""};
-    std::ifstream file("data/level_" + std::to_string(level) + ".txt");
+    std::string level_str = (level >= 0) ? std::to_string(level) : "test";
+    std::ifstream file("data/level_" + level_str + ".txt");
     int index = 0;
     if(file.is_open()){
 
@@ -646,7 +647,7 @@ void MyScene::readLevelGenerationFile(){
 }
 
 MyScene::~MyScene() {
-    qDebug() << this;
+    // qDebug() << this;
     while(platforms.size() > 0){
         delete platforms[0];
     }
@@ -663,9 +664,7 @@ MyScene::~MyScene() {
         window->getStackedWidget()->setCurrentIndex(1);
         window->getStackedWidget()->removeWidget(player_view);
     }
-    qDebug() << "trying to delete player_view";
     delete player_view;
-    qDebug() << "\n---------MySceneFullFree---------\n";
 }
 
 void MyScene::update() {
@@ -895,6 +894,10 @@ Infos* MyScene::getInfos(){
     return infos;
 }
 
+Player* MyScene::getPlayer() {
+    return player;
+}
+
 void MyScene::setDeaths(int n){
     deaths = n;
 }
@@ -925,6 +928,10 @@ void MyScene::toInitialState(){
     if(pause_menu_displayed){
         gameStart();
     }
+}
+
+bool MyScene::isGameStopped() {
+    return game_stopped;
 }
 
 void MyScene::exit(){

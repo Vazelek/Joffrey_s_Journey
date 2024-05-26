@@ -1,4 +1,4 @@
-# Génération de l'introduction
+# Generation of the introduction level
 
 Data: {
     spawn_x: (0),
@@ -10,7 +10,7 @@ Platforms: {
         x: (-16),
         y: (0),
         width: (1),
-        height: (313), # à adapter à la taille
+        height: (313),
         ressource: (stone.png)
     ],
     [

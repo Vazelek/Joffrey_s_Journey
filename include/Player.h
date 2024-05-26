@@ -64,6 +64,8 @@ public:
     float getBaseVertSpeed();
     void jump();
     void isOnIce();
+    int getSpawnX();
+    int getSpawnY();
 };
 
 #endif

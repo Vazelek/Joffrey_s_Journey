@@ -38,6 +38,9 @@ public:
     void reloadConnectName();
     void updateLockedLevels();
     void unlockBtn(int level);
+    QLabel* getMenuLabel();
+    QVector<LevelChoiceButton*> getLevelButtons();
+    MyScene* getScene();
 
 public slots:
     void startLater();

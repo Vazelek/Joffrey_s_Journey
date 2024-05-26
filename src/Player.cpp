@@ -26,7 +26,7 @@ Player::Player(QString image_url, MyScene* scene) : QGraphicsPixmapItem(QPixmap(
 }
 
 Player::~Player(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void Player::jump(){
@@ -364,7 +364,7 @@ bool Player::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
 }
 
 void Player::death(Platform* platform){ // A suppr
-    qDebug() << "DEATH " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
+    // qDebug() << "DEATH " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;
     death();
 }
 
@@ -534,4 +534,12 @@ float Player::getBaseVertSpeed(){
 
 void Player::isOnIce(){
     is_on_ice = true;
+}
+
+int Player::getSpawnX() {
+    return spawn_x;
+}
+
+int Player::getSpawnY() {
+    return spawn_y;
 }

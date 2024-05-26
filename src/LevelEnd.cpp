@@ -356,7 +356,7 @@ LevelEnd::LevelEnd(MyScene* scene, Player* player, Infos* infos, Menu* menu, QGr
 }
 
 LevelEnd::~LevelEnd(){
-    qDebug() << this;
+    // qDebug() << this;
 }
 
 void LevelEnd::updatePos(){

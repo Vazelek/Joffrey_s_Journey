@@ -1,0 +1,177 @@
+# Generation of the introduction level
+
+Data: {
+    spawn_x: (0),
+    spawn_y: (152)
+}
+
+Platforms: {
+    [
+        x: (-16),
+        y: (0),
+        width: (1),
+        height: (100),
+        ressource: (stone.png)
+    ],
+    [
+        x: (0),
+        y: (200),
+        width: (200),
+        height: (7),
+        ressource: (grass)
+    ]
+}
+
+MovingPlatforms: {
+    [
+        x: (64),
+        y: (200),
+        width: (3),
+        height: (1),
+        ressource: (moving_platform.png),
+        final_coord: (100),
+        movement_vertical: (true),
+        speed: (1)
+    ],
+    [
+        x: (144),
+        y: (120),
+        width: (3),
+        height: (5),
+        ressource: (door),
+        final_coord: (60),
+        movement_vertical: (true),
+        speed: (1),
+        start_on_create: (false),
+        repeat: (1)
+    ]
+}
+
+PushablePlatforms: {
+    [
+        x: (224),
+        y: (150),
+        width: (3),
+        height: (3),
+        ressource: (crate)
+    ]
+}
+
+BreakablePlatforms: {
+    [
+        x: (300),
+        y: (184),
+        width: (3),
+        height: (1),
+        lifetime: (2),
+        respawn_time: (3)
+    ]
+}
+
+SkillPlatforms: {
+    [
+        x: (380),
+        y: (184),
+        type: (jump)
+    ],
+    [
+        x: (428),
+        y: (184),
+        type: (shield)
+    ],
+    [
+        x: (476),
+        y: (184),
+        type: (dash)
+    ],
+    [
+        x: (524),
+        y: (184),
+        type: (size_increase)
+    ],
+    [
+        x: (572),
+        y: (184),
+        type: (size_decrease)
+    ]
+}
+
+SlidingPlatform: {
+    [
+        x: (620),
+        y: (184),
+        width: (4),
+        height: (1),
+        ressource: (icy_stone.png)
+    ]
+}
+
+SemiPassablePlatform: {
+    [
+        x: (700),
+        y: (150),
+        width: (3),
+        height: (1),
+        ressource: (semi_passable_platform.png)
+    ]
+}
+
+SecretRoom: {
+    [
+        x: (780),
+        y: (120),
+        width: (3),
+        height: (5),
+        ressource: (stone.png)
+    ]
+}
+
+Lava: {
+}
+
+Buttons: {
+    [
+        x: (110),
+        y: (184),
+        linked_platform: (1)
+    ]
+}
+
+Flags: {
+    [
+        x: (860),
+        y: (152)
+    ],
+    [
+        x: (2000),
+        y: (168),
+        is_end_flag: (true)
+    ]
+}
+
+Coins: {
+    [
+        x: (64),
+        y: (64)
+    ]
+}
+
+ArrowThrower: {
+    [
+        x: (920),
+        y: (100),
+        direction: (down),
+        final_coord: (200),
+        delay: (1)
+    ]
+}
+
+TextArea: {
+    [
+        x: (136),
+        y: (0),
+        max_width: (120),
+        text_en: (TEST LEVEL :<br>[Q] / [←] : Go left<br>[D] / [→] : Go right),
+        text_fr: (TEST LEVEL :<br>[Q] / [←] : Aller à gauche<br>[D] / [→] : Aller à droite)
+    ]
+}

@@ -33,7 +33,7 @@ MovingPlatform::MovingPlatform(MyScene* scene, Player* player, int x, int y, int
 }
 
 MovingPlatform::~MovingPlatform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getMovingPlatforms()->removeOne(this);
 }
 

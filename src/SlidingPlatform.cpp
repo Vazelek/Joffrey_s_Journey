@@ -5,7 +5,7 @@ SlidingPlatform::SlidingPlatform(MyScene* scene, Player* player, int x, int y, i
 }
 
 SlidingPlatform::~SlidingPlatform(){
-    qDebug() << this;
+    // qDebug() << this;
     scene->getSlidingPlatforms()->removeOne(this);
 }
 

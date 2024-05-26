@@ -45,19 +45,15 @@ Menu::Menu(MainWindow* main_window, QWidget* parent) : QWidget(parent), main_win
 }
 
 Menu::~Menu(){
-    qDebug() << this;
+    // qDebug() << this;
     if(mainView != nullptr){
         delete mainView;
     }
-    qDebug() << "View";
 }
 
 void Menu::startLevel(int number){
     if(mainView != nullptr){
         delete mainView;
-    }
-    if(number != 0){
-        number = 1;
     }
 
     player_view = new QGraphicsView();
@@ -119,4 +115,16 @@ void Menu::updateLockedLevels(){
         }
         level++;
     }
+}
+
+QLabel* Menu::getMenuLabel() {
+    return connect_name;
+}
+
+QVector<LevelChoiceButton*> Menu::getLevelButtons(){
+    return buttons;
+}
+
+MyScene* Menu::getScene() {
+    return scene;
 }
