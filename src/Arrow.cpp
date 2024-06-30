@@ -27,7 +27,3 @@ void Arrow::update(){
         }
     }
 }
-
-void Arrow::toInitialState(){
-    
-}

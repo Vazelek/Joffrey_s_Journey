@@ -922,7 +922,9 @@ void MyScene::toInitialState(){
         platform->toInitialState();
     }
     for(auto eventitem : event_items){
-        eventitem->toInitialState();
+        if(SpecialInitialStateEventItem* hasInitialStateEventItem = dynamic_cast<SpecialInitialStateEventItem*>(eventitem)) {
+            hasInitialStateEventItem->toInitialState();
+        }
     }
     coins_count = 0;
     if(pause_menu_displayed){

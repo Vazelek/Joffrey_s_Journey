@@ -13,7 +13,6 @@ public:
     ~ArrowDown();
     virtual unsigned short int  move();
     virtual void update();
-    virtual void toInitialState();
 };
 
 #endif

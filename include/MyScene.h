@@ -33,6 +33,7 @@
 #include "LevelEnd.h"
 #include "SecretRoom.h"
 #include "TextArea.h"
+#include "SpecialInitialStateEventItem.h"
 
 #define FPS 60
 

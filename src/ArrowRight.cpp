@@ -19,7 +19,3 @@ unsigned short int  ArrowRight::move() {
 void ArrowRight::update(){
     Arrow::update();
 }
-
-void ArrowRight::toInitialState(){
-    
-}

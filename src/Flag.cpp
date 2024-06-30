@@ -43,10 +43,6 @@ void Flag::update(){
     }
 }
 
-void Flag::toInitialState(){
-    
-}
-
 void Flag::toFullyInitialState(){
     if(used){
         used = false;

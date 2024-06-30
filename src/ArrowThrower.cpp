@@ -37,7 +37,3 @@ void ArrowThrower::throwArrow(){
         qDebug() << "Invalid orientation";
     }
 }
-
-void ArrowThrower::toInitialState(){
-    
-}

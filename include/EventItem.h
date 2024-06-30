@@ -21,7 +21,6 @@ public:
     EventItem(MyScene* scene, Player* player, int x, int y, QString ressource_url);
     ~EventItem();
     virtual void update() = 0;
-    virtual void toInitialState();
 };
 
 #include "Coin.h"

@@ -51,6 +51,7 @@ HEADERS += WindowGenerationTests.h \
            ../include/SemiPassablePlatform.h \
            ../include/SkillPlatform.h \
            ../include/SlidingPlatform.h \
+           ../include/SpecialInitialStateEventItem.h \
            ../include/TextArea.h
 
 SOURCES += WindowGenerationTests.cpp \
@@ -87,6 +88,7 @@ SOURCES += WindowGenerationTests.cpp \
            ../src/SemiPassablePlatform.cpp \
            ../src/SkillPlatform.cpp \
            ../src/SlidingPlatform.cpp \
+           ../src/SpecialInitialStateEventItem.cpp \
            ../src/TextArea.cpp
 
 QMAKE_CXXFLAGS += -fPIC
