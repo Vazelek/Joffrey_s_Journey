@@ -263,7 +263,20 @@ Platform* Player::isColliding(QString direction, float speed){
                 continue;
             }
 
-            if(collidesWithPlatform(platform, 0, speed)){
+            if(
+                collidesWithPlatform(
+                    platform->getX(), 
+                    platform->getY(), 
+                    x(),
+                    y(),
+                    platform->getWidth() * platform->getItemWidth(),
+                    platform->getHeight() * platform->getItemHeight(),
+                    width,
+                    height,
+                    0, 
+                    speed
+                )
+            ) {
                 if(x() - (platform->getX() + platform->getWidth() * platform->getItemWidth()) < min_distance || closest == nullptr){
                     min_distance = x() - (platform->getX() + platform->getWidth() * platform->getItemWidth());
                     closest = platform;
@@ -286,7 +299,20 @@ Platform* Player::isColliding(QString direction, float speed){
                 continue;
             }
 
-            if(collidesWithPlatform(platform, speed)){
+            if(
+                collidesWithPlatform(
+                    platform->getX(), 
+                    platform->getY(), 
+                    x(),
+                    y(),
+                    platform->getWidth() * platform->getItemWidth(),
+                    platform->getHeight() * platform->getItemHeight(),
+                    width,
+                    height,
+                    speed,
+                    0
+                )
+            ) {
                 if(y() - (platform->getY() + platform->getHeight() * platform->getItemHeight()) < min_distance || closest == nullptr){
                     min_distance = y() - platform->getY() - platform->getHeight() * platform->getItemHeight();
                     closest = platform;
@@ -309,7 +335,20 @@ Platform* Player::isColliding(QString direction, float speed){
                 continue;
             }
 
-            if(collidesWithPlatform(platform, 0, speed)){
+            if(
+                collidesWithPlatform(
+                    platform->getX(), 
+                    platform->getY(), 
+                    x(),
+                    y(),
+                    platform->getWidth() * platform->getItemWidth(),
+                    platform->getHeight() * platform->getItemHeight(),
+                    width,
+                    height,
+                    0, 
+                    speed
+                )
+            ) {
                 if(platform->getX() - x() + width < min_distance || closest == nullptr){
                     min_distance = platform->getX() - x() + width;
                     closest = platform;
@@ -332,7 +371,20 @@ Platform* Player::isColliding(QString direction, float speed){
                 continue;
             }
 
-            if(collidesWithPlatform(platform, speed)){
+            if(
+                collidesWithPlatform(
+                    platform->getX(), 
+                    platform->getY(), 
+                    x(),
+                    y(),
+                    platform->getWidth() * platform->getItemWidth(),
+                    platform->getHeight() * platform->getItemHeight(),
+                    width,
+                    height,
+                    speed,
+                    0
+                )
+            ) {
                 if(platform->getY() - y() + height < min_distance || closest == nullptr){
                     min_distance = platform->getY() - y() + height;
                     closest = platform;
@@ -354,14 +406,14 @@ Platform* Player::isColliding(QString direction, float speed){
     return nullptr;
 }
 
-bool Player::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
-    if(platform->getX() < x() + width + h_speed && platform->getX() + platform->getWidth() * platform->getItemWidth() > x() + h_speed){
-        if(platform->getY() < y() + height - v_speed && platform->getY() + platform->getHeight() * platform->getItemHeight() > y() - v_speed){
-            return true;
-        }
-    }
-    return false;
-}
+// bool Player::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
+//     if(platform->getX() < x() + width + h_speed && platform->getX() + platform->getWidth() * platform->getItemWidth() > x() + h_speed){
+//         if(platform->getY() < y() + height - v_speed && platform->getY() + platform->getHeight() * platform->getItemHeight() > y() - v_speed){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 void Player::death(Platform* platform){ // A suppr
     // qDebug() << "DEATH " << platform << " -----> (x, y, width, height) : (" << platform->getX() << ", " << platform->getY() << ", " << platform->getWidth() * platform->getItemWidth() << ", " << platform->getHeight() * platform->getItemHeight() << ") //// Player : " << x() << ", " << y() << ", " << width << ", " << height;

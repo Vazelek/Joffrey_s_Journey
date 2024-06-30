@@ -52,7 +52,8 @@ HEADERS += WindowGenerationTests.h \
            ../include/SkillPlatform.h \
            ../include/SlidingPlatform.h \
            ../include/SpecialInitialStateEventItem.h \
-           ../include/TextArea.h
+           ../include/TextArea.h \
+           ../include/utils.h
 
 SOURCES += WindowGenerationTests.cpp \
            PlayerInteractionsTests.cpp \
@@ -89,6 +90,7 @@ SOURCES += WindowGenerationTests.cpp \
            ../src/SkillPlatform.cpp \
            ../src/SlidingPlatform.cpp \
            ../src/SpecialInitialStateEventItem.cpp \
-           ../src/TextArea.cpp
+           ../src/TextArea.cpp \
+           ../src/utils.cpp
 
 QMAKE_CXXFLAGS += -fPIC

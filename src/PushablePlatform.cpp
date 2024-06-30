@@ -42,7 +42,20 @@ Platform* PushablePlatform::isCollidingDown(int speed){
             continue;
         }
 
-        if(collidesWithPlatform(platform, speed, 0)){
+        if(
+            collidesWithPlatform(
+                platform->getX(), 
+                platform->getY(),
+                this->getX(),
+                this->getY(),
+                platform->getWidth() * platform->getItemWidth(),
+                platform->getHeight() * platform->getItemHeight(),
+                this->getWidth() * this->getItemWidth(),
+                this->getHeight() * this->getItemHeight(),
+                speed,
+                0
+            )
+        ){
             if(platform->getY() - y + height * item_height < min_distance || closest == nullptr){
                 min_distance = platform->getY() - y + height * item_height;
                 closest = platform;
@@ -57,7 +70,20 @@ Platform* PushablePlatform::isCollidingDown(int speed){
         }
     }
 
-    if(player->collidesWithPlatform(this, -speed, 0)){ // Kill the player if he collides with it
+    if(
+        collidesWithPlatform(
+            this->getX(), 
+            this->getY(), 
+            player->x(),
+            player->y(),
+            this->getWidth() * this->getItemWidth(),
+            this->getHeight() * this->getItemHeight(),
+            player->getWidth(),
+            player->getHeight(),
+            -speed,
+            0
+        )
+    ){ // Kill the player if he collides with it
         player->death(this);
     }
 

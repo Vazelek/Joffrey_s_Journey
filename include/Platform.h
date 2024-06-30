@@ -10,6 +10,7 @@
 #include <QDebug>
 #include "MyScene.h"
 #include "Player.h"
+#include "utils.h"
 
 class MyScene;
 class Player;
@@ -31,7 +32,6 @@ public:
     ~Platform();
     void itemsGeneration(QString ressource_url, int new_width = 0, int new_height = 0);
     QGraphicsPixmapItem*** getItems();
-    bool collidesWithPlatform(Platform* platform, int v_speed = 0, int h_speed = 0);
     int getX();
     int getY();
     int getWidth();

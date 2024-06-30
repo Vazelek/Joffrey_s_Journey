@@ -198,7 +198,20 @@ void Platform::platformCollidesWithGravitySensitiveItem(bool positive_speed, boo
             }
         }
 
-        if(collidesWithPlatform(platform)){
+        if(
+            collidesWithPlatform(
+                this->getX(),
+                this->getY(),
+                platform->getX(), 
+                platform->getY(),
+                this->getWidth() * this->getItemWidth(),
+                this->getHeight() * this->getItemHeight(),
+                platform->getWidth() * platform->getItemWidth(),
+                platform->getHeight() * platform->getItemHeight(),
+                0,
+                0
+            )
+        ){
             if(!movement_vertical){
                 if(positive_speed){
                     platform->moveTo(x + width * item_width, platform->getY());
@@ -227,7 +240,20 @@ void Platform::platformCollidesWithGravitySensitiveItem(bool positive_speed, boo
         }
     }
 
-    if(player->collidesWithPlatform(this)){
+    if(
+        collidesWithPlatform(
+            this->getX(), 
+            this->getY(), 
+            player->x(),
+            player->y(),
+            this->getWidth() * this->getItemWidth(),
+            this->getHeight() * this->getItemHeight(),
+            player->getWidth(),
+            player->getHeight(),
+            0,
+            0
+        )
+    ){
         if(!movement_vertical){
             if(positive_speed){
                 player->setX(x + width * item_width);
@@ -247,14 +273,14 @@ void Platform::platformCollidesWithGravitySensitiveItem(bool positive_speed, boo
     }
 }
 
-bool Platform::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
-    if(platform->getX() < x + width * item_width + h_speed && platform->getX() + platform->getWidth() * platform->getItemWidth() > x + h_speed){
-        if(platform->getY() < y + height * item_height - v_speed && platform->getY() + platform->getHeight() * platform->getItemHeight() > y - v_speed){
-            return true;
-        }
-    }
-    return false;
-}
+// bool Platform::collidesWithPlatform(Platform* platform, int v_speed, int h_speed){
+//     if(platform->getX() < x + width * item_width + h_speed && platform->getX() + platform->getWidth() * platform->getItemWidth() > x + h_speed){
+//         if(platform->getY() < y + height * item_height - v_speed && platform->getY() + platform->getHeight() * platform->getItemHeight() > y - v_speed){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 void Platform::updateImage(QString ressource_url){
     for(int i = 0; i < width; i++){

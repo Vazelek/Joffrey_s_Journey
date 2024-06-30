@@ -8,6 +8,7 @@
 #include <QString>
 #include <QDebug>
 #include "MyScene.h"
+#include "utils.h"
 
 class MyScene;
 class Platform;
@@ -39,7 +40,6 @@ public:
     void move();
     void setVerticalSpeed(int speed);
     Platform* isColliding(QString direction, float speed = 0);
-    bool collidesWithPlatform(Platform* platform, int v_speed = 0, int h_speed = 0);
     float getHorizontalSpeed();
     float getVerticalSpeed();
     void death(Platform* platform);

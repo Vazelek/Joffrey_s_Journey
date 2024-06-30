@@ -48,7 +48,8 @@ HEADERS += ../include/Arrow.h \
            ../include/SkillPlatform.h \
            ../include/SlidingPlatform.h \
            ../include/SpecialInitialStateEventItem.h \
-           ../include/TextArea.h
+           ../include/TextArea.h \
+           ../include/utils.h
 
 SOURCES += ../src/Arrow.cpp \
            ../src/ArrowLeft.cpp \
@@ -81,4 +82,5 @@ SOURCES += ../src/Arrow.cpp \
            ../src/SkillPlatform.cpp \
            ../src/SlidingPlatform.cpp \
            ../src/SpecialInitialStateEventItem.cpp \
-           ../src/TextArea.cpp
+           ../src/TextArea.cpp \
+           ../src/utils.cpp

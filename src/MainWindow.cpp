@@ -48,14 +48,11 @@ void MainWindow::closeEvent(QCloseEvent *event)
         event->ignore();
     } else {
         event->accept();
-        qDebug() << this;
         if(stacked_widget->currentIndex() == 2){
             delete scene;
         }
         delete stacked_widget;
-        qDebug() << "stacked_widget";
         delete player_data;
-        qDebug() << "player_data";
     }
 }
 
