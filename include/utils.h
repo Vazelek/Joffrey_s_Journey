@@ -35,4 +35,17 @@ bool isEntityFarFromPlayer(
 
 double distance(int x1, int y1, int x2, int y2);
 
+std::tuple<int, int> getPlayerPositionAfterPlatformMovesHorizontally(
+    int player_x, 
+    int player_y, 
+    int platform_x, 
+    int platform_y, 
+    int player_width, 
+    int player_height,
+    int platform_width,
+    int horizontal_speed
+);
+
+int getHorizontalSpeedWithWind(int base_horizontal_speed, int wind_speed);
+
 #endif
