@@ -1,0 +1,25 @@
+aspect SceneDebug {
+    pattern "MySceneGeneration_Debug" : "" "MyScene" "MyScene";
+    pattern "LevelGenerationFile_Debug" : "void" "MyScene" "readLevelGenerationFile";
+    pattern "MyScene_AnyFunction_Debug" : "" "MyScene" "";
+
+    MySceneGeneration_Debug::before {
+        std::cout << "Entering \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+    }
+
+    MySceneGeneration_Debug::after {
+        std::cout << "Exiting \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+    }
+
+    LevelGenerationFile_Debug::before {
+        std::cout << "Entering \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+    }
+
+    MyScene_AnyFunction_Debug::before {
+        std::cout << "Entering \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+    }
+
+    MyScene_AnyFunction_Debug::after {
+        std::cout << "Exiting \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+    }
+}
