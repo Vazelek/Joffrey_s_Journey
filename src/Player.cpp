@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "math.h"
+#include <tuple>
 
 
 Player::Player(QString image_url, MyScene* scene) : QGraphicsPixmapItem(QPixmap(image_url)), scene(scene){
@@ -88,55 +89,7 @@ void Player::move(){
         }
     }
 
-
-
-    if(is_on_ice){
-        if(ice_speed >= 0){
-            if(hori_speed > 0){
-                ice_speed = hori_speed;
-            }
-            if(ice_speed != 0){
-                if(hori_speed == 0){
-                    hori_speed = ice_speed;
-                    ice_speed -= 0.1;
-                    if(ice_speed < 0){
-                        ice_speed = 0;
-                    }
-                }
-                else{
-                    hori_speed = ice_speed;
-                    ice_speed -= 0.2;
-                    if(ice_speed < 0){
-                        ice_speed = 0;
-                    }
-                }
-            }
-        }
-        if(ice_speed <= 0){
-            if(hori_speed < 0){
-                ice_speed = hori_speed;
-            }
-            if(ice_speed != 0){
-                if(hori_speed == 0){
-                    hori_speed = ice_speed;
-                    ice_speed += 0.1;
-                    if(ice_speed > 0){
-                        ice_speed = 0;
-                    }
-                }
-                else{
-                    hori_speed = ice_speed;
-                    ice_speed += 0.2;
-                    if(ice_speed > 0){
-                        ice_speed = 0;
-                    }
-                }
-            }
-        }
-    }
-    else{
-        ice_speed = 0;
-    }
+    std::tie(hori_speed, ice_speed) = getIceSpeed(hori_speed, ice_speed, is_on_ice);
 
     // Check if the player is trying to go Out Of Bounds
     // - down

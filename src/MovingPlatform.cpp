@@ -91,7 +91,7 @@ void MovingPlatform::move(){
             continue;
         }
         if(platform->getX() < player->x() + player->getWidth() && platform->getX() + platform->getWidth() * platform->getItemWidth() > player->x()){
-            if(platform->getY() < player->y() + +player->getHeight() && platform->getY() + platform->getHeight() * platform->getItemHeight() > player->y()){
+            if(platform->getY() < player->y() + player->getHeight() && platform->getY() + platform->getHeight() * platform->getItemHeight() > player->y()){
                 player->death(platform);
             }
         }
