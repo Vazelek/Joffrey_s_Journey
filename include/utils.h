@@ -46,6 +46,6 @@ std::tuple<int, int> getPlayerPositionAfterPlatformMovesHorizontally(
     int horizontal_speed
 );
 
-int getHorizontalSpeedWithWind(int base_horizontal_speed, int wind_speed);
+int getPlayerHorizontalSpeedWithWind(int base_horizontal_speed, int wind_speed, int max_speed, int min_speed);
 
 #endif

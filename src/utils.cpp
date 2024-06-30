@@ -145,3 +145,18 @@ std::tuple<int, int> getPlayerPositionAfterPlatformMovesHorizontally(
         return std::make_tuple(player_x, player_y);
     }
 }
+
+int getPlayerHorizontalSpeedWithWind(int base_horizontal_speed, int wind_speed, int max_speed, int min_speed){
+    int horizontal_speed = base_horizontal_speed;
+    if (base_horizontal_speed + wind_speed > max_speed) {
+        horizontal_speed = max_speed;
+    }
+    else if (base_horizontal_speed + wind_speed < min_speed) {
+        horizontal_speed = min_speed;
+    }
+    else {
+        horizontal_speed = base_horizontal_speed + wind_speed;
+    }
+
+    return horizontal_speed;
+}
