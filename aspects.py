@@ -34,7 +34,15 @@ def load_aspects(aspect_dir):
 
                     for pattern_name in aspects[aspect_name]:
                         aspect_pattern_functions_regex = re.compile(
-                            pattern_name + r'::before\s*{(?P<before_code>[^}]+)}',
+                            pattern_name + r'::define\s*{(?P<define_code>[^{}]*(?:\{(?1)\}[^{}]*)*)}',
+                            re.DOTALL
+                        )
+                        
+                        for match_pattern in aspect_pattern_functions_regex.finditer(aspect_content):
+                            aspects[aspect_name][pattern_name]['define_code'] = match_pattern.group('define_code')
+
+                        aspect_pattern_functions_regex = re.compile(
+                            pattern_name + r'::before\s*{(?P<before_code>[^{}]*(?:\{(?1)\}[^{}]*)*)}',
                             re.DOTALL
                         )
                         
@@ -42,7 +50,7 @@ def load_aspects(aspect_dir):
                             aspects[aspect_name][pattern_name]['before_code'] = match_pattern.group('before_code')
 
                         aspect_pattern_functions_regex = re.compile(
-                            pattern_name + r'::after\s*{(?P<after_code>[^}]+)}',
+                            pattern_name + r'::after\s*{(?P<after_code>[^{}]*(?:\{(?1)\}[^{}]*)*)}',
                             re.DOTALL
                         )
                         
@@ -61,7 +69,22 @@ def apply_aspects_to_function(match, before_code, after_code, aspect_name, patte
     before_code = before_code.replace('$$return_type$$', return_type).replace('$$namespace$$', namespace).replace('$$function_name$$', function_name).replace('$$pattern_name$$', pattern_name).replace('$$aspect_name$$', aspect_name)
     after_code = after_code.replace('$$return_type$$', return_type).replace('$$namespace$$', namespace).replace('$$function_name$$', function_name).replace('$$pattern_name$$', pattern_name).replace('$$aspect_name$$', aspect_name)
     
-    modified_body = f"{before_code}\n{function_body}\n{after_code}"
+    modified_body = ""
+
+    if before_code != "":
+        modified_body += f"""
+\t/* ########## BEGIN - Code added by aspect {aspect_name} - {pattern_name} (before) ########## */
+\t{before_code.lstrip().rstrip()}
+\t/* ############ END - Code added by aspect {aspect_name} - {pattern_name} (before) ########## */
+"""
+    modified_body += function_body
+
+    if after_code != "":
+        modified_body += f"""
+\t/* ########## BEGIN - Code added by aspect {aspect_name} - {pattern_name} (after) ########## */
+\t{after_code.lstrip().rstrip()}
+\t/* ############ END - Code added by aspect {aspect_name} - {pattern_name} (after) ########## */
+"""
     return f"{function_signature} {{ {modified_body} }}"
 
 def process_cpp_file(file_path, aspects):
@@ -70,9 +93,9 @@ def process_cpp_file(file_path, aspects):
         modified_content = content
 
         for aspect_name in aspects:
-            print("Processing " + aspect_name)
+            # print("Processing " + aspect_name)
             for pattern_name in aspects[aspect_name]:
-                print("- Match pattern " + pattern_name)
+                # print("- Match pattern " + pattern_name)
                 pattern = aspects[aspect_name][pattern_name]
 
                 return_type = pattern['return_type']
@@ -80,6 +103,7 @@ def process_cpp_file(file_path, aspects):
                 function_name = pattern['function_name']
                 before_code = ''
                 after_code = ''
+                define_code = ''
 
                 if 'before_code' in pattern:
                     before_code = pattern['before_code']
@@ -87,12 +111,29 @@ def process_cpp_file(file_path, aspects):
                 if 'after_code' in pattern:
                     after_code = pattern['after_code']
 
+                if 'define_code' in pattern:
+                    define_code = pattern['define_code']
+
+                if function_name == "~": # Destructor
+                    if namespace != "":
+                        function_name = "~" + namespace
+                    else:
+                        function_name = r'~[^(]+'
+
                 function_pattern_regex = (r'((?:(' + return_type + r')\s+)') if return_type != "" else r'((\w*)\s*'
-                function_pattern_regex += (r'(?:(' + namespace + r')::)') if namespace != "" else r'(?:([^:]+)::)'
+                function_pattern_regex += (r'(?:(' + namespace + r')::)') if namespace != "" else r'(?:([^:{}()]+)::)'
                 function_pattern_regex += (r'(' + function_name + r')') if function_name != "" else r'([^(]+)'
                 function_pattern_regex += r'\([^)]*\)[^{]*)\{([^{}]*(?:\{(?5)\}[^{}]*)*)\}'
 
-                print(function_pattern_regex)
+                
+                
+                if define_code != "" and re.search(function_pattern_regex, content):
+                    modified_content = f"""
+/* ########## BEGIN - Code added by aspect {aspect_name} - {pattern_name} (define) ########## */
+{define_code.lstrip().rstrip()}
+/* ############ END - Code added by aspect {aspect_name} - {pattern_name} (define) ########## */
+{modified_content}
+"""
 
                 # Regex to match function definitions
                 function_pattern = re.compile(function_pattern_regex)

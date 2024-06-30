@@ -1,0 +1,52 @@
+aspect GameTickMetrics {
+    pattern "GameTickDuration_metric" : "void" "MyScene" "update";
+    pattern "GameTickCallCount_printMetric" : "" "" "~";
+    pattern "GameTickCallCount_printMetric_MyScene" : "" "MyScene" "~";
+    pattern "GameTickCallCount_updateMetric" : "" "" "update";
+
+    GameTickDuration_metric::define {
+        #include <chrono>
+        static unsigned long long int game_tick_duration_total_update_duration = 0;
+        static unsigned long int game_tick_duration_total_update_call = 0;
+    }
+
+    GameTickDuration_metric::before {
+        auto game_tick_duration_start = std::chrono::high_resolution_clock::now();
+    }
+
+    GameTickDuration_metric::after {
+        auto game_tick_duration_stop = std::chrono::high_resolution_clock::now();
+
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(game_tick_duration_stop - game_tick_duration_start);
+        game_tick_duration_total_update_duration += duration.count();
+        game_tick_duration_total_update_call++;
+
+        // std::cout << duration.count() << " microseconds (" << (((float) 1) / FPS) * 1000000 << " us = 1 frame)" << std::endl;
+        if (1000000 / duration.count() < FPS) {
+            std::cout << "Warning - FPS lower than expected: " << 1000000 / duration.count() << " / " << FPS << std::endl;
+        }
+    }
+
+    GameTickCallCount_updateMetric::before {
+        update_call_count++;
+    }
+
+    GameTickCallCount_printMetric::define {
+        static unsigned long int update_call_count = 0;
+        #include <iostream>
+    }
+
+    GameTickCallCount_printMetric::before {
+        if(update_call_count != 0 && "$$namespace$$" != "Arrow") {
+            std::cout << "$$namespace$$ update function called " << update_call_count << " times since creation" << std::endl;
+            update_call_count = 0;
+        }
+    }
+
+    GameTickCallCount_printMetric_MyScene::before {
+        auto average_duration = game_tick_duration_total_update_duration / game_tick_duration_total_update_call;
+        std::cout << "Average update function duration: " << average_duration << " microseconds (" << (((float) 1) / FPS) * 1000000 << " us = 1 frame) - (" << game_tick_duration_total_update_duration << " us alive)" << std::endl;
+        game_tick_duration_total_update_duration = 0;
+        game_tick_duration_total_update_call = 0;
+    }
+}

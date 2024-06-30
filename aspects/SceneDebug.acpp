@@ -16,10 +16,10 @@ aspect SceneDebug {
     }
 
     MyScene_AnyFunction_Debug::before {
-        std::cout << "Entering \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+        // std::cout << "Entering \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
     }
 
     MyScene_AnyFunction_Debug::after {
-        std::cout << "Exiting \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
+        // std::cout << "Exiting \"$$return_type$$ $$namespace$$::$$function_name$$\" (called by $$pattern_name$$ from $$aspect_name$$)" << std::endl;
     }
 }

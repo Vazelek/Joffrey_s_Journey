@@ -22,6 +22,7 @@
 #include <QDir>
 #include <fstream>
 #include <string>
+#include <iostream>
 #include "MainWindow.h"
 #include "Platform.h"
 #include "Player.h"
