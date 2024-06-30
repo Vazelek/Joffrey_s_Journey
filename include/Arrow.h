@@ -5,15 +5,18 @@
 
 class Arrow : public EventItem{
 
-private:
-    int final_coord;
-    QString orientation;
-    float speed;
 public:
-    Arrow(MyScene* scene, Player* player,int x, int y, QString orientation, int final_coord, float speed = 3);
+    Arrow(MyScene* scene, Player* player, int x, int y, QString resource_url);
     ~Arrow();
+    virtual unsigned short int move();
     virtual void update();
     virtual void toInitialState();
 };
+
+
+#include "ArrowDown.h"
+#include "ArrowUp.h"
+#include "ArrowLeft.h"
+#include "ArrowRight.h"
 
 #endif

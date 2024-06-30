@@ -26,7 +26,7 @@ public:
 
 #include "Coin.h"
 #include "Flag.h"
-#include "ArrowThrower.h"
 #include "Arrow.h"
+#include "ArrowThrower.h"
 
 #endif

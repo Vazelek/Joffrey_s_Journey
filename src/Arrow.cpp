@@ -1,6 +1,6 @@
 #include "Arrow.h"
 
-Arrow::Arrow(MyScene* scene, Player* player, int x, int y, QString orientation, int final_coord, float speed) : EventItem(scene, player, x, y, "arrow_" + orientation), final_coord(final_coord), orientation(orientation), speed(speed){
+Arrow::Arrow(MyScene* scene, Player* player, int x, int y, QString resource_url) : EventItem(scene, player, x, y, resource_url) {
     setZValue(-1);
 }
 
@@ -8,38 +8,13 @@ Arrow::~Arrow(){
     
 }
 
+unsigned short int Arrow::move() {
+
+}
+
 void Arrow::update(){
-    if(orientation == "left"){
-        setX(x() - speed);
-        if(x() <= final_coord){
-            delete this;
-            return;
-        }
-    }
-    else if(orientation == "right"){
-        setX(x() + speed);
-        if(x() >= final_coord){
-            delete this;
-            return;
-        }
-    }
-    else if(orientation == "up"){
-        setY(y() - speed);
-        if(y() <= final_coord){
-            delete this;
-            return;
-        }
-    }
-    else if(orientation == "down"){
-        setY(y() + speed);
-        if(y() >= final_coord){
-            delete this;
-            return;
-        }
-    }
-    else{
-        qDebug() << "Invalid orientation";
-    }
+    if (!this->move()) // Means delete 
+        return;
 
     if(collidesWithItem(player)){
         if(player->hasShield()){
@@ -48,6 +23,7 @@ void Arrow::update(){
         }
         else{
             player->death();
+            delete this;
         }
     }
 }

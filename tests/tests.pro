@@ -23,6 +23,10 @@ HEADERS += WindowGenerationTests.h \
            LevelSceneGeneration.h \
            TestsGlobal.h \
            ../include/Arrow.h \
+           ../include/ArrowLeft.h \
+           ../include/ArrowRight.h \
+           ../include/ArrowUp.h \
+           ../include/ArrowDown.h \
            ../include/ArrowThrower.h \
            ../include/BreakablePlatform.h \
            ../include/Button.h \
@@ -55,6 +59,10 @@ SOURCES += WindowGenerationTests.cpp \
            TestsGlobal.cpp \
            main.cpp \
            ../src/Arrow.cpp \
+           ../src/ArrowLeft.cpp \
+           ../src/ArrowRight.cpp \
+           ../src/ArrowUp.cpp \
+           ../src/ArrowDown.cpp \
            ../src/ArrowThrower.cpp \
            ../src/BreakablePlatform.cpp \
            ../src/Button.cpp \

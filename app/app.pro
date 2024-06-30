@@ -19,6 +19,10 @@ MOC_DIR = ../build/app/moc
 
 # Input
 HEADERS += ../include/Arrow.h \
+           ../include/ArrowLeft.h \
+           ../include/ArrowRight.h \
+           ../include/ArrowUp.h \
+           ../include/ArrowDown.h \
            ../include/ArrowThrower.h \
            ../include/BreakablePlatform.h \
            ../include/Button.h \
@@ -46,6 +50,10 @@ HEADERS += ../include/Arrow.h \
            ../include/TextArea.h
 
 SOURCES += ../src/Arrow.cpp \
+           ../src/ArrowLeft.cpp \
+           ../src/ArrowRight.cpp \
+           ../src/ArrowUp.cpp \
+           ../src/ArrowDown.cpp \
            ../src/ArrowThrower.cpp \
            ../src/BreakablePlatform.cpp \
            ../src/Button.cpp \

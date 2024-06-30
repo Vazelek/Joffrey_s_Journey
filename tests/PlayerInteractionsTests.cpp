@@ -172,7 +172,7 @@ void PlayerInteractionsTests::test_ShieldProtectPlayer()
         return;
     }
 
-    Arrow* arrow = new Arrow(scene, player, player->x(), player->y() - 30, "down", 100000);
+    ArrowDown* arrow = new ArrowDown(scene, player, player->x(), player->y() - 30, 100000);
 
     QVERIFY(arrow != nullptr);
 
