@@ -26,11 +26,34 @@ def process_cpp_file(file_path):
     
     modified_content = function_pattern.sub(add_logging_to_function, content)
 
-    if file_path == "./modified_project/src/Arrow.cpp":
-        print(modified_content)
-
     with open(file_path, 'w') as file:
         file.write(modified_content)
+
+def copy_project(source_dir, dest_dir):
+    # List of directories and files to include
+    include_paths = [
+        'app/app.pro',
+        'tests/main.cpp', 'tests/tests.pro', 'tests/LevelSceneGeneration.cpp', 'tests/LevelSceneGeneration.h', 'tests/PlayerInteractionsTests.cpp', 'tests/PlayerInteractionsTests.h', 'tests/TestsGlobal.cpp', 'tests/TestsGlobal.h', 'tests/WindowGenerationTests.cpp', 'tests/WindowGenerationTests.h',
+        'Joffrey_s_Journey.pro'
+    ]
+
+    # Include entire directories
+    include_directories = ['include', 'src', 'data', 'fonts', 'resources']
+
+    for f in os.listdir(source_dir):
+        if os.path.isdir(f):
+            if f in include_directories:
+                shutil.copytree(os.path.join(source_dir, f), os.path.join(dest_dir, f))
+            else:
+                for f2 in os.listdir(f):
+                    path = os.path.join(f, f2)
+                    if path in include_paths:
+                        if not os.path.exists(os.path.join(dest_dir, f)):
+                            os.mkdir(os.path.join(dest_dir, f))
+                        shutil.copy(os.path.join(source_dir, path), os.path.join(dest_dir, path))
+        else:
+            if f in include_paths:
+                shutil.copy(os.path.join(source_dir, f), os.path.join(dest_dir, f))
 
 # Function to process the project directory
 def process_project(src_dir, dest_dir):
@@ -38,8 +61,8 @@ def process_project(src_dir, dest_dir):
     if os.path.exists(dest_dir):
         shutil.rmtree(dest_dir)
     
-    # Copy the entire project directory to the destination directory
-    shutil.copytree(src_dir, dest_dir)
+    # Copy only the specified directories and files
+    copy_project(src_dir, dest_dir)
 
     # Process all .cpp files in the src directory of the copied project
     src_code_dir = os.path.join(dest_dir, 'src')
