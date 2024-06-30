@@ -17,7 +17,6 @@ public:
     Flag(MyScene* scene, Player* player, int x, int y, bool is_end_flag = false);
     ~Flag();
     virtual void update();
-    virtual void toInitialState();
     void toFullyInitialState();
 };
 

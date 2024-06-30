@@ -15,7 +15,6 @@ public:
     ~ArrowThrower();
     virtual void update();
     void throwArrow();
-    virtual void toInitialState();
 };
 
 #endif

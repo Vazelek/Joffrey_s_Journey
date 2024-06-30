@@ -19,6 +19,10 @@ MOC_DIR = ../build/app/moc
 
 # Input
 HEADERS += ../include/Arrow.h \
+           ../include/ArrowLeft.h \
+           ../include/ArrowRight.h \
+           ../include/ArrowUp.h \
+           ../include/ArrowDown.h \
            ../include/ArrowThrower.h \
            ../include/BreakablePlatform.h \
            ../include/Button.h \
@@ -43,9 +47,14 @@ HEADERS += ../include/Arrow.h \
            ../include/SemiPassablePlatform.h \
            ../include/SkillPlatform.h \
            ../include/SlidingPlatform.h \
+           ../include/SpecialInitialStateEventItem.h \
            ../include/TextArea.h
 
 SOURCES += ../src/Arrow.cpp \
+           ../src/ArrowLeft.cpp \
+           ../src/ArrowRight.cpp \
+           ../src/ArrowUp.cpp \
+           ../src/ArrowDown.cpp \
            ../src/ArrowThrower.cpp \
            ../src/BreakablePlatform.cpp \
            ../src/Button.cpp \
@@ -71,4 +80,5 @@ SOURCES += ../src/Arrow.cpp \
            ../src/SemiPassablePlatform.cpp \
            ../src/SkillPlatform.cpp \
            ../src/SlidingPlatform.cpp \
+           ../src/SpecialInitialStateEventItem.cpp \
            ../src/TextArea.cpp

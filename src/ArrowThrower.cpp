@@ -18,26 +18,22 @@ void ArrowThrower::update(){
 
 void ArrowThrower::throwArrow(){
     if(orientation == "left"){
-        new Arrow(scene, player, x(), y() + 5, "left", final_coord);
+        new ArrowLeft(scene, player, x(), y() + 5, final_coord);
         return;
     }
     else if(orientation == "right"){
-        new Arrow(scene, player, x(), y() + 5, "right", final_coord);
+        new ArrowRight(scene, player, x(), y() + 5, final_coord);
         return;
     }
     else if(orientation == "up"){
-        new Arrow(scene, player, x() + 5, y(), "up", final_coord);
+        new ArrowUp(scene, player, x() + 5, y(), final_coord);
         return;
     }
     else if(orientation == "down"){
-        new Arrow(scene, player, x() + 5, y(), "down", final_coord);
+        new ArrowDown(scene, player, x() + 5, y(), final_coord);
         return;
     }
     else{
         qDebug() << "Invalid orientation";
     }
-}
-
-void ArrowThrower::toInitialState(){
-    
 }

@@ -4,6 +4,10 @@
 #include <QtTest/QtTest>
 #include <QObject>
 #include "MainWindow.h"
+#include "ArrowDown.h"
+#include "ArrowUp.h"
+#include "ArrowLeft.h"
+#include "ArrowRight.h"
 
 class PlayerInteractionsTests : public QObject
 {

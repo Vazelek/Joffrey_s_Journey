@@ -2,11 +2,12 @@
 #define COIN_H
 
 #include "EventItem.h"
+#include "SpecialInitialStateEventItem.h"
 
 class MyScene;
 class Player;
 
-class Coin : public EventItem{
+class Coin : public EventItem, public SpecialInitialStateEventItem{
 
 private:
 public:

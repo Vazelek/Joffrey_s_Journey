@@ -23,6 +23,10 @@ HEADERS += WindowGenerationTests.h \
            LevelSceneGeneration.h \
            TestsGlobal.h \
            ../include/Arrow.h \
+           ../include/ArrowLeft.h \
+           ../include/ArrowRight.h \
+           ../include/ArrowUp.h \
+           ../include/ArrowDown.h \
            ../include/ArrowThrower.h \
            ../include/BreakablePlatform.h \
            ../include/Button.h \
@@ -47,6 +51,7 @@ HEADERS += WindowGenerationTests.h \
            ../include/SemiPassablePlatform.h \
            ../include/SkillPlatform.h \
            ../include/SlidingPlatform.h \
+           ../include/SpecialInitialStateEventItem.h \
            ../include/TextArea.h
 
 SOURCES += WindowGenerationTests.cpp \
@@ -55,6 +60,10 @@ SOURCES += WindowGenerationTests.cpp \
            TestsGlobal.cpp \
            main.cpp \
            ../src/Arrow.cpp \
+           ../src/ArrowLeft.cpp \
+           ../src/ArrowRight.cpp \
+           ../src/ArrowUp.cpp \
+           ../src/ArrowDown.cpp \
            ../src/ArrowThrower.cpp \
            ../src/BreakablePlatform.cpp \
            ../src/Button.cpp \
@@ -79,6 +88,7 @@ SOURCES += WindowGenerationTests.cpp \
            ../src/SemiPassablePlatform.cpp \
            ../src/SkillPlatform.cpp \
            ../src/SlidingPlatform.cpp \
+           ../src/SpecialInitialStateEventItem.cpp \
            ../src/TextArea.cpp
 
 QMAKE_CXXFLAGS += -fPIC

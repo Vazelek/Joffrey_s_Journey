@@ -11,7 +11,3 @@ EventItem::EventItem(MyScene* scene, Player* player, int x, int y, QString resso
 EventItem::~EventItem(){
     scene->getEventItems()->removeOne(this);
 }
-
-void EventItem::toInitialState(){
-    
-}
