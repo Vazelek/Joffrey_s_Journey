@@ -37,7 +37,7 @@ aspect GameTickMetrics {
     }
 
     GameTickCallCount_printMetric::before {
-        if(update_call_count != 0 && "$$namespace$$" != "Arrow") {
+        if(update_call_count != 0 && "$$namespace$$" != "ArrowDown" && "$$namespace$$" != "ArrowUp" && "$$namespace$$" != "ArrowRight" && "$$namespace$$" != "ArrowLeft" && "$$namespace$$" != "Arrow") {
             std::cout << "$$namespace$$ update function called " << update_call_count << " times since creation" << std::endl;
             update_call_count = 0;
         }

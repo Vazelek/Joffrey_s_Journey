@@ -146,7 +146,7 @@ def process_cpp_file(file_path, aspects):
 def copy_project(source_dir, dest_dir):
     include_paths = [
         'app/app.pro',
-        'tests/main.cpp', 'tests/tests.pro', 'tests/LevelSceneGeneration.cpp', 'tests/LevelSceneGeneration.h', 'tests/PlayerInteractionsTests.cpp', 'tests/PlayerInteractionsTests.h', 'tests/TestsGlobal.cpp', 'tests/TestsGlobal.h', 'tests/WindowGenerationTests.cpp', 'tests/WindowGenerationTests.h',
+        'tests/main.cpp', 'tests/tests.pro', 'tests/LevelSceneGeneration.cpp', 'tests/LevelSceneGeneration.h', 'tests/PlayerInteractionsTests.cpp', 'tests/PlayerInteractionsTests.h', 'tests/TestsGlobal.cpp', 'tests/TestsGlobal.h', 'tests/WindowGenerationTests.cpp', 'tests/WindowGenerationTests.h', 'tests/UnitTest.cpp', 'tests/UnitTest.h',
         'Joffrey_s_Journey.pro'
     ]
 

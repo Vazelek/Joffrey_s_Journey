@@ -22,6 +22,7 @@ HEADERS += WindowGenerationTests.h \
            PlayerInteractionsTests.h \
            LevelSceneGeneration.h \
            TestsGlobal.h \
+           UnitTest.h \
            ../include/Arrow.h \
            ../include/ArrowLeft.h \
            ../include/ArrowRight.h \
@@ -59,6 +60,7 @@ SOURCES += WindowGenerationTests.cpp \
            PlayerInteractionsTests.cpp \
            LevelSceneGeneration.cpp \
            TestsGlobal.cpp \
+           UnitTest.cpp \
            main.cpp \
            ../src/Arrow.cpp \
            ../src/ArrowLeft.cpp \
