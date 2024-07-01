@@ -1,9 +1,5 @@
-# Use an official Debian or CentOS base image
 # Debian
 FROM debian:latest
-
-# Or use CentOS
-# FROM centos:latest
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -19,14 +15,6 @@ RUN apt-get update && apt-get install -y \
     g++ \
     make \
     && rm -rf /var/lib/apt/lists/*
-
-# For CentOS, uncomment the following lines and comment the Debian-specific lines
-# RUN yum install -y \
-#     qt5-qtbase-devel \
-#     qt5-qtmultimedia-devel \
-#     gcc-c++ \
-#     make \
-#     && yum clean all
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app

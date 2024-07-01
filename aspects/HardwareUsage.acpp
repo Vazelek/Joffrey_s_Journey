@@ -1,6 +1,7 @@
 aspect HardwareUsage {
     pattern "PrintHardwareUsage" : "void" "MyScene" "update";
     pattern "PrintHardwareUsage_init" : "" "MyScene" "MyScene";
+    pattern "PrintHardwareUsage_close" : "" "MyScene" "~";
 
     PrintHardwareUsage::define {
         #include "stdlib.h"
@@ -8,10 +9,15 @@ aspect HardwareUsage {
         #include "string.h"
         #include "sys/times.h"
         #include "sys/vtimes.h"
+        #include <iostream>
+        #include <fstream>
+
 
         static clock_t lastCPU, lastSysCPU, lastUserCPU;
         static int numProcessors;
         static unsigned short int displayCPU_RAM = 0;
+        int __ = std::remove("logs.txt");
+        static std::ofstream log_file("logs.txt", std::ios_base::app);
 
         void initCpuUsage(){
             FILE* file;
@@ -84,14 +90,20 @@ aspect HardwareUsage {
     PrintHardwareUsage::after {
         displayCPU_RAM++;
         if (displayCPU_RAM > 300) { // Every 5 seconds with 60 FPS
+            double cpu_usage = getUsedCPU();
             std::cout << "########## CPU - Memory usage ##########" << std::endl;
             std::cout << getUsedRam() << " KB RAM used by this process" << std::endl;
-            std::cout << getUsedCPU() << " \% CPU used by this process\n" << std::endl;
+            std::cout << cpu_usage << " \% CPU used by this process\n" << std::endl;
             displayCPU_RAM = 0;
+            log_file << getUsedRam() << ";" << cpu_usage << std::endl;
         }
     }
 
     PrintHardwareUsage_init::after {
         initCpuUsage();
+    }
+
+    PrintHardwareUsage_close::before {
+        log_file.close();
     }
 }
