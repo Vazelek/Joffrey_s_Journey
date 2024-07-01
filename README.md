@@ -13,7 +13,7 @@ Install packages
 sudo apt-get install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtmultimedia5-dev libqt5multimedia5-plugins -y
 ```
 
-Compiling
+Compile
 ```sh
 cd Joffrey_s_Journey
 qmake
@@ -31,7 +31,7 @@ Intal packages
 sudo yum install qt5-qtbase-devel qt5-qtmultimedia-devel
 ```
 
-Compiling
+Compile
 ```sh
 cd Joffrey_s_Journey
 qmake-qt5
@@ -43,3 +43,35 @@ Execute
 ./Joffrey_s_Journey.exe
 ```
 
+## Containerize
+
+### On windows
+
+#### Requirements
+
+- Docker Desktop intalled (https://www.docker.com/products/docker-desktop/) 
+- MobaXterm installed (https://mobaxterm.mobatek.net/)
+
+#### Build the image
+
+- Start the Docker Desktop app so that the docker deamon is running
+- Open the cmd
+
+```sh
+docker build -t joffrey_journey_app .
+```
+
+#### Run the container
+
+- Start MobaXterm and ensure the X server is running (for GUI display)
+- Find your host's IP address with `ipconfig`
+
+```sh
+ipconfig
+```
+- Run the docker container
+
+```sh
+docker run -it --rm -e DISPLAY=<WINDOWS_HOST_IP>:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix joffrey_journey_app
+```
+Replace `<WINDOWS_HOST_IP>` by your local IPv4 address
